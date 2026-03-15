@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Library — Shane Thomas Strough</title>
+  <meta name="description" content="Field notes, technical analysis, and thought leadership by Shane Thomas Strough — Integration and Commissioning Leader. Articles on zero-downtime cutovers, OT/IT integration, AI infrastructure, and mission-critical construction." />
+  <meta name="keywords" content="Shane Thomas Strough, Shane Strough, commissioning articles, data center field notes, zero downtime cutover, OT IT integration, air-gapped AI, mission critical construction, technical leadership" />
+  <link rel="canonical" href="https://shanestrough.com/insights.html" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Technical Library — Shane Thomas Strough",
+    "description": "Field notes and technical analysis by Shane Thomas Strough",
+    "url": "https://shanestrough.com/insights.html",
+    "author": {
+      "@type": "Person",
+      "name": "Shane Thomas Strough",
+      "url": "https://shanestrough.com"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,600;0,900;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black: #080A0C;
+      --deep: #0D1117;
+      --panel: #111820;
+      --border: #1E2D3D;
+      --electric: #00E5FF;
+      --teal: #00B4C6;
+      --dim-teal: rgba(0, 229, 255, 0.12);
+      --white: #F0F4F8;
+      --muted: #6B8099;
+      --warm: #C8A96E;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--electric); }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: rgba(8, 10, 12, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--electric); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px; height: 1px;
+      background: var(--electric);
+    }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      padding: 12rem 2.5rem 5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .page-header-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .breadcrumb {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb a {
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 7rem);
+      line-height: 0.9;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-title span { color: var(--electric); }
+
+    .page-subtitle {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      max-width: 600px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── FILTER BAR ─── */
+    .filter-bar {
+      background: var(--deep);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      position: sticky;
+      top: 56px;
+      z-index: 90;
+    }
+
+    .filter-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-right: 0.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.4rem 1rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: var(--electric);
+      color: var(--electric);
+      background: var(--dim-teal);
+    }
+
+    /* ─── MAIN CONTENT ─── */
+    .library-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* ─── ARTICLE FEED ─── */
+    .article-feed { display: flex; flex-direction: column; gap: 1px; }
+
+    .feed-section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      margin-top: 3rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .feed-section-title:first-child { margin-top: 0; }
+
+    .article-row {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem;
+      background: var(--deep);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s;
+      margin-bottom: 1px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-row::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 2px;
+      background: var(--electric);
+      transform: scaleY(0);
+      transition: transform 0.3s;
+    }
+
+    .article-row:hover {
+      background: var(--panel);
+      border-color: var(--teal);
+      transform: translateX(4px);
+    }
+
+    .article-row:hover::before { transform: scaleY(1); }
+
+    .article-row-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      min-width: 80px;
+    }
+
+    .article-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: var(--border);
+      line-height: 1;
+    }
+
+    .article-date {
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .article-row-content { flex: 1; }
+
+    .article-row-tag {
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--electric);
+      margin-bottom: 0.6rem;
+    }
+
+    .article-row-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+
+    .article-row-desc {
+      font-size: 0.68rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .article-row-footer {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .article-cta {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--electric);
+      transition: letter-spacing 0.3s;
+    }
+
+    .article-row:hover .article-cta { letter-spacing: 0.35em; }
+
+    .article-status {
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .article-status.live {
+      border-color: rgba(0, 229, 255, 0.3);
+      color: var(--electric);
+    }
+
+    .article-status.soon {
+      border-color: rgba(200, 169, 110, 0.3);
+      color: var(--warm);
+    }
+
+    /* ─── COMING SOON CARD ─── */
+    .article-row.coming-soon {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    .article-row.coming-soon:hover {
+      transform: none;
+      background: var(--deep);
+      border-color: var(--border);
+    }
+
+    .article-row.coming-soon::before { display: none; }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar { position: sticky; top: 120px; }
+
+    .sidebar-card {
+      background: var(--deep);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(30, 45, 61, 0.5);
+      font-size: 0.65rem;
+    }
+
+    .sidebar-stat:last-child { border-bottom: none; }
+
+    .sidebar-stat-label { color: var(--muted); letter-spacing: 0.1em; }
+
+    .sidebar-stat-value {
+      color: var(--electric);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+    }
+
+    .sidebar-links { display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 0.8rem;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+
+    .sidebar-link:hover {
+      border-color: var(--electric);
+      color: var(--electric);
+      background: var(--dim-teal);
+    }
+
+    .sidebar-tag {
+      display: inline-block;
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--border);
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      margin: 0.2rem;
+    }
+
+    .sidebar-tag:hover {
+      border-color: var(--electric);
+      color: var(--electric);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+    }
+
+    .footer-copy {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* ─── REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 900px) {
+      .library-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; position: fixed; top: 56px; left: 0; right: 0; background: rgba(8,10,12,0.97); flex-direction: column; padding: 2rem 1.5rem; gap: 1.5rem; border-bottom: 1px solid var(--border); }
+      .nav-links.open { display: flex; }
+      .nav-hamburger { display: flex; }
+      .page-header { padding: 9rem 1.5rem 3rem; }
+      .filter-bar { padding: 0.8rem 1.5rem; top: 56px; }
+      .library-layout { padding: 2rem 1.5rem; }
+      .article-row { flex-direction: column; gap: 1rem; }
+      .article-row-meta { flex-direction: row; align-items: center; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">STS</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#expertise">Expertise</a></li>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="insights.html" class="active">Field Notes</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header-grid" aria-hidden="true"></div>
+  <header class="page-header">
+    <div class="breadcrumb">
+      <a href="index.html">shanestrough.com</a> / Technical Library
+    </div>
+    <h1 class="page-title">
+      Technical<br>
+      <span>Library</span>
+    </h1>
+    <p class="page-subtitle">
+      Field notes, technical analysis, and thought leadership from 15+ years executing complex programs across DoD, aerospace, data center, and industrial infrastructure.
+    </p>
+  </header>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="filterArticles('all')">All</button>
+    <button class="filter-btn" onclick="filterArticles('commissioning')">Commissioning</button>
+    <button class="filter-btn" onclick="filterArticles('ai')">AI / Infrastructure</button>
+    <button class="filter-btn" onclick="filterArticles('international')">International</button>
+    <button class="filter-btn" onclick="filterArticles('ld')">L&D / Leadership</button>
+    <button class="filter-btn" onclick="filterArticles('aerospace')">Aerospace</button>
+    <button class="filter-btn" onclick="filterArticles('ai')">AI / SaaS / Security</button>
+  </div>
+
+  <!-- MAIN LIBRARY LAYOUT -->
+  <main class="library-layout">
+
+    <!-- ARTICLE FEED -->
+    <div class="article-feed" id="article-feed">
+
+      <h2 class="feed-section-title">// Published — Field Notes</h2>
+
+      <!-- Article 01 -->
+      <a class="article-row reveal" href="https://medium.com/@shane-thomas-strough/mitigating-logistical-risks-in-international-mission-critical-construction-214009336399" target="_blank" rel="noopener" data-category="international commissioning">
+        <div class="article-row-meta">
+          <span class="article-num">01</span>
+          <span class="article-date">Mar 2026</span>
+        </div>
+        <div class="article-row-content">
+          <div class="article-row-tag">International Construction · Logistics · DoD</div>
+          <h3 class="article-row-title">Mitigating Logistical Risks in International Mission-Critical Construction</h3>
+          <p class="article-row-desc">Navigating concurrent transnational deployments, dual-compliance mandates (DoD UFC and EU/German standards), and ODC constraints — with field-tested frameworks that hold under real operational pressure. Covers localized logistics models, cross-border SIMOPS, and the $250K+ savings model built from scratch.</p>
+          <div class="article-row-footer">
+            <span class="article-cta">Read on Medium →</span>
+            <span class="article-status live">Live</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 02 -->
+      <a class="article-row reveal" href="https://medium.com/@shane-thomas-strough" target="_blank" rel="noopener" data-category="commissioning">
+        <div class="article-row-meta">
+          <span class="article-num">02</span>
+          <span class="article-date">Mar 2026</span>
+        </div>
+        <div class="article-row-content">
+          <div class="article-row-tag">Electrical · Live Environments · Zero-Downtime</div>
+          <h3 class="article-row-title">The Anatomy of a Zero-Downtime Cutover in Live, Mission-Critical Facilities</h3>
+          <p class="article-row-desc">A zero-downtime cutover is won in planning, not during the overnight window. Deep dive into MOP engineering, temporary power design for motor inrush, OT/IT change-freeze protocols, LOTO layering, human performance factors, and why re-energization is commissioning — not celebration.</p>
+          <div class="article-row-footer">
+            <span class="article-cta">Read on Medium →</span>
+            <span class="article-status live">Live</span>
+          </div>
+        </div>
+      </a>
+
+      <h2 class="feed-section-title">// In Pipeline — Coming Soon</h2>
+
+      <!-- Article 03 -->
+      <div class="article-row coming-soon reveal" data-category="commissioning international">
+        <div class="article-row-meta">
+          <span class="article-num">03</span>
+          <span class="article-date">Coming</span>
+        </div>
+        <div class="article-row-content">
+          <div class="article-row-tag">OT/IT · Controls · Network Integration</div>
+          <h3 class="article-row-title">Bridging the Gap: Aligning E&amp;I Field Execution with OT/IT Network Integration</h3>
+          <p class="article-row-desc">How to prevent the OT/IT ambush during live-environment cutovers. Self-healing fiber rings, SEL RTAC interfaces, change-freeze protocols, and the discipline of keeping every system state known from first isolation to final re-energization.</p>
+          <div class="article-row-footer">
+            <span class="article-status soon">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 04 -->
+      <div class="article-row coming-soon reveal" data-category="commissioning">
+        <div class="article-row-meta">
+          <span class="article-num">04</span>
+          <span class="article-date">Coming</span>
+        </div>
+        <div class="article-row-content">
+          <div class="article-row-tag">Commissioning · Secure Environments · Documentation</div>
+          <h3 class="article-row-title">Deploying Offline-First Documentation Workflows for Secure Job Sites</h3>
+          <p class="article-row-desc">Designing enterprise SME collaboration architectures for environments without cloud access. Offline OCR, local-first revision tracking, and keeping field packages synchronized on air-gapped DoD and federal programs.</p>
+          <div class="article-row-footer">
+            <span class="article-status soon">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 05 -->
+      <div class="article-row coming-soon reveal" data-category="aerospace commissioning">
+        <div class="article-row-meta">
+          <span class="article-num">05</span>
+          <span class="article-date">Coming</span>
+        </div>
+        <div class="article-row-content">
+          <div class="article-row-tag">Aerospace · High-Angle Access · FAA Compliance</div>
+          <h3 class="article-row-title">Executing High-Angle Specialized Access Operations for Aerospace Infrastructure</h3>
+          <p class="article-row-desc">Restoring FAA compliance (AC 70/7460-1M) at 586ft+ on the Blue Origin LC-36 Vehicle Access Tower. High-angle technical rescue leadership, marine/salt environment diagnostics, and MTTR reduction on active launch infrastructure.</p>
+          <div class="article-row-footer">
+            <span class="article-status soon">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 06 -->
+      <div class="article-row coming-soon reveal" data-category="ai">
+        <div class="article-row-meta">
+          <span class="article-num">06</span>
+          <span class="article-date">Coming</span>
+        </div>
+        <div class="article-row-content">
+          <div class="article-row-tag">AI Infrastructure · Data Sovereignty · Secure Deployment</div>
+          <h3 class="article-row-title">Architecting Air-Gapped AI: Deploying Local Enterprise Models for Secure Infrastructure</h3>
+          <p class="article-row-desc">Building offline-first AI stacks for secure, federally-adjacent environments. RTX 5090 bare-metal workstation engineering, local inference architecture, data sovereignty principles, and the case for keeping the model inside the wire.</p>
+          <div class="article-row-footer">
+            <span class="article-status soon">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 07 -->
+      <div class="article-row coming-soon reveal" data-category="ld">
+        <div class="article-row-meta">
+          <span class="article-num">07</span>
+          <span class="article-date">Coming</span>
+        </div>
+        <div class="article-row-content">
+          <div class="article-row-tag">Enterprise L&amp;D · Workforce Strategy · AI Integration</div>
+          <h3 class="article-row-title">Accelerating the Workforce: Deploying the FOUND Methodology in Enterprise L&amp;D</h3>
+          <p class="article-row-desc">How the Framework for Opportunities, Upskilling, and Next-level Development (FOUND) generated a projected $1.5M+ SBU ROI through targeted turnover reduction and AI-powered personalized career pathway delivery for a 5,000-person enterprise workforce.</p>
+          <div class="article-row-footer">
+            <span class="article-status soon">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 08 -->
+      <div class="article-row coming-soon reveal" data-category="ld commissioning">
+        <div class="article-row-meta">
+          <span class="article-num">08</span>
+          <span class="article-date">Coming</span>
+        </div>
+        <div class="article-row-content">
+          <div class="article-row-tag">Leadership · Human Performance · Risk Mitigation</div>
+          <h3 class="article-row-title">Master the Flow: The Architecture of Precision Communication in Critical Environments</h3>
+          <p class="article-row-desc">Why a misunderstood email is more dangerous than a faulty breaker. Implementing BLUF methodology, SMART instructions, and closed-loop read-backs to prevent million-dollar lost time events during live cutovers. The case for treating communication as a technical competency — not a soft skill.</p>
+          <div class="article-row-footer">
+            <span class="article-status soon">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 09 -->
+      <div class="article-row coming-soon reveal" data-category="ai commissioning">
+        <div class="article-row-meta">
+          <span class="article-num">09</span>
+          <span class="article-date">Coming</span>
+        </div>
+        <div class="article-row-content">
+          <div class="article-row-tag">Software · SaaS · Full-Stack AI</div>
+          <h3 class="article-row-title">From Bare Metal to the Browser: Architecting the Full-Stack AI Ecosystem</h3>
+          <p class="article-row-desc">Bridging 96GB VRAM bare-metal infrastructure, FastAPI Python backends, pgVector RAG pipelines, and 60 FPS React Flow graph visualizations into a unified production SaaS platform. The engineer's guide to owning the entire stack — from the server room to the browser tab.</p>
+          <div class="article-row-footer">
+            <span class="article-status soon">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 10 -->
+      <div class="article-row coming-soon reveal" data-category="ai ld">
+        <div class="article-row-meta">
+          <span class="article-num">10</span>
+          <span class="article-date">Coming</span>
+        </div>
+        <div class="article-row-content">
+          <div class="article-row-tag">Business · AI Security · Scale</div>
+          <h3 class="article-row-title">The 'Assurance by Default' Mandate: Securing AI for High-Trust SMBs</h3>
+          <p class="article-row-desc">Why Myelin runtime guardrails and MCP Guard tool-call firewalls are non-negotiable for legal and medical sectors. The case for treating AI security not as a compliance checkbox, but as a load-bearing architectural element — and how to deploy it without slowing down the business.</p>
+          <div class="article-row-footer">
+            <span class="article-status soon">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-card reveal">
+        <div class="sidebar-title">// Library Stats</div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Published</span>
+          <span class="sidebar-stat-value">2</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">In Pipeline</span>
+          <span class="sidebar-stat-value">8</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Topics Covered</span>
+          <span class="sidebar-stat-value">7</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Yrs Field Experience</span>
+          <span class="sidebar-stat-value">15+</span>
+        </div>
+      </div>
+
+      <div class="sidebar-card reveal">
+        <div class="sidebar-title">// Connect</div>
+        <div class="sidebar-links">
+          <a class="sidebar-link" href="https://medium.com/@shane-thomas-strough" target="_blank" rel="noopener">
+            <span>Medium</span><span>↗</span>
+          </a>
+          <a class="sidebar-link" href="https://shanestrough.substack.com" target="_blank" rel="noopener">
+            <span>Substack</span><span>↗</span>
+          </a>
+          <a class="sidebar-link" href="https://www.linkedin.com/in/shane-thomas-strough/" target="_blank" rel="noopener">
+            <span>LinkedIn</span><span>↗</span>
+          </a>
+          <a class="sidebar-link" href="index.html">
+            <span>← Back to HQ</span><span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-card reveal">
+        <div class="sidebar-title">// Topics</div>
+        <div style="margin-top:0.5rem;">
+          <span class="sidebar-tag" onclick="filterArticles('commissioning')">Commissioning</span>
+          <span class="sidebar-tag" onclick="filterArticles('ai')">AI Infrastructure</span>
+          <span class="sidebar-tag" onclick="filterArticles('international')">International</span>
+          <span class="sidebar-tag" onclick="filterArticles('aerospace')">Aerospace</span>
+          <span class="sidebar-tag" onclick="filterArticles('ld')">L&D</span>
+          <span class="sidebar-tag" onclick="filterArticles('all')">All Topics</span>
+        </div>
+      </div>
+
+    </aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Shane Thomas Strough</span>
+    <span style="font-family:'Fraunces',serif; font-style:italic; font-size:0.7rem; color:var(--muted);">Sovereign. Honest. Aware. Navigating. Evolving.</span>
+    <span class="footer-copy">© 2026 · shanestrough.com</span>
+  </footer>
+
+  <script>
+    // ─── MOBILE MENU ───
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+
+    // ─── FILTER ───
+    function filterArticles(category) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      document.querySelectorAll('.article-row[data-category]').forEach(row => {
+        if (category === 'all' || row.dataset.category.includes(category)) {
+          row.style.display = 'flex';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    // ─── INTERSECTION OBSERVER ───
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
