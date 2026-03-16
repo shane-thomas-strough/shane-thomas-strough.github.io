@@ -1847,4 +1847,10 @@
     document.addEventListener('mousemove', e => {
       if (glow) {
         const x = (e.clientX / window.innerWidth) * 10;
-        const y
+        const y = (e.clientY / window.innerHeight) * 10;
+        glow.style.transform = `translate(${x - 5}%, ${y - 5}%)`;
+      }
+    });
+  </script>
+</body>
+</html>
