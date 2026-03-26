@@ -1,0 +1,338 @@
+# =============================================================================
+# Search Engine Indexing Workflow
+# =============================================================================
+#
+# Automatically notifies search engines when HTML pages are added or modified.
+#
+# How it works:
+#   1. On every push to main, detects which .html files changed.
+#   2. Submits changed URLs to IndexNow (Bing, Yandex, Seznam, Naver, etc.)
+#   3. Submits changed URLs to Google Indexing API (if credentials are configured).
+#
+# Setup required:
+#   - IndexNow: Already configured. The API key verification file is committed
+#     to the repo root (5891ff7061e0f42802e84221382b9ca9.txt).
+#
+#   - Google Indexing API (optional, can be added later):
+#     1. Create a Google Cloud project and enable the "Web Search Indexing API".
+#     2. Create a service account and download its JSON key.
+#     3. Add the service account email as an owner in Google Search Console.
+#     4. Store the entire JSON key as a GitHub secret named GOOGLE_INDEXING_KEY.
+#     The workflow will skip Google submission gracefully if this secret is not set.
+#
+# Base URL: https://shanestrough.com
+# =============================================================================
+
+name: Notify Search Engines of Page Changes
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      # Only run when HTML files change -- no point pinging search engines
+      # for workflow or config changes.
+      - "**.html"
+
+# Prevent overlapping runs; cancel in-progress if a new push arrives.
+concurrency:
+  group: search-engine-indexing
+  cancel-in-progress: true
+
+jobs:
+  index-search-engines:
+    name: Submit changed URLs to search engines
+    runs-on: ubuntu-latest
+
+    steps:
+      # ------------------------------------------------------------------
+      # 1. Checkout the repo so we can inspect the commit
+      # ------------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch enough history to diff against the previous commit.
+          # For the very first commit or force-pushes, we fall back to
+          # listing all HTML files in the repo.
+          fetch-depth: 2
+
+      # ------------------------------------------------------------------
+      # 2. Detect which HTML files were added or modified
+      # ------------------------------------------------------------------
+      - name: Detect changed HTML files
+        id: detect
+        run: |
+          SITE_URL="https://shanestrough.com"
+
+          # Compare HEAD against its parent. If there is no parent (initial
+          # commit), fall back to listing all tracked HTML files.
+          if git rev-parse HEAD~1 >/dev/null 2>&1; then
+            # diff-filter: A = added, M = modified, R = renamed
+            CHANGED_FILES=$(git diff --name-only --diff-filter=AMR HEAD~1 HEAD -- '*.html')
+          else
+            echo "No parent commit found; treating all HTML files as changed."
+            CHANGED_FILES=$(git ls-files '*.html')
+          fi
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No HTML files changed in this push."
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "has_changes=true" >> "$GITHUB_OUTPUT"
+
+          # Build a newline-separated list of full URLs.
+          # index.html gets submitted both as /index.html and as / (the root).
+          URLS=""
+          for FILE in $CHANGED_FILES; do
+            # Skip files in subdirectories that aren't web pages (e.g. templates)
+            URL="${SITE_URL}/${FILE}"
+            URLS="${URLS}${URL}"$'\n'
+
+            # Also submit the bare domain for index.html since most crawlers
+            # treat / and /index.html as separate URLs.
+            if [ "$FILE" = "index.html" ]; then
+              URLS="${URLS}${SITE_URL}/"$'\n'
+            fi
+          done
+
+          # Remove trailing newline and store
+          URLS=$(echo "$URLS" | sed '/^$/d')
+          echo "Changed URLs:"
+          echo "$URLS"
+
+          # Store URLs in a file so later steps can read them reliably
+          # (avoids multiline-output escaping issues in GITHUB_OUTPUT).
+          echo "$URLS" > /tmp/changed_urls.txt
+
+          # Also store as a JSON array for the IndexNow batch API
+          JSON_ARRAY=$(echo "$URLS" | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "url_json=$JSON_ARRAY" >> "$GITHUB_OUTPUT"
+
+      # ------------------------------------------------------------------
+      # 3. Submit to IndexNow (Bing, Yandex, Seznam, Naver, etc.)
+      # ------------------------------------------------------------------
+      #
+      # IndexNow is a simple, key-based protocol. A single POST to any
+      # participating engine fans out to all of them (Bing, Yandex, Seznam,
+      # Naver, Seznambot). We submit to Bing's endpoint as the primary.
+      #
+      # Docs: https://www.indexnow.org/documentation
+      # ------------------------------------------------------------------
+      - name: Submit to IndexNow (Bing, Yandex, and partners)
+        if: steps.detect.outputs.has_changes == 'true'
+        env:
+          INDEXNOW_KEY: "5891ff7061e0f42802e84221382b9ca9"
+        run: |
+          echo "--- IndexNow Submission ---"
+
+          URL_COUNT=$(wc -l < /tmp/changed_urls.txt | tr -d ' ')
+          echo "Submitting $URL_COUNT URL(s) to IndexNow..."
+
+          # IndexNow supports a batch endpoint that accepts multiple URLs
+          # in a single POST request.
+          PAYLOAD=$(cat <<EOF
+          {
+            "host": "shanestrough.com",
+            "key": "${INDEXNOW_KEY}",
+            "keyLocation": "https://shanestrough.com/${INDEXNOW_KEY}.txt",
+            "urlList": ${{ steps.detect.outputs.url_json }}
+          }
+          EOF
+          )
+
+          echo "Payload:"
+          echo "$PAYLOAD" | jq .
+
+          # Submit to Bing's IndexNow endpoint (fans out to all partners)
+          HTTP_STATUS=$(curl -s -o /tmp/indexnow_response.txt -w "%{http_code}" \
+            -X POST \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD" \
+            "https://api.indexnow.org/indexnow")
+
+          echo "IndexNow API response status: $HTTP_STATUS"
+          cat /tmp/indexnow_response.txt 2>/dev/null || true
+          echo ""
+
+          # IndexNow returns 200 (OK) or 202 (Accepted). Anything else is
+          # an error, but we don't fail the workflow -- just warn.
+          if [ "$HTTP_STATUS" -ge 200 ] && [ "$HTTP_STATUS" -lt 300 ]; then
+            echo "IndexNow submission successful."
+          else
+            echo "::warning::IndexNow returned HTTP $HTTP_STATUS. URLs may not have been indexed."
+          fi
+
+      # ------------------------------------------------------------------
+      # 4. Submit to Google Indexing API
+      # ------------------------------------------------------------------
+      #
+      # Google's Indexing API uses OAuth2 with a service account. We:
+      #   a) Decode the service account JSON from the GitHub secret
+      #   b) Mint a short-lived access token using a self-signed JWT
+      #   c) POST each URL to the Indexing API
+      #
+      # If the GOOGLE_INDEXING_KEY secret is not set, this step is skipped
+      # gracefully with an informational message.
+      #
+      # Setup instructions:
+      #   1. Go to https://console.cloud.google.com
+      #   2. Create a project (or use an existing one)
+      #   3. Enable "Web Search Indexing API"
+      #   4. Create a Service Account, download the JSON key
+      #   5. In Google Search Console, add the service account email as an Owner
+      #   6. In GitHub repo Settings > Secrets, add GOOGLE_INDEXING_KEY with
+      #      the full contents of the JSON key file
+      # ------------------------------------------------------------------
+      - name: Submit to Google Indexing API
+        if: steps.detect.outputs.has_changes == 'true'
+        env:
+          GOOGLE_INDEXING_KEY: ${{ secrets.GOOGLE_INDEXING_KEY }}
+        run: |
+          echo "--- Google Indexing API Submission ---"
+
+          # Check if credentials are configured
+          if [ -z "$GOOGLE_INDEXING_KEY" ]; then
+            echo "::notice::GOOGLE_INDEXING_KEY secret is not set. Skipping Google Indexing API submission."
+            echo ""
+            echo "To enable Google indexing, follow these steps:"
+            echo "  1. Create a Google Cloud project and enable the 'Web Search Indexing API'"
+            echo "  2. Create a service account and download its JSON key"
+            echo "  3. Add the service account email as an Owner in Google Search Console"
+            echo "  4. Add the JSON key contents as a GitHub secret named GOOGLE_INDEXING_KEY"
+            exit 0
+          fi
+
+          # Write the service account key to a temporary file
+          echo "$GOOGLE_INDEXING_KEY" > /tmp/google_sa_key.json
+
+          # Extract the service account email and private key
+          SA_EMAIL=$(jq -r '.client_email' /tmp/google_sa_key.json)
+          TOKEN_URI=$(jq -r '.token_uri' /tmp/google_sa_key.json)
+
+          if [ -z "$SA_EMAIL" ] || [ "$SA_EMAIL" = "null" ]; then
+            echo "::error::Failed to parse service account email from GOOGLE_INDEXING_KEY. Check the secret format."
+            exit 1
+          fi
+
+          echo "Using service account: $SA_EMAIL"
+          echo "Token URI: $TOKEN_URI"
+
+          # ---------------------------------------------------------------
+          # Mint an OAuth2 access token using a self-signed JWT (no gcloud
+          # or client libraries needed -- just openssl, jq, and curl).
+          # ---------------------------------------------------------------
+          NOW=$(date +%s)
+          EXP=$((NOW + 3600))
+
+          # Create the JWT header and claims
+          JWT_HEADER=$(echo -n '{"alg":"RS256","typ":"JWT"}' | openssl base64 -e | tr -d '=\n' | tr '+/' '-_')
+
+          JWT_CLAIMS=$(echo -n "{
+            \"iss\": \"${SA_EMAIL}\",
+            \"scope\": \"https://www.googleapis.com/auth/indexing\",
+            \"aud\": \"${TOKEN_URI}\",
+            \"iat\": ${NOW},
+            \"exp\": ${EXP}
+          }" | openssl base64 -e | tr -d '=\n' | tr '+/' '-_')
+
+          # Sign with the service account's private key
+          SIGNING_INPUT="${JWT_HEADER}.${JWT_CLAIMS}"
+
+          # Extract the private key to a file for openssl
+          jq -r '.private_key' /tmp/google_sa_key.json > /tmp/google_sa_private_key.pem
+
+          SIGNATURE=$(echo -n "$SIGNING_INPUT" | \
+            openssl dgst -sha256 -sign /tmp/google_sa_private_key.pem | \
+            openssl base64 -e | tr -d '=\n' | tr '+/' '-_')
+
+          JWT="${SIGNING_INPUT}.${SIGNATURE}"
+
+          # Exchange the JWT for an access token
+          TOKEN_RESPONSE=$(curl -s -X POST "$TOKEN_URI" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=${JWT}")
+
+          ACCESS_TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.access_token')
+
+          if [ -z "$ACCESS_TOKEN" ] || [ "$ACCESS_TOKEN" = "null" ]; then
+            echo "::error::Failed to obtain Google access token. Response:"
+            echo "$TOKEN_RESPONSE" | jq . 2>/dev/null || echo "$TOKEN_RESPONSE"
+            echo ""
+            echo "Verify that:"
+            echo "  - The GOOGLE_INDEXING_KEY secret contains valid JSON"
+            echo "  - The Web Search Indexing API is enabled in your Google Cloud project"
+            echo "  - The service account key has not expired"
+            exit 1
+          fi
+
+          echo "Successfully obtained Google access token."
+
+          # ---------------------------------------------------------------
+          # Submit each changed URL to the Google Indexing API
+          # ---------------------------------------------------------------
+          SUCCESS_COUNT=0
+          FAIL_COUNT=0
+
+          while IFS= read -r URL; do
+            [ -z "$URL" ] && continue
+
+            echo "Submitting to Google: $URL"
+
+            RESPONSE=$(curl -s -o /tmp/google_response.txt -w "%{http_code}" \
+              -X POST \
+              -H "Content-Type: application/json" \
+              -H "Authorization: Bearer ${ACCESS_TOKEN}" \
+              -d "{
+                \"url\": \"${URL}\",
+                \"type\": \"URL_UPDATED\"
+              }" \
+              "https://indexing.googleapis.com/v3/urlNotifications:publish")
+
+            if [ "$RESPONSE" -ge 200 ] && [ "$RESPONSE" -lt 300 ]; then
+              echo "  -> Success (HTTP $RESPONSE)"
+              SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+            else
+              echo "  -> Failed (HTTP $RESPONSE)"
+              cat /tmp/google_response.txt 2>/dev/null || true
+              echo ""
+              FAIL_COUNT=$((FAIL_COUNT + 1))
+            fi
+
+          done < /tmp/changed_urls.txt
+
+          echo ""
+          echo "Google Indexing API results: $SUCCESS_COUNT succeeded, $FAIL_COUNT failed."
+
+          if [ "$FAIL_COUNT" -gt 0 ]; then
+            echo "::warning::$FAIL_COUNT URL(s) failed to submit to Google Indexing API."
+          fi
+
+          # ---------------------------------------------------------------
+          # Clean up sensitive files
+          # ---------------------------------------------------------------
+          rm -f /tmp/google_sa_key.json /tmp/google_sa_private_key.pem
+
+      # ------------------------------------------------------------------
+      # 5. Summary
+      # ------------------------------------------------------------------
+      - name: Print summary
+        if: steps.detect.outputs.has_changes == 'true'
+        run: |
+          echo ""
+          echo "============================================="
+          echo "  Search Engine Indexing Complete"
+          echo "============================================="
+          echo ""
+          echo "URLs submitted:"
+          cat /tmp/changed_urls.txt
+          echo ""
+          echo "Engines notified:"
+          echo "  - IndexNow (Bing, Yandex, Seznam, Naver)"
+          if [ -n "${{ secrets.GOOGLE_INDEXING_KEY }}" ]; then
+            echo "  - Google Indexing API"
+          else
+            echo "  - Google Indexing API (SKIPPED - credentials not configured)"
+          fi
+          echo ""
