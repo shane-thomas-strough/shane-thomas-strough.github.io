@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Accent of the Soul — Shane Thomas Strough</title>
+  <meta name="description" content="'The Accent of the Soul' — a poem written on Day 43 of the Palmarcito Reset, El Salvador. By Shane Thomas Strough. On belonging, distance, recognition, and the accent that follows you everywhere." />
+  <meta name="keywords" content="Shane Thomas Strough, Shane Strough, poetry, The Accent of the Soul, Palmarcito, El Salvador, Was braucht dein Garten, original poetry" />
+  <link rel="canonical" href="https://shanestrough.com/poetry.html" />
+
+  <meta property="og:title" content="The Accent of the Soul — Shane Thomas Strough" />
+  <meta property="og:description" content="A poem written on Day 43 of the Palmarcito Reset, El Salvador. On belonging, distance, recognition, and the accent that follows you everywhere." />
+  <meta property="og:url" content="https://shanestrough.com/poetry.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="The Accent of the Soul — Shane Thomas Strough" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "The Accent of the Soul",
+    "author": {
+      "@type": "Person",
+      "name": "Shane Thomas Strough",
+      "url": "https://shanestrough.com"
+    },
+    "dateCreated": "2026-03-26",
+    "locationCreated": {
+      "@type": "Place",
+      "name": "Palmarcito, El Salvador"
+    },
+    "genre": "Poetry",
+    "inLanguage": ["en", "de"],
+    "url": "https://shanestrough.com/poetry.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,600;0,900;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black: #080A0C;
+      --deep: #0D1117;
+      --panel: #111820;
+      --border: #1E2D3D;
+      --electric: #00E5FF;
+      --teal: #00B4C6;
+      --dim-teal: rgba(0, 229, 255, 0.12);
+      --white: #F0F4F8;
+      --muted: #6B8099;
+      --warm: #C8A96E;
+      --dim-warm: rgba(200, 169, 110, 0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--warm); }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: rgba(8, 10, 12, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--electric); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px; height: 1px;
+      background: var(--electric);
+    }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      padding: 14rem 2.5rem 5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+    }
+
+    .page-header-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200, 169, 110, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 169, 110, 0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .breadcrumb {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb a {
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.92;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-title span { color: var(--warm); }
+
+    .page-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-meta .meta-dot {
+      display: inline-block;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--warm);
+      vertical-align: middle;
+      margin: 0 1rem;
+      opacity: 0.6;
+    }
+
+    .header-glow {
+      position: absolute;
+      top: 10%; left: 50%;
+      transform: translateX(-50%);
+      width: 50vw; height: 50vw;
+      max-width: 600px; max-height: 600px;
+      background: radial-gradient(ellipse, rgba(200, 169, 110, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── POEM ─── */
+    .poem-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 6rem;
+      position: relative;
+    }
+
+    .poem-epigraph {
+      text-align: center;
+      margin-bottom: 4rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(200, 169, 110, 0.15);
+    }
+
+    .poem-epigraph-line {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .stanza {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: clamp(1rem, 2vw, 1.12rem);
+      line-height: 2;
+      color: rgba(240, 244, 248, 0.88);
+      margin-bottom: 2rem;
+    }
+
+    .section-gap {
+      height: 2rem;
+    }
+
+    .refrain {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+      color: var(--warm);
+      margin: 0.5rem 0 2rem;
+      letter-spacing: 0.03em;
+    }
+
+    .stanza--emphasis {
+      color: var(--white);
+    }
+
+    .poem-attribution {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(200, 169, 110, 0.15);
+      text-align: right;
+    }
+
+    .poem-attribution-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+
+    .poem-attribution-detail {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* ─── STORY TRANSITION ─── */
+    .story-transition {
+      text-align: center;
+      padding: 4rem 2.5rem;
+      position: relative;
+    }
+
+    .story-transition-line {
+      width: 1px;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, var(--warm), transparent);
+      margin: 0 auto 2rem;
+    }
+
+    .story-transition-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .story-transition-title {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--warm);
+      margin-top: 0.8rem;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--warm), transparent);
+      opacity: 0.2;
+    }
+
+    /* ─── STORY ─── */
+    .story-section {
+      background: var(--deep);
+      border-top: 1px solid var(--border);
+      padding: 6rem 2.5rem;
+    }
+
+    .story-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .story-header {
+      margin-bottom: 4rem;
+    }
+
+    .story-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 0.03em;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .story-subtitle {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-top: 0.8rem;
+    }
+
+    .story-break {
+      width: 40px;
+      height: 1px;
+      background: var(--warm);
+      margin: 3rem 0;
+      opacity: 0.4;
+    }
+
+    .story-text {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+      line-height: 2;
+      color: rgba(107, 128, 153, 0.9);
+      margin-bottom: 1.5rem;
+    }
+
+    .story-text:last-child { margin-bottom: 0; }
+
+    .story-text em {
+      color: rgba(200, 169, 110, 0.8);
+      font-style: italic;
+    }
+
+    .story-text strong {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .story-text--highlight {
+      color: rgba(240, 244, 248, 0.7);
+    }
+
+    .story-text--standalone {
+      font-size: 1.05rem;
+      color: rgba(240, 244, 248, 0.6);
+    }
+
+    .story-colophon {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .story-colophon p {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.82rem;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+    }
+
+    .footer-copy {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* ─── REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal-slow {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-slow.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 56px; left: 0; right: 0;
+        background: rgba(8,10,12,0.97);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links.open { display: flex; }
+      .nav-hamburger { display: flex; }
+
+      .page-header { padding: 10rem 1.5rem 3rem; }
+      .poem-container { padding: 2rem 1.5rem 4rem; }
+      .story-section { padding: 4rem 1.5rem; }
+      footer { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .page-title { font-size: clamp(2.5rem, 12vw, 4rem); }
+      .page-meta .meta-dot { margin: 0 0.5rem; }
+      .stanza { font-size: 0.95rem; line-height: 1.9; }
+      .refrain { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">STS</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#expertise">Expertise</a></li>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="insights.html">Field Notes</a></li>
+      <li><a href="poetry.html" class="active">Poetry</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header-grid" aria-hidden="true"></div>
+  <header class="page-header">
+    <div class="header-glow" aria-hidden="true"></div>
+    <div class="breadcrumb">
+      <a href="index.html">shanestrough.com</a> / Poetry
+    </div>
+    <h1 class="page-title">
+      The Accent<br>
+      <span>of the Soul</span>
+    </h1>
+    <div class="page-meta">
+      Day 43 <span class="meta-dot"></span> Palmarcito, El Salvador <span class="meta-dot"></span> March 2026
+    </div>
+  </header>
+
+  <!-- THE POEM -->
+  <main class="poem-container" role="main">
+    <article>
+
+      <!-- I. The Shop -->
+      <div class="stanza reveal-slow">
+        In the dim light of the shifting stalls,<br>
+        where every turning offered some small wonder,<br>
+        I laid my former life down piece by piece<br>
+        and chose a hollow scroll of waiting thunder.
+      </div>
+
+      <div class="stanza reveal-slow">
+        A brother kept the ledgers, keys, and locks,<br>
+        his hands full of the weight of what was traded,<br>
+        but at the threshold, half in shade, half gold,<br>
+        she stood like something destiny had braided.
+      </div>
+
+      <div class="stanza reveal-slow">
+        I do not know what moved within my mouth<br>
+        before my mind could teach my tongue to follow.<br>
+        I only know I asked her, soft and strange,<br>
+        what did her garden need to fill the hollow.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Refrain I -->
+      <div class="refrain reveal-slow">Was braucht dein Garten?</div>
+
+      <div class="stanza reveal-slow">
+        Broken, but alive.<br>
+        A borrowed phrase with roots beneath its skin,<br>
+        as though some older self had risen up<br>
+        and spoken from the buried earth within.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- II. The Accent -->
+      <div class="stanza reveal-slow">
+        She smiled, and then she blushed, and then grew still.<br>
+        One hand remained against the door behind her.<br>
+        She said I had an accent here. I knew it.<br>
+        I have one anywhere the heart grows kinder.
+      </div>
+
+      <div class="stanza reveal-slow">
+        It is the gravel in the gears.<br>
+        It is the "Garten" that refuses to be a "garden."<br>
+        A jagged truth that fits nowhere but her ear.
+      </div>
+
+      <div class="stanza reveal-slow">
+        I told her I have an accent that no land has heard, and every land recognizes.<br>
+        No matter where I go, I travel through it.<br>
+        I have never learned the local way of love.<br>
+        I only know the wound, and how to move it.
+      </div>
+
+      <div class="stanza reveal-slow">
+        For I have never belonged cleanly to a place.<br>
+        I have worn distance like a second nature,<br>
+        a man made out of leaving and return,<br>
+        half wound, half compass, half unfinished prayer.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- III. The Water -->
+      <div class="stanza stanza--emphasis reveal-slow">
+        I have swum in water that wanted to take me.<br>
+        I have loved the thing that kept me most afraid.<br>
+        That is not courage. That is only hunger<br>
+        for what feels holy when it cannot stay.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- IV. The Room -->
+      <div class="stanza reveal-slow">
+        And still there was a softness in her gaze<br>
+        that made the room around us feel less certain,<br>
+        as though the world had narrowed to a hush<br>
+        and something sacred stirred behind the curtain.
+      </div>
+
+      <div class="stanza reveal-slow">
+        The brother watched. The business carried on.<br>
+        The heavy click of iron... the world shut out.<br>
+        We stood in the dust of a thousand dead things,<br>
+        trading gold for a silence that screams.
+      </div>
+
+      <div class="stanza reveal-slow">
+        The locks were turned. The ordinary remained.<br>
+        Yet nothing in that dim and breathing shop<br>
+        was ordinary after she was named.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- V. The Scroll -->
+      <div class="stanza reveal-slow">
+        I bought the scroll, though it was never blank.<br>
+        It held the shape of something still becoming,<br>
+        not parchment only, but a place to keep<br>
+        the words that rise before the lips can summon.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Because I knew, beneath my own apology,<br>
+        beneath the awkward truth I could not smother,<br>
+        I had not come for vellum, ink, or trade.<br>
+        I had come there to recognize another.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Not merely her, though God, it was her too,<br>
+        but something in her soul my soul remembered,<br>
+        like winter recognizing distant spring,<br>
+        or ash recalling what it was in ember.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- VI. The Seeds -->
+      <div class="stanza stanza--emphasis reveal-slow">
+        Some souls do not begin when they are spoken.<br>
+        Some know each other long before the sound.<br>
+        Some pass through years like buried seeds in November,<br>
+        then break the dark the moment rain is found.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- VII. The Carrying -->
+      <div class="stanza reveal-slow">
+        Now I will carry this unwritten thing<br>
+        through every border, silence, road, and weather,<br>
+        until I find the place where shadow parts<br>
+        and two estranged accents lean toward together.
+      </div>
+
+      <div class="stanza reveal-slow">
+        No perfect language. None was ever needed.<br>
+        Not for the truest things the heart can know.<br>
+        Some loves arrive already half-translated<br>
+        in looks, in breath, in all we do not show.
+      </div>
+
+      <div class="stanza reveal-slow">
+        So let the polished speakers keep their fluency.<br>
+        Let others live by rules of tongue and nation.<br>
+        I know the holiest words I've ever heard<br>
+        were spoken in the ache of hesitation.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Refrain II -->
+      <div class="refrain reveal-slow">Was braucht dein Garten?</div>
+
+      <div class="stanza reveal-slow">
+        Not grandeur.<br>
+        Not rescue.<br>
+        Not the clever hand of art.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Only the one<br>
+        who asks the question<br>
+        as if listening<br>
+        is a form of heart.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- VIII. The Return -->
+      <div class="stanza reveal-slow">
+        And if this scroll was ever meant for anything,<br>
+        it was to bear the truth I could not borrow:<br>
+        that I did not come to purchase empty space.
+      </div>
+
+      <div class="stanza reveal-slow">
+        I came to carry home<br>
+        the shape<br>
+        of tomorrow.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- IX. The Staying -->
+      <div class="stanza reveal-slow">
+        This time,<br>
+        if she opens,<br>
+        I will not speak like someone passing through.
+      </div>
+
+      <div class="stanza reveal-slow">
+        I have wandered<br>
+        long enough<br>
+        to know how rare it is
+      </div>
+
+      <div class="stanza reveal-slow">
+        to be heard<br>
+        before being understood,<br>
+        to be known<br>
+        before being named,<br>
+        to be welcomed<br>
+        not for fluency,<br>
+        not for perfection,<br>
+        but for the trembling truth<br>
+        you carried in broken form<br>
+        all the way to the door.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        So let me come to her<br>
+        without the polished tongue,<br>
+        without the practiced grace,<br>
+        without the armor men mistake for wisdom.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Let me come as I am:<br>
+        weathered,<br>
+        wandering,<br>
+        still carrying the salt<br>
+        of every sea that tried to keep me.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- X. The Offering -->
+      <div class="stanza reveal-slow">
+        And if she asks<br>
+        what I have brought her,<br>
+        let it be this:
+      </div>
+
+      <div class="stanza reveal-slow">
+        not a ring,<br>
+        not a knee,<br>
+        not a promise made beautiful by spectacle,
+      </div>
+
+      <div class="stanza reveal-slow">
+        but a rock,<br>
+        an open scroll,<br>
+        an accent,<br>
+        a question I will keep asking<br>
+        every single day,<br>
+        and a staying<br>
+        that does not leave<br>
+        when love becomes ordinary.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- XI. The Ink -->
+      <div class="stanza stanza--emphasis reveal-slow">
+        Nothing translated.<br>
+        Nothing disguised.
+      </div>
+
+      <div class="stanza reveal-slow">
+        I grip the wood of the scroll until my knuckles go white.<br>
+        It is heavy with the "tomorrow" I haven't written yet.
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        I am no longer passing through.<br>
+        I am the one who stays until the ink runs dry.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- XII. The Close -->
+      <div class="stanza reveal-slow">
+        Only a man<br>
+        who has wandered every language<br>
+        only to find<br>
+        one soul<br>
+        worth not leaving.
+      </div>
+
+      <!-- Attribution -->
+      <div class="poem-attribution reveal-slow">
+        <div class="poem-attribution-name">— Shane Thomas Strough</div>
+        <div class="poem-attribution-detail">Palmarcito, El Salvador</div>
+        <div class="poem-attribution-detail">Day 43</div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- TRANSITION TO STORY -->
+  <div class="story-transition reveal">
+    <div class="story-transition-line"></div>
+    <div class="story-transition-label">Continue</div>
+    <div class="story-transition-title">The Night Before the Poem</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- THE STORY -->
+  <section class="story-section">
+    <div class="story-inner">
+
+      <div class="story-header reveal">
+        <h2 class="story-title">The Night Before the Poem</h2>
+        <p class="story-subtitle">A note on "The Accent of the Soul"</p>
+      </div>
+
+      <div class="story-break"></div>
+
+      <p class="story-text story-text--highlight reveal">The night before I wrote this poem, I fell off a cliff.</p>
+
+      <p class="story-text reveal">Not metaphorically. Literally. Twenty feet down a rock ledge at a beachside restaurant in Palmarcito, El Salvador, because I wasn't paying enough attention. I escaped with a scrape on my left side, a bruised ego, and a realization I've been carrying ever since: I am not undamageable.</p>
+
+      <p class="story-text reveal">I've had that realization before. Fourteen times, give or take. The phenol tank I laid on before I knew a drop smaller than a dime could kill a person. The concrete-filled steel bollard that carved a clean path through my engine compartment and into the passenger seat while I wasn't wearing a seatbelt. The hurricane surf. The night swims at the 3rd break in double overhead swells. The places I've been that had no business letting me walk away.</p>
+
+      <p class="story-text story-text--standalone reveal">I always walk away.</p>
+
+      <p class="story-text reveal">But I'm getting ahead of myself.</p>
+
+      <div class="story-break"></div>
+
+      <p class="story-text reveal">I came to Palmarcito on Feb 12th, 2026, on a one-way ticket. I had been running at full speed for years — 60, sometimes 90-hour weeks as a General Superintendent then Learning and Development Manager at a large electrical contracting firm, managing projects and programs for thousands of employees, building AI-powered systems, promising myself that the next project would be the one where someone actually followed through on what they said. They didn't. So I bought the ticket and left.</p>
+
+      <p class="story-text reveal">The casita costs $300 a month. It belongs to David, a 59-year-old retired infectious disease doctor who cooks too much food and forgets things and is possibly one of the best human beings I've ever met. The Pacific Ocean is 60 meters from the door.</p>
+
+      <p class="story-text reveal">I came to reset. I didn't know what that meant until I was already inside it.</p>
+
+      <p class="story-text reveal">What it turned out to mean: Advanced Open Water certification. A fire ceremony with village elders on St. Patrick's Day. An accidental songwriting residency at a pupuseria across the street. A SaaS product built from scratch in a casita. A drone crashed into a cactus for a two-year-old named Ariel who thinks I control all aircraft. A reconnection with the first woman I ever loved, seventeen years after a silence that was never supposed to be permanent.</p>
+
+      <p class="story-text story-text--standalone reveal">Her name is Gina.</p>
+
+      <div class="story-break"></div>
+
+      <p class="story-text reveal">I sent her a message from a cliff at 11:11pm on March 7th. I hadn't spoken to her in seventeen years. She answered in two seconds.</p>
+
+      <p class="story-text reveal">What followed was twenty-some days of conversations that I'm still trying to fully understand. She is the woman I wrote about in this poem — the one at the threshold, half in shade, half gold, one hand against the door. She burned my letters once. Buried the ashes. She told me she was trying to forget me. It didn't work. I kept the letters she wrote me and the incense for seventeen years and never threw them away.</p>
+
+      <p class="story-text story-text--highlight reveal">We are not the same people we were. We are also exactly the same people we were. Both things are true and I've stopped trying to resolve the paradox.</p>
+
+      <div class="story-break"></div>
+
+      <p class="story-text reveal">The night I fell off the cliff, I came home, cleaned up, and slept harder than I had in weeks. My side hurt. The adrenaline took a while to leave. At some point in the early hours of the morning, I had a dream so vivid and coherent that I woke up at 3am still inside it.</p>
+
+      <p class="story-text reveal">A shop. Dimly lit. Full of what I can only describe as shifting trinkets — every time I turned around, the inventory had rearranged itself into something new and perfect. I was there to buy something. I found it in the exact spot where I had just bought something else: an empty scroll. I knew immediately it was what I came for.</p>
+
+      <p class="story-text reveal">There was a woman working in the shop. Foreign. I didn't know her language and she didn't know mine, but I opened my mouth and what came out was German — <em>Was braucht dein Garten?</em> — which translates roughly to <em>What does your garden need?</em> I didn't plan to say it. I didn't know I knew German well enough to say it. I spent a brief period working at military installations in Ramstein and Wiesbaden and apparently the language went somewhere inside me where I couldn't find it until I was asleep and not trying.</p>
+
+      <p class="story-text reveal">She looked at me and said: <em>You have an accent here.</em></p>
+
+      <p class="story-text reveal">I said: <em>I have one everywhere I go.</em></p>
+
+      <p class="story-text reveal">Her brother — the shopkeeper, the man with the ledgers and the locks — intervened. He locked the door. Led me to the back room to complete the transaction. She stood at the threshold, blushing, one hand on the door between us.</p>
+
+      <p class="story-text reveal">I bought the scroll. I apologized for what I'd said. I didn't stop meaning it.</p>
+
+      <p class="story-text reveal">I woke up knowing I had to write the poem before I forgot any of it.</p>
+
+      <div class="story-break"></div>
+
+      <p class="story-text reveal">Here is what I know about myself that most people don't:</p>
+
+      <p class="story-text story-text--highlight reveal">I am honestly afraid of the open ocean.</p>
+
+      <p class="story-text reveal">I have saltwater in my veins. I surf. I dive. I fish offshore. I swim at 10pm in the Pacific when the lifeguards have gone home and the third break is running fast and the sharks, if there are any, have apparently decided I am not worth the trouble. I have been held down by three consecutive waves in a hurricane swell named Gustav and it almost took the remainder of my life.</p>
+
+      <p class="story-text reveal">And I am honestly, genuinely afraid of it.</p>
+
+      <p class="story-text reveal">I've told two people that in my life. My ex-wife. And Gina.</p>
+
+      <p class="story-text reveal">I go in anyway. Not because I'm brave. Because the alternative is to walk away from the thing that feels most holy, and I've tried that, and I don't like how it feels. What I have is not fearlessness. It's reverence. Deep, bone-level respect for the thing that could take me, paired with an inability to stay on the shore.</p>
+
+      <p class="story-text story-text--highlight reveal">That's also what the poem is about. That's also what Gina is about.</p>
+
+      <p class="story-text story-text--standalone reveal">I have loved the thing that kept me most afraid.</p>
+
+      <div class="story-break"></div>
+
+      <p class="story-text reveal">I am not a professional poet. I'm an electrical director with fifteen years of experience building the nervous systems of industrial facilities and data centers. I have an Advanced Open Water certification and a sovereign AI workstation in Melbourne, Florida and an accidental residency at a pupuseria in El Salvador where they critique my Spanish while I consult on their construction project and their daughters blush for reasons I choose not to examine too closely.</p>
+
+      <p class="story-text reveal">I write songs. I wrote one on a chicken bus in El Salvador that a man named Geronimo danced to on the beach while I sang it at full volume into a borrowed microphone, and his response was that it reminded him of Alexander Acha. I don't know if that's true but I will take it.</p>
+
+      <p class="story-text reveal">I don't write poems. Except I did, once, on Day 43 of the most alive I have ever been, because a lucid dream handed me the imagery and the only honest response was to get it down before the ordinary morning came and took it.</p>
+
+      <div class="story-break"></div>
+
+      <p class="story-text reveal">What the poem is actually about:</p>
+
+      <p class="story-text reveal">It is about being a person who has never belonged cleanly to any place. Who carries an accent everywhere — not just in language, but in spirit. Who is always recognizably from somewhere else, even when that somewhere else is nowhere specific. Who has worn distance like a second nature for so long that the wearing became invisible.</p>
+
+      <p class="story-text reveal">It is about buying an empty scroll — trading the past for a blank page — and discovering it was never blank. It already held the shape of what was coming.</p>
+
+      <p class="story-text reveal">It is about a woman who stood at a threshold seventeen years ago while a father/brother figure locked the door. And who is standing at a threshold again now, and this time the transaction completes differently.</p>
+
+      <p class="story-text reveal">It is about the daily question I ask her now. Not a ring. Not a knee. Not a promise made once and expected to hold forever under its own accumulated weight. Just the same question, every single morning, which she can answer however she chooses. She has said yes every day since I started asking.</p>
+
+      <p class="story-text reveal">It is about November. Which is when we first knew each other, a long time ago, before the seventeen years of silence. Seeds buried in November don't know yet if they'll survive. They just wait in the dark until the rain comes.</p>
+
+      <p class="story-text story-text--highlight reveal">The rain came on March 7th at 11:11pm. She answered in two seconds.</p>
+
+      <div class="story-break"></div>
+
+      <p class="story-text reveal">The scroll is still mostly blank. I have a job offer coming from the largest AI data center infrastructure project currently underway in the United States. I have three sons in Western New York who are going to need their father present and functional and not run into any more cliffs. I have a SaaS product that processes audio stems in 3.33 seconds on an RTX 5090 and takes real money from real musicians. I have a gift from an artist in El Tunco that I have not yet disclosed sitting in a little brown bag in this casita, waiting for her.</p>
+
+      <p class="story-text reveal">I have a poem that started as a lucid dream and ended as the most honest thing I've written since No Hay Quizas, which I wrote on a chicken bus on March 10th and which will soon be on Spotify if you want to look it up.</p>
+
+      <p class="story-text story-text--standalone reveal">I have an accent everywhere I go.</p>
+
+      <p class="story-text story-text--standalone reveal">I am no longer passing through.</p>
+
+      <div class="story-break"></div>
+
+      <div class="story-colophon reveal">
+        <p>The Accent of the Soul was written on Day 43 of The Palmarcito Reset, in Palmarcito, El Salvador, following a lucid dream on the night of March 25&ndash;26, 2026. The author does not recommend falling off cliffs as a prerequisite for creative work, but cannot entirely rule out the connection.</p>
+        <p style="margin-top: 1.5rem;">— Shane Thomas Strough<br>Palmarcito, El Salvador</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Shane Thomas Strough</span>
+    <span style="font-family:'Fraunces',serif; font-style:italic; font-size:0.7rem; color:var(--muted);">Sovereign. Honest. Aware. Navigating. Evolving.</span>
+    <span class="footer-copy">&copy; 2026 &middot; shanestrough.com</span>
+  </footer>
+
+  <script>
+    // ─── MOBILE MENU ───
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+
+    // ─── INTERSECTION OBSERVER ───
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('.reveal, .reveal-slow').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
