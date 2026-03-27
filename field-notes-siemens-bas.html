@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siemens BAS Data Center Commissioning Field Guide — Shane Thomas Strough</title>
+  <meta name="description" content="Shane Thomas Strough Siemens data center commissioning field guide. Comprehensive technical reference for Siemens Building Automation Systems — Desigo CC, APOGEE, PXC controllers, BACnet, Modbus, Cerberus PRO fire alarm integration, and data center commissioning workflows." />
+  <meta name="keywords" content="Shane Thomas Strough, Siemens BAS, data center commissioning, Desigo CC, APOGEE, PXC controller, BACnet, Modbus, Cerberus PRO, fire alarm commissioning, building automation, HVAC controls, commissioning field guide" />
+  <link rel="canonical" href="https://shanestrough.com/field-notes-siemens-bas.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Siemens BAS — Data Center Commissioning Field Guide" />
+  <meta property="og:description" content="Comprehensive technical field guide for Siemens Building Automation Systems in data center commissioning. By Shane Thomas Strough." />
+  <meta property="og:image" content="https://shanestrough.com/images/shane-thomas-strough-datahall-1.jpg" />
+  <meta property="og:url" content="https://shanestrough.com/field-notes-siemens-bas.html" />
+  <meta property="og:type" content="article" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Siemens BAS — Data Center Commissioning Field Guide" />
+  <meta name="twitter:description" content="Comprehensive technical field guide for Siemens Building Automation Systems in data center commissioning. By Shane Thomas Strough." />
+  <meta name="twitter:image" content="https://shanestrough.com/images/shane-thomas-strough-datahall-1.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Siemens Building Automation Systems — Data Center Commissioning Field Guide",
+    "description": "Comprehensive technical field guide for Siemens Building Automation Systems in data center commissioning, covering Desigo CC, APOGEE, PXC controllers, BACnet, Modbus, Cerberus PRO fire alarm systems, and commissioning workflows.",
+    "author": {
+      "@type": "Person",
+      "name": "Shane Thomas Strough",
+      "url": "https://shanestrough.com"
+    },
+    "url": "https://shanestrough.com/field-notes-siemens-bas.html",
+    "image": "https://shanestrough.com/images/shane-thomas-strough-datahall-1.jpg",
+    "publisher": {
+      "@type": "Person",
+      "name": "Shane Thomas Strough"
+    },
+    "proficiencyLevel": "Expert",
+    "dependencies": "Siemens Desigo CC, APOGEE, PXC Controllers, BACnet, Modbus, Cerberus PRO"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,400;0,600;0,900;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black: #080A0C;
+      --deep: #0D1117;
+      --panel: #111820;
+      --border: #1E2D3D;
+      --electric: #00E5FF;
+      --teal: #00B4C6;
+      --dim-teal: rgba(0, 229, 255, 0.12);
+      --white: #F0F4F8;
+      --muted: #6B8099;
+      --warm: #C8A96E;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--electric); }
+
+    /* --- NAV --- */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: rgba(8, 10, 12, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--electric); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px; height: 1px;
+      background: var(--electric);
+    }
+
+    /* --- BACKGROUND GRID --- */
+    .page-header-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* --- PAGE HEADER --- */
+    .page-header {
+      padding: 12rem 2.5rem 4rem;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .breadcrumb {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb a {
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      line-height: 0.95;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-title span { color: var(--electric); }
+
+    .page-subtitle {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-author {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--warm);
+      margin-top: 0.8rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- TABLE OF CONTENTS --- */
+    .toc {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      padding: 0 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .toc-inner {
+      background: var(--deep);
+      border: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+    }
+
+    .toc-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.1em;
+      color: var(--electric);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toc-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 2rem;
+    }
+
+    .toc-link {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.35rem 0;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+      line-height: 1.5;
+    }
+
+    .toc-link:hover { color: var(--electric); }
+
+    .toc-link .toc-num {
+      color: var(--border);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+      min-width: 1.5rem;
+    }
+
+    /* --- ARTICLE CONTENT --- */
+    .article-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2.5rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- CHAPTER HEADERS --- */
+    .chapter-header {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1;
+      color: var(--white);
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      letter-spacing: 0.03em;
+    }
+
+    .chapter-header span { color: var(--electric); }
+
+    .sub-header {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      line-height: 1.1;
+      color: var(--white);
+      margin-top: 3rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.03em;
+    }
+
+    .sub-header span { color: var(--electric); }
+
+    /* --- BODY TEXT --- */
+    .article-content p {
+      font-family: 'Fraunces', serif;
+      font-size: 0.9rem;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .article-content p strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* --- NAMED BLOCKS (bold titles as mini-headers) --- */
+    .named-block {
+      margin-bottom: 1.2rem;
+    }
+
+    .named-block-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
+    .named-block p {
+      margin-bottom: 0.6rem;
+    }
+
+    /* --- BLOCKQUOTES / FIELD NOTES --- */
+    .field-note {
+      border-left: 3px solid var(--electric);
+      background: var(--dim-teal);
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .field-note p {
+      font-family: 'Fraunces', serif;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .field-note p strong {
+      color: var(--electric);
+      font-weight: 600;
+    }
+
+    /* --- TABLES --- */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      line-height: 1.6;
+    }
+
+    .article-content table th {
+      background: var(--panel);
+      color: var(--electric);
+      font-weight: 500;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      white-space: nowrap;
+    }
+
+    .article-content table td {
+      padding: 0.65rem 1rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--deep);
+      vertical-align: top;
+    }
+
+    .article-content table tr:hover td {
+      background: var(--panel);
+    }
+
+    /* --- LISTS --- */
+    .article-content ul,
+    .article-content ol {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+
+    .article-content li {
+      font-family: 'Fraunces', serif;
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+      padding-left: 0.3rem;
+    }
+
+    .article-content li strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .article-content ul li::marker {
+      color: var(--electric);
+    }
+
+    .article-content ol li::marker {
+      color: var(--electric);
+      font-family: 'DM Mono', monospace;
+      font-weight: 500;
+    }
+
+    /* --- HORIZONTAL RULE / SECTION DIVIDER --- */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    /* --- CLOSING SECTION --- */
+    .closing-block {
+      text-align: center;
+      padding: 3rem 0 2rem;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+
+    .closing-block .closing-statement {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: var(--muted);
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+
+    .closing-block .closing-statement.accent {
+      color: var(--electric);
+    }
+
+    .closing-block .closing-credit {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--white);
+      margin-top: 1.5rem;
+    }
+
+    .closing-block .closing-credit-sub {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    /* --- BACK LINK --- */
+    .back-link-wrap {
+      text-align: center;
+      padding: 2rem 0 3rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--electric);
+      text-decoration: none;
+      padding: 0.6rem 1.5rem;
+      border: 1px solid var(--electric);
+      transition: all 0.2s;
+    }
+
+    .back-link:hover {
+      background: var(--dim-teal);
+      letter-spacing: 0.3em;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+    }
+
+    .footer-copy {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* --- REVEAL --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 900px) {
+      .toc-columns { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 56px; left: 0; right: 0;
+        background: rgba(8,10,12,0.97);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links.open { display: flex; }
+      .nav-hamburger { display: flex; }
+      .page-header { padding: 9rem 1.5rem 3rem; }
+      .toc { padding: 0 1.5rem; }
+      .toc-inner { padding: 1.5rem; }
+      .article-content { padding: 0 1.5rem 3rem; }
+      .article-content table { font-size: 0.6rem; }
+      .article-content table th,
+      .article-content table td { padding: 0.5rem 0.6rem; }
+      footer { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 600px) {
+      .page-title { font-size: clamp(2rem, 8vw, 3rem); }
+      .chapter-header { font-size: 1.6rem; }
+      .sub-header { font-size: 1.15rem; }
+    }
+
+    @media (max-width: 480px) {
+      .toc-inner { padding: 1rem; }
+      .toc-link { font-size: 0.58rem; }
+      .article-content p,
+      .article-content li { font-size: 0.82rem; }
+      .field-note p { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">STS</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#expertise">Expertise</a></li>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="insights.html" class="active">Field Notes</a></li>
+      <li><a href="poetry.html">Poetry</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- BACKGROUND GRID -->
+  <div class="page-header-grid" aria-hidden="true"></div>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header reveal">
+    <div class="breadcrumb">
+      <a href="index.html">shanestrough.com</a> / <a href="insights.html">Field Notes</a> / Siemens BAS
+    </div>
+    <h1 class="page-title">
+      Siemens BAS /<br>
+      <span>Data Center Commissioning</span>
+    </h1>
+    <p class="page-subtitle">Cx Boot Camp Training Series &middot; Session 3</p>
+    <p class="page-author">Shane Thomas Strough</p>
+  </header>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc reveal">
+    <div class="toc-inner">
+      <div class="toc-title">// Table of Contents</div>
+      <div class="toc-columns">
+        <div>
+          <a class="toc-link" href="#agenda"><span class="toc-num">00</span>Session 3 Agenda</a>
+          <a class="toc-link" href="#ch1"><span class="toc-num">01</span>Siemens Product Family Overview</a>
+          <a class="toc-link" href="#ch2"><span class="toc-num">02</span>Desigo CC Platform</a>
+          <a class="toc-link" href="#ch2-features"><span class="toc-num">02b</span>Desigo CC Key Features</a>
+          <a class="toc-link" href="#ch3"><span class="toc-num">03</span>APOGEE Platform</a>
+          <a class="toc-link" href="#ch3-workflow"><span class="toc-num">03b</span>APOGEE Commissioning Workflow</a>
+          <a class="toc-link" href="#ch4"><span class="toc-num">04</span>Siemens Controllers</a>
+          <a class="toc-link" href="#ch4-bacnet"><span class="toc-num">04b</span>PXC BACnet Object Types</a>
+          <a class="toc-link" href="#ch4-legacy"><span class="toc-num">04c</span>Legacy Controllers (MEC/REC/TEC)</a>
+        </div>
+        <div>
+          <a class="toc-link" href="#ch5"><span class="toc-num">05</span>BACnet Implementation</a>
+          <a class="toc-link" href="#ch5-tools"><span class="toc-num">05b</span>BACnet Discovery &amp; Verification Tools</a>
+          <a class="toc-link" href="#ch6"><span class="toc-num">06</span>Modbus Integration</a>
+          <a class="toc-link" href="#ch7"><span class="toc-num">07</span>Siemens on the Data Center Floor</a>
+          <a class="toc-link" href="#ch8"><span class="toc-num">08</span>Common Fault Conditions</a>
+          <a class="toc-link" href="#ch9"><span class="toc-num">09</span>Siemens Fire Alarm Systems</a>
+          <a class="toc-link" href="#ch10"><span class="toc-num">10</span>BAS and Fire Alarm Integration</a>
+          <a class="toc-link" href="#ch11"><span class="toc-num">11</span>Tools and Software</a>
+          <a class="toc-link" href="#ch12"><span class="toc-num">12</span>Exercise &mdash; Group Discussion</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE CONTENT -->
+  <main class="article-content">
+
+    <!-- SESSION 3 AGENDA -->
+    <section id="agenda" class="reveal">
+      <h2 class="chapter-header"><span>Session 3</span> Agenda</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Left Column</th>
+              <th>Right Column</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>01 — Siemens Product Family Overview</td><td>01 — Siemens Fire Alarm Systems</td></tr>
+            <tr><td>02 — Desigo CC Platform</td><td>02 — Cerberus PRO Deep Dive</td></tr>
+            <tr><td>03 — APOGEE Platform</td><td>03 — Fire Alarm Commissioning Protocol</td></tr>
+            <tr><td>04 — Siemens Controllers</td><td>04 — Integration Between BAS and FA</td></tr>
+            <tr><td>05 — BACnet Implementation</td><td>05 — Common Fault Conditions</td></tr>
+            <tr><td>06 — Modbus Integration</td><td>06 — Tools and Software</td></tr>
+            <tr><td>07 — Siemens on the Data Center Floor</td><td>07 — Exercise — Group Discussion</td></tr>
+            <tr><td>08 — Commissioning Workflow</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 1 -->
+    <section id="ch1" class="reveal">
+      <h2 class="chapter-header">Chapter 1 — <span>Siemens Product Family Overview</span></h2>
+
+      <p>Siemens Building Technologies is one of the most widely deployed building automation and fire safety platforms in mission-critical facilities worldwide. In data center commissioning you will encounter Siemens products on virtually every large project — understanding their architecture, terminology, and integration methods is non-negotiable field knowledge.</p>
+
+      <p><strong>The Two Primary Platforms You Will Encounter:</strong></p>
+
+      <p><strong>Desigo CC</strong> — The current-generation integrated building management platform. Desigo CC is Siemens' flagship product for large mission-critical facilities. It integrates HVAC, fire safety, access control, and power monitoring under a single operator interface. Most new data center builds specify Desigo CC.</p>
+
+      <p><strong>APOGEE</strong> — The legacy platform. Many existing data centers and retrofit projects still run APOGEE. You will encounter APOGEE on existing facility upgrades and expansions. Understanding both platforms is required for full-scope commissioning work.</p>
+
+      <div class="field-note">
+        <p><strong>Critical field note:</strong> Do not assume a Siemens installation is Desigo CC just because the hardware is new. Verify the platform before you begin. APOGEE and Desigo CC have different commissioning workflows, different software tools, and different integration methods.</p>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 2 -->
+    <section id="ch2" class="reveal">
+      <h2 class="chapter-header">Chapter 2 — <span>Desigo CC Platform</span></h2>
+
+      <p><strong>What Is Desigo CC?</strong></p>
+
+      <p>Desigo CC (Command and Control) is Siemens' integrated building management platform designed for large, complex facilities. In data center applications it serves as the central operations hub — aggregating data from HVAC controllers, fire alarm panels, electrical systems, and access control into a single operator workstation.</p>
+
+      <p><strong>Core Architecture:</strong></p>
+
+      <p><strong>Management Station (Server)</strong><br>
+      The Desigo CC server runs the core software platform. All data from field controllers and subsystems aggregates here. The server hosts the engineering environment, the operator interface, and the historical data archive. In large data centers there will typically be a primary server and a redundant standby server.</p>
+
+      <p><strong>Operator Workstation</strong><br>
+      The client interface where operators monitor and control the facility. Multiple workstations can connect to a single Desigo CC server. The operator workstation displays system graphics, alarm lists, trend logs, and event history.</p>
+
+      <p><strong>Field Controllers</strong><br>
+      Desigo CC communicates with field-level controllers via BACnet/IP, BACnet MS/TP, or proprietary Siemens protocols depending on the hardware generation. Controllers handle local control logic and communicate data to the management station.</p>
+
+      <p><strong>Integration Engine</strong><br>
+      Desigo CC includes native integration capabilities for BACnet, Modbus, OPC, LON, and SNMP. This is what makes it valuable in data centers — it can aggregate data from chillers, UPS systems, PDUs, and precision cooling units regardless of manufacturer.</p>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- DESIGO CC KEY FEATURES -->
+    <section id="ch2-features" class="reveal">
+      <h2 class="sub-header">Desigo CC — <span>Key Features for Data Center Commissioning</span></h2>
+
+      <p><strong>System Manager</strong><br>
+      The engineering environment within Desigo CC. This is where points are configured, graphics are built, and control logic is programmed. During commissioning you will use System Manager to verify point configurations, check engineering unit assignments, and confirm alarm setpoints.</p>
+
+      <p><strong>Trend Logs</strong><br>
+      Desigo CC maintains configurable trend logs for all monitored points. During commissioning verify that trend logs are configured for all critical points — supply air temperature, chilled water supply and return, differential pressure, UPS battery temperature. Trend data is the primary tool for performance verification after systems are running.</p>
+
+      <p><strong>Alarm Management</strong><br>
+      Desigo CC uses a structured alarm hierarchy. Alarms are categorized by priority — Life Safety, Critical, Major, Minor, Warning. During commissioning verify that every alarm is assigned the correct priority and that routing to the correct operator group is configured. A life safety alarm routed to the wrong group is a commissioning deficiency.</p>
+
+      <p><strong>Graphics and Floor Plans</strong><br>
+      Desigo CC supports custom system graphics and floor plan overlays. During acceptance testing the owner will expect to see accurate system graphics that match the installed equipment. Verify all graphics against the as-built equipment layout before acceptance.</p>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 3 -->
+    <section id="ch3" class="reveal">
+      <h2 class="chapter-header">Chapter 3 — <span>APOGEE Platform</span></h2>
+
+      <p><strong>What Is APOGEE?</strong></p>
+
+      <p>APOGEE is Siemens' legacy building automation platform. It remains widely deployed in existing facilities and will be encountered on data center retrofits, expansions, and upgrade projects. APOGEE uses a hierarchical architecture with three distinct levels.</p>
+
+      <p><strong>APOGEE Architecture — Three Levels:</strong></p>
+
+      <p><strong>Level 3 — Insight Workstation</strong><br>
+      The operator interface and engineering workstation for APOGEE systems. Insight software runs on Windows and provides system monitoring, alarm management, trending, and programming access. This is your primary tool for APOGEE commissioning.</p>
+
+      <p><strong>Level 2 — Field Panel Controllers</strong><br>
+      APOGEE field panels handle local control for HVAC and mechanical systems. Common APOGEE field panels encountered in data centers:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Panel</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>MEC (Modular Equipment Controller)</td><td>Controls individual mechanical equipment — air handlers, chillers, cooling towers</td></tr>
+            <tr><td>REC (Remote Equipment Controller)</td><td>Smaller controller for terminal equipment</td></tr>
+            <tr><td>TEC (Terminal Equipment Controller)</td><td>Zone-level control for VAVs, FCUs</td></tr>
+            <tr><td>PXCM (PXC Modular)</td><td>Newer generation BACnet native controller</td></tr>
+            <tr><td>PXC36 / PXC64 / PXC128</td><td>PXC series — number indicates IO point capacity</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Level 1 — Field Devices</strong><br>
+      Sensors, actuators, valves, and dampers that connect directly to field panel IO. Same device types as discussed in Session 2 — temperature sensors, pressure transmitters, flow meters, differential pressure sensors.</p>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- APOGEE COMMISSIONING WORKFLOW -->
+    <section id="ch3-workflow" class="reveal">
+      <h2 class="sub-header">APOGEE — <span>Commissioning Workflow</span></h2>
+
+      <p><strong>Step 1: Establish Communication with Insight</strong><br>
+      Connect laptop to the APOGEE network. Launch Insight software. Verify communication to all field panels — a panel shown offline in Insight is the first item to resolve before any other commissioning activity.</p>
+
+      <p><strong>Step 2: Verify Point Database</strong><br>
+      Every physical IO point must have a corresponding point in the Insight database. Verify:</p>
+      <ul>
+        <li>Point name matches MEPiL tag</li>
+        <li>Engineering units are correct</li>
+        <li>Range calibration matches instrument submittal</li>
+        <li>Alarm setpoints match design documents</li>
+      </ul>
+
+      <p><strong>Step 3: Verify Field Wiring</strong><br>
+      Cross-reference each point in Insight against the field installation using loop drawings. Force outputs and verify field response. Read inputs and verify correct engineering unit display.</p>
+
+      <p><strong>Step 4: Verify Control Logic</strong><br>
+      Review APOGEE programming against the Sequence of Operation. Every control sequence must be tested and documented. Do not rely on the programmer's word that the logic is correct — test every sequence under real conditions.</p>
+
+      <p><strong>Step 5: Trend Verification</strong><br>
+      Enable trend logs for critical points. Allow the system to run for a minimum of 24 hours before acceptance. Review trend data to verify stable operation within design parameters.</p>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 4 -->
+    <section id="ch4" class="reveal">
+      <h2 class="chapter-header">Chapter 4 — <span>Siemens Controllers</span></h2>
+
+      <p><strong>Current Generation — PXC Series (BACnet Native)</strong></p>
+
+      <p>The PXC (Process Controller) series is Siemens' current-generation BACnet native controller family. PXC controllers are the most commonly specified Siemens controllers on new data center projects.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Controller</th><th>IO Capacity</th><th>Typical Application</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>PXC36-E.D</td><td>36 IO points</td><td>Terminal equipment, small AHUs</td></tr>
+            <tr><td>PXC64-E.D</td><td>64 IO points</td><td>Medium AHUs, pump skids</td></tr>
+            <tr><td>PXC128-E.D</td><td>128 IO points</td><td>Large AHUs, chiller plants</td></tr>
+            <tr><td>PXC200-E.D</td><td>200 IO points</td><td>Central plant controllers</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>PXC Communication Ports:</strong></p>
+      <ul>
+        <li>Ethernet port — BACnet/IP communication to management station</li>
+        <li>RS-485 port — BACnet MS/TP communication to field bus devices</li>
+        <li>USB port — local programming and diagnostics</li>
+      </ul>
+
+      <p><strong>PXC LED Indicators — Know These:</strong></p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>LED</th><th>Color/State</th><th>Meaning</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>RUN</td><td>Green solid</td><td>Controller operating normally</td></tr>
+            <tr><td>RUN</td><td>Green flashing</td><td>Controller in startup or download mode</td></tr>
+            <tr><td>ERR</td><td>Red solid</td><td>Hardware fault — requires service</td></tr>
+            <tr><td>ERR</td><td>Red flashing</td><td>Application fault — check programming</td></tr>
+            <tr><td>COM</td><td>Yellow flashing</td><td>Active communication on BACnet port</td></tr>
+            <tr><td>COM</td><td>Yellow solid</td><td>Communication fault</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="field-note">
+        <p><strong>Field tip:</strong> When you approach a Siemens PXC controller the first thing you check is the LED status. A red ERR LED stops all other commissioning activity on that controller until resolved.</p>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- PXC BACNET OBJECT TYPES -->
+    <section id="ch4-bacnet" class="reveal">
+      <h2 class="sub-header">PXC Controller — <span>BACnet Object Types</span></h2>
+
+      <p>Every point on a PXC controller is represented as a BACnet object. During commissioning you will read and write BACnet objects to verify correct operation.</p>
+
+      <p><strong>Core BACnet Object Types on PXC Controllers:</strong></p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Object Type</th><th>Abbreviation</th><th>Use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Analog Input</td><td>AI</td><td>Physical analog input — 4-20mA, 0-10VDC, RTD</td></tr>
+            <tr><td>Analog Output</td><td>AO</td><td>Physical analog output — valve command, VFD speed</td></tr>
+            <tr><td>Analog Value</td><td>AV</td><td>Software calculated value — setpoints, calculated temperatures</td></tr>
+            <tr><td>Binary Input</td><td>BI</td><td>Physical binary input — run status, alarm contact</td></tr>
+            <tr><td>Binary Output</td><td>BO</td><td>Physical binary output — start/stop command</td></tr>
+            <tr><td>Binary Value</td><td>BV</td><td>Software binary value — enable/disable flags</td></tr>
+            <tr><td>Multi-State Value</td><td>MSV</td><td>Multi-position status — system operating mode</td></tr>
+            <tr><td>Schedule</td><td>SCH</td><td>Time-based scheduling object</td></tr>
+            <tr><td>Calendar</td><td>CAL</td><td>Holiday and special day scheduling</td></tr>
+            <tr><td>Trend Log</td><td>TL</td><td>Historical data collection object</td></tr>
+            <tr><td>Notification Class</td><td>NC</td><td>Alarm routing configuration</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- LEGACY CONTROLLERS -->
+    <section id="ch4-legacy" class="reveal">
+      <h2 class="sub-header">Legacy Controllers — <span>APOGEE MEC/REC/TEC</span></h2>
+
+      <p><strong>MEC — Modular Equipment Controller</strong><br>
+      The MEC is the primary APOGEE field controller for mechanical equipment. MECs use proprietary Siemens P1 or P2 bus communication to the Insight workstation. Key things to know during commissioning:</p>
+
+      <ul>
+        <li>MEC address must match the address configured in Insight — address switches are physically set on the controller board</li>
+        <li>MEC programming is stored in battery-backed SRAM — a dead battery means lost programming</li>
+        <li>Always verify battery condition on legacy MECs before commissioning — a dead battery during testing is a project delay</li>
+        <li>MEC IO expansion modules extend the point count — verify all expansion modules are communicating before point verification begins</li>
+      </ul>
+
+      <p><strong>REC — Remote Equipment Controller</strong><br>
+      Smaller version of the MEC for terminal equipment. Same communication protocol. Same battery consideration.</p>
+
+      <p><strong>TEC — Terminal Equipment Controller</strong><br>
+      Zone-level controller for VAVs and fan coil units. TECs typically communicate via MS/TP bus back to a MEC or directly to an APOGEE network controller.</p>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 5 -->
+    <section id="ch5" class="reveal">
+      <h2 class="chapter-header">Chapter 5 — <span>BACnet Implementation on Siemens Systems</span></h2>
+
+      <p><strong>BACnet on Siemens — What You Need to Know</strong></p>
+
+      <p>Siemens implements BACnet/IP and BACnet MS/TP in accordance with ASHRAE Standard 135. However, Siemens also implements proprietary extensions and features that affect commissioning. Understanding the difference between standard BACnet behavior and Siemens-specific behavior prevents troubleshooting dead-ends.</p>
+
+      <p><strong>Siemens BACnet Device IDs</strong><br>
+      Every BACnet device requires a unique Device Instance (Device ID) on the network. On Siemens PXC controllers the Device ID is configured in the programming tool. During commissioning verify:</p>
+      <ul>
+        <li>No duplicate Device IDs on the network — duplicates will cause one or both devices to go offline</li>
+        <li>Device ID matches the project documentation</li>
+        <li>Device ID range falls within the owner's defined numbering scheme</li>
+      </ul>
+
+      <p><strong>BACnet/IP — Network Configuration</strong><br>
+      PXC controllers communicate BACnet/IP over standard Ethernet. Required configuration:</p>
+      <ul>
+        <li>Static IP address assigned — DHCP is not recommended for controllers in mission-critical environments</li>
+        <li>Subnet mask matches the BAS network segment</li>
+        <li>UDP port 47808 (0xBAC0) must be open on any network equipment between controllers and the management station</li>
+        <li>BACnet/IP Broadcast Management Device (BBMD) configured if controllers and servers are on different IP subnets</li>
+      </ul>
+
+      <p><strong>BACnet MS/TP — Field Bus Configuration</strong><br>
+      MS/TP is a serial RS-485 bus used for field-level devices. Key parameters:</p>
+      <ul>
+        <li>Baud rate — 9600, 19200, 38400, or 76800 bps — must match all devices on the same MS/TP segment</li>
+        <li>MAC address — unique address for each device on the MS/TP segment, range 0-127 for masters</li>
+        <li>Max Master — sets the highest MAC address the token will be passed to — set this correctly or the bus wastes time polling nonexistent addresses</li>
+        <li>Max Info Frames — number of data frames a device can send when it holds the token</li>
+      </ul>
+
+      <div class="field-note">
+        <p><strong>Common MS/TP commissioning fault:</strong> Baud rate mismatch between devices on the same segment. One device at 38400 and another at 19200 will prevent communication. Verify baud rate on every device before troubleshooting anything else.</p>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- BACNET DISCOVERY AND VERIFICATION TOOLS -->
+    <section id="ch5-tools" class="reveal">
+      <h2 class="sub-header">BACnet Discovery and <span>Verification Tools</span></h2>
+
+      <p>During Siemens BACnet commissioning you will need tools to verify device communication and object values independent of the Siemens software. These tools are your independent verification layer.</p>
+
+      <p><strong>YABE — Yet Another BACnet Explorer</strong><br>
+      Free open-source BACnet browser. Run on your laptop to discover all BACnet devices on the network, read object values, and write to writeable objects. Essential for:</p>
+      <ul>
+        <li>Verifying a PXC controller is online before opening Desigo CC or Insight</li>
+        <li>Reading point values independently of the Siemens management software</li>
+        <li>Confirming BACnet object names match project documentation</li>
+      </ul>
+
+      <p><strong>BACnet Stack Tools</strong><br>
+      Siemens provides BACnet diagnostic tools within the engineering software. Use these for advanced diagnostics but always verify independently with YABE first.</p>
+
+      <p><strong>Wireshark with BACnet Dissector</strong><br>
+      For network-level BACnet troubleshooting. Captures BACnet/IP packets on the Ethernet network. Use when a device appears offline in software but the physical connection is verified — the packet capture will show whether BACnet traffic is reaching the management station.</p>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 6 -->
+    <section id="ch6" class="reveal">
+      <h2 class="chapter-header">Chapter 6 — <span>Modbus Integration on Siemens Systems</span></h2>
+
+      <p><strong>When You Will Encounter Modbus on Siemens Projects</strong></p>
+
+      <p>Siemens controllers natively speak BACnet. Modbus appears in data center BAS projects when integrating third-party equipment that does not support BACnet:</p>
+      <ul>
+        <li>Older chiller models</li>
+        <li>UPS systems and battery monitoring</li>
+        <li>Power distribution units (PDUs)</li>
+        <li>Generator controls</li>
+        <li>Chemical feed systems</li>
+        <li>Some precision cooling units</li>
+      </ul>
+
+      <p>Siemens PXC controllers support Modbus RTU (RS-485 serial) and Modbus TCP (Ethernet) as integration protocols. The PXC acts as the Modbus Master — it polls the third-party device (Modbus Slave) for data.</p>
+
+      <h3 class="sub-header">Modbus Integration — <span>Commissioning Checklist</span></h3>
+
+      <p><strong>Before Connecting:</strong></p>
+      <ul>
+        <li>Obtain the Modbus register map from the equipment manufacturer — this document defines every available data point, its register address, data type, and scaling factor</li>
+        <li>Verify the communication parameters — baud rate, parity, stop bits, slave address (RTU) or IP address and port (TCP)</li>
+        <li>Verify the Siemens controller has the correct Modbus driver loaded in its programming</li>
+      </ul>
+
+      <p><strong>Verifying Modbus Communication:</strong><br>
+      Use Modbus Poll software on your laptop to independently verify communication with the Modbus slave device before attempting integration through the Siemens controller. If Modbus Poll cannot read the device, the Siemens controller will not be able to either — resolve the communication issue at the device level first.</p>
+
+      <p><strong>Common Modbus Register Types:</strong></p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Register Type</th><th>Address Range</th><th>Access</th><th>Data Type</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Coil</td><td>00001-09999</td><td>Read/Write</td><td>Boolean (0/1)</td></tr>
+            <tr><td>Discrete Input</td><td>10001-19999</td><td>Read Only</td><td>Boolean (0/1)</td></tr>
+            <tr><td>Input Register</td><td>30001-39999</td><td>Read Only</td><td>16-bit integer</td></tr>
+            <tr><td>Holding Register</td><td>40001-49999</td><td>Read/Write</td><td>16-bit integer</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Scaling and Engineering Units:</strong><br>
+      Modbus registers contain raw integer values. The register map will define the scaling factor required to convert the raw value to engineering units. Example: a chiller leaving water temperature register returns a value of 445. The register map states the scaling factor is 0.1&deg;F. Actual temperature = 44.5&deg;F.</p>
+
+      <p>Verify every scaled engineering unit value during commissioning — a wrong scaling factor produces plausible-looking data that is factually incorrect and will cause the control system to operate incorrectly.</p>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 7 -->
+    <section id="ch7" class="reveal">
+      <h2 class="chapter-header">Chapter 7 — <span>Siemens on the Data Center Floor</span></h2>
+
+      <p><strong>Typical Siemens Scope on a Hyperscale Data Center Build</strong></p>
+
+      <p>On a large data center project you will encounter Siemens equipment across multiple system types. Understanding the full scope prevents gaps during commissioning planning.</p>
+
+      <p><strong>Cooling Plant Integration</strong></p>
+      <ul>
+        <li>Chiller plant — supply/return water temperatures, flow, differential pressure, chiller status and alarms</li>
+        <li>Cooling tower — fan status, basin temperature, conductivity, blowdown valve</li>
+        <li>Primary/secondary pump skids — VFD speed, run status, differential pressure, flow</li>
+        <li>Heat exchangers — approach temperature monitoring, isolation valve status</li>
+      </ul>
+
+      <p><strong>Precision Cooling</strong></p>
+      <ul>
+        <li>CRAHs and CRACs — supply/return air temperature, humidity, fan speed, cooling capacity, alarm status</li>
+        <li>Most precision cooling units communicate via BACnet or Modbus — verify protocol with submittal before commissioning begins</li>
+        <li>In-row cooling units — same integration approach as CRAHs</li>
+      </ul>
+
+      <p><strong>Environmental Monitoring</strong></p>
+      <ul>
+        <li>Temperature and humidity sensors in data halls — typically hardwired AI points to Siemens IO modules</li>
+        <li>Leak detection panels — binary input to BAS indicating leak alarm</li>
+        <li>Airflow stations — analog input for CFM measurement</li>
+      </ul>
+
+      <p><strong>Electrical System Integration</strong></p>
+      <ul>
+        <li>Generator status and fuel level — Modbus or hardwired binary inputs</li>
+        <li>UPS status and battery parameters — typically Modbus TCP</li>
+        <li>Automatic Transfer Switch (ATS) position — hardwired binary inputs</li>
+        <li>Power Distribution Units (PDUs) — SNMP or Modbus</li>
+      </ul>
+
+      <p><strong>Life Safety</strong></p>
+      <ul>
+        <li>Fire alarm system interface — hardwired dry contact or network integration (covered in detail in Chapter 9)</li>
+        <li>Access control — typically separate Siemens platform (Siemens SiPass or equivalent)</li>
+      </ul>
+
+      <h3 class="sub-header">Data Center Commissioning Sequence — <span>Siemens Systems</span></h3>
+
+      <p><strong>Phase 1 — Pre-Functional Checks</strong><br>
+      Before any functional testing begins:</p>
+      <ul>
+        <li>Verify Desigo CC or Insight server is online and communicating with all field controllers</li>
+        <li>Verify all field controllers show online and error-free in the management software</li>
+        <li>Verify all IO points are reading in the management software</li>
+        <li>Verify all trend logs are configured and recording</li>
+        <li>Verify all alarm setpoints are configured per design documents</li>
+        <li>Verify all graphics are accurate to the as-built installation</li>
+      </ul>
+
+      <p><strong>Phase 2 — Point-by-Point Verification</strong><br>
+      Working from the MEPiL:</p>
+      <ul>
+        <li>For every analog input: verify correct engineering unit value at a known condition</li>
+        <li>For every analog output: command output and verify field device responds correctly</li>
+        <li>For every binary input: verify correct on/off status at field device</li>
+        <li>For every binary output: command on/off and verify field device responds correctly</li>
+        <li>Document every verified point in the commissioning log</li>
+      </ul>
+
+      <p><strong>Phase 3 — Sequence of Operation Testing</strong></p>
+      <ul>
+        <li>Test every control sequence defined in the Sequence of Operation</li>
+        <li>Test normal operating sequences under actual load conditions</li>
+        <li>Test all failure scenarios — simulate equipment failures and verify failover behavior</li>
+        <li>Test all alarm conditions — verify alarms appear in correct priority in management software and route to correct operator group</li>
+        <li>Document every tested sequence with pass/fail result</li>
+      </ul>
+
+      <p><strong>Phase 4 — Integrated Systems Testing</strong></p>
+      <ul>
+        <li>Verify communication between Siemens BAS and all integrated third-party systems</li>
+        <li>Simulate fire alarm conditions and verify BAS response (fan shutdown, damper positions, door releases)</li>
+        <li>Verify power failure response — test UPS transfer and verify BAS continues to operate</li>
+        <li>Verify generator start sequence and BAS response</li>
+      </ul>
+
+      <p><strong>Phase 5 — Trend and Performance Verification</strong></p>
+      <ul>
+        <li>Allow systems to operate for minimum 24-72 hours under design conditions</li>
+        <li>Review trend data for all critical points — temperature stability, pressure stability, humidity control</li>
+        <li>Document any deviations from design parameters</li>
+        <li>Verify all trend logs are archiving correctly to the management station</li>
+      </ul>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 8 -->
+    <section id="ch8" class="reveal">
+      <h2 class="chapter-header">Chapter 8 — <span>Common Siemens Fault Conditions</span></h2>
+
+      <p><strong>Know these before you go to the field. Most commissioning delays come from one of these.</strong></p>
+
+      <hr class="section-divider" />
+
+      <h3 class="sub-header">Fault 1: <span>Controller Offline in Management Software</span></h3>
+
+      <p>Possible causes:</p>
+      <ul>
+        <li>Network connectivity issue — check Ethernet cable, switch port, IP configuration</li>
+        <li>Duplicate Device ID on network — use YABE to scan for duplicates</li>
+        <li>Controller in fault state — check ERR LED on controller</li>
+        <li>Firewall blocking UDP port 47808 — verify with network team</li>
+        <li>Controller IP address conflict — verify no other device has same IP</li>
+      </ul>
+
+      <p>Troubleshooting sequence:</p>
+      <ol>
+        <li>Ping the controller IP from your laptop — if no response, network issue</li>
+        <li>If ping succeeds, open YABE — if controller appears, software configuration issue</li>
+        <li>If controller appears in YABE but not in Desigo CC, check Device ID and network routing configuration</li>
+      </ol>
+
+      <hr class="section-divider" />
+
+      <h3 class="sub-header">Fault 2: <span>Point Reading Incorrect Value</span></h3>
+
+      <p>Possible causes:</p>
+      <ul>
+        <li>Wrong input type configured — AI configured as 4-20mA receiving 0-10VDC signal</li>
+        <li>Wrong range configured — transmitter range set to 0-100 PSI but device is 0-200 PSI</li>
+        <li>Wiring error — signal wired to wrong terminal</li>
+        <li>Bad sensor — sensor failed or out of calibration</li>
+        <li>Scaling error — engineering unit conversion factor incorrect</li>
+      </ul>
+
+      <p>Troubleshooting sequence:</p>
+      <ol>
+        <li>Verify input type in controller programming matches loop drawing</li>
+        <li>Verify range in controller programming matches equipment submittal</li>
+        <li>Use multimeter to measure raw signal at controller terminal</li>
+        <li>Compare raw signal to expected value at known condition</li>
+        <li>If raw signal is correct but engineering unit value is wrong — programming error</li>
+        <li>If raw signal is wrong — field wiring or sensor issue</li>
+      </ol>
+
+      <hr class="section-divider" />
+
+      <h3 class="sub-header">Fault 3: <span>Output Not Responding</span></h3>
+
+      <p>Possible causes:</p>
+      <ul>
+        <li>Output commanded but field device not wired correctly</li>
+        <li>Overridden output — Siemens controllers allow manual overrides that prevent normal control</li>
+        <li>Output in wrong mode — manual vs automatic</li>
+        <li>Interlock preventing operation — safety interlock holding output off</li>
+        <li>Actuator or valve issue — mechanical failure in field device</li>
+      </ul>
+
+      <p>Troubleshooting sequence:</p>
+      <ol>
+        <li>Verify output value in controller programming — is it being commanded?</li>
+        <li>Check for active overrides in Desigo CC or Insight — release any manual overrides</li>
+        <li>Measure output signal at controller terminal with multimeter</li>
+        <li>If signal is correct at controller terminal, trace wiring to field device</li>
+        <li>Verify field device receives signal and responds mechanically</li>
+      </ol>
+
+      <hr class="section-divider" />
+
+      <h3 class="sub-header">Fault 4: <span>MS/TP Bus Communication Failure</span></h3>
+
+      <p>Possible causes:</p>
+      <ul>
+        <li>Baud rate mismatch between devices</li>
+        <li>Duplicate MAC addresses on bus segment</li>
+        <li>Incorrect termination — RS-485 bus requires 120-ohm termination resistors at each end</li>
+        <li>Wiring fault — polarity reversal on RS-485 A/B conductors</li>
+        <li>Bus too long — RS-485 maximum recommended length is 4000 feet</li>
+      </ul>
+
+      <p>Troubleshooting sequence:</p>
+      <ol>
+        <li>Verify baud rate on all devices on the segment</li>
+        <li>Verify MAC addresses — no duplicates</li>
+        <li>Verify termination resistors are installed at both physical ends of the bus</li>
+        <li>Check A/B polarity — swap if reversed</li>
+        <li>Use Wireshark to capture MS/TP traffic and verify token passing</li>
+      </ol>
+
+      <hr class="section-divider" />
+
+      <h3 class="sub-header">Fault 5: <span>Alarm Not Appearing in Management Software</span></h3>
+
+      <p>Possible causes:</p>
+      <ul>
+        <li>Alarm not configured — point exists but no alarm object created</li>
+        <li>Wrong Notification Class assigned — alarm routes to wrong operator group</li>
+        <li>Alarm suppressed — inhibit flag active on the point</li>
+        <li>Setpoint not configured — alarm threshold set to wrong value</li>
+        <li>Communication gap — controller offline when alarm occurred</li>
+      </ul>
+
+      <p>Troubleshooting sequence:</p>
+      <ol>
+        <li>Verify alarm object exists for the point in the programming</li>
+        <li>Verify Notification Class assignment routes to correct operator group</li>
+        <li>Check for active alarm inhibits on the point</li>
+        <li>Verify alarm setpoint matches design documents</li>
+        <li>Force the condition to trigger the alarm and trace its path through the system</li>
+      </ol>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 9 -->
+    <section id="ch9" class="reveal">
+      <h2 class="chapter-header">Chapter 9 — <span>Siemens Fire Alarm Systems</span></h2>
+
+      <p><strong>Product Families — What You Will Encounter</strong></p>
+
+      <p>Siemens has two primary fire alarm product families deployed in data center applications:</p>
+
+      <p><strong>Cerberus PRO</strong><br>
+      Siemens' current-generation intelligent fire alarm platform. Cerberus PRO is the most commonly specified Siemens fire alarm system on new data center construction. It supports addressable detection, aspirating smoke detection (ASD), suppression system monitoring, and integration with the BAS.</p>
+
+      <p><strong>Sinteso (European market designation)</strong><br>
+      Equivalent to Cerberus PRO for international projects. You will encounter Sinteso on global data center builds. Same commissioning approach as Cerberus PRO with minor regional differences.</p>
+
+      <p><strong>FireFinder XLS</strong><br>
+      Legacy Siemens fire alarm platform. Still widely deployed in existing facilities and retrofit projects. If you are commissioning a fire alarm system on an existing data center, verify which platform is installed before proceeding.</p>
+
+      <div class="field-note">
+        <p><strong>Critical note:</strong> Fire alarm commissioning requires licensed fire alarm technicians in most jurisdictions. As a BAS integrator your role is typically limited to verifying the integration between the fire alarm system and the BAS — not commissioning the fire alarm system itself. Always verify scope of work and licensing requirements before touching fire alarm equipment.</p>
+      </div>
+
+      <h3 class="sub-header">Cerberus PRO — <span>System Architecture</span></h3>
+
+      <p><strong>Central Controller — FC722 / FC724</strong><br>
+      The Cerberus PRO central controller is the brain of the fire alarm system. It processes detector data, manages alarm conditions, controls output devices, and communicates with the BAS. In large data centers multiple FC controllers may be networked together in a peer-to-peer ring topology for redundancy.</p>
+
+      <p><strong>Loop Controllers</strong><br>
+      Cerberus PRO uses addressable detection loops. Each loop controller manages a circuit of addressable devices — smoke detectors, heat detectors, manual call points, and modules. Each device on the loop has a unique address.</p>
+
+      <p><strong>Addressable Devices</strong><br>
+      Every detector and module on a Cerberus PRO system has a unique address set during installation. The address determines:</p>
+      <ul>
+        <li>Where the device appears on the system graphics</li>
+        <li>What zone and area it belongs to</li>
+        <li>What outputs activate when it alarms</li>
+      </ul>
+
+      <p><strong>Network Communication</strong><br>
+      Cerberus PRO communicates to the BAS via:</p>
+      <ul>
+        <li>Hardwired dry contact outputs — the most reliable and most common method</li>
+        <li>BACnet/IP — available on newer Cerberus PRO versions via network interface module</li>
+        <li>OPC — available via Siemens integration module</li>
+        <li>Desigo CC native integration — when both systems are Siemens, native integration provides the richest data exchange</li>
+      </ul>
+
+      <h3 class="sub-header">Cerberus PRO — <span>Detector Types in Data Centers</span></h3>
+
+      <p><strong>Standard Addressable Smoke Detectors</strong><br>
+      Photo-electric and ionization detectors mounted in ceiling spaces. Standard detection for general areas — corridors, offices, electrical rooms.</p>
+
+      <p><strong>Aspirating Smoke Detection (ASD) — Very Early Warning</strong><br>
+      ASD systems (also called VESDA — Very Early Smoke Detection Apparatus) are the primary detection technology in data hall spaces. ASD systems actively draw air samples through a pipe network to a detection chamber. They detect smoke at concentrations far below what standard detectors respond to.</p>
+
+      <p>In data centers the ASD pipe network typically runs through the ceiling space and under the raised floor. Commissioning ASD systems involves:</p>
+      <ul>
+        <li>Verifying all sampling ports are open and unobstructed</li>
+        <li>Verifying correct airflow through the system (measured in liters per minute)</li>
+        <li>Verifying alarm threshold settings — Alert, Action, Fire 1, Fire 2</li>
+        <li>Performing smoke sensitivity testing at the sampling ports</li>
+        <li>Verifying integration to fire alarm panel and BAS</li>
+      </ul>
+
+      <p><strong>Linear Heat Detection</strong><br>
+      Heat-sensitive cable deployed in cable trays and under raised floors. When the cable reaches its rated temperature it creates a short circuit that the panel detects as an alarm.</p>
+
+      <p><strong>Flame Detectors</strong><br>
+      UV/IR flame detectors in areas with high fire risk — generator rooms, diesel storage, battery rooms. Verify field of view covers the target area and that no obstructions block the detector.</p>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- FIRE ALARM COMMISSIONING PROTOCOL -->
+    <section class="reveal">
+      <h2 class="sub-header">Fire Alarm Commissioning Protocol — <span>Data Centers</span></h2>
+
+      <p><strong>Pre-Commissioning Requirements</strong></p>
+      <ul>
+        <li>Verify all detection devices are installed and addressed per the fire alarm drawing package</li>
+        <li>Verify all output devices — bells, strobes, door holders, suppression system interface — are installed</li>
+        <li>Verify fire alarm panel programming is loaded and matches the design documents</li>
+        <li>Verify all notification appliance circuits are wired and balanced</li>
+        <li>Obtain copies of the fire alarm drawing package, device address list, and sequence of operations</li>
+      </ul>
+
+      <p><strong>Point-by-Point Testing</strong><br>
+      Every addressable device must be individually tested. For each device:</p>
+      <ul>
+        <li>Verify the device address matches the drawing</li>
+        <li>Activate the device (introduce smoke, heat, or use test magnet per device type)</li>
+        <li>Verify the correct device identification appears at the panel</li>
+        <li>Verify the correct zone and area designation</li>
+        <li>Verify correct output activation per the Sequence of Operations</li>
+        <li>Document the test result</li>
+      </ul>
+
+      <p><strong>ASD System Testing</strong></p>
+      <ul>
+        <li>Verify airflow readings at sampling ports against design specifications</li>
+        <li>Introduce aerosol test smoke at the sampling port furthest from the detection unit — this is the worst-case scenario for detection sensitivity</li>
+        <li>Verify the system detects at the correct alarm threshold</li>
+        <li>Verify integration to fire alarm panel triggers at correct threshold</li>
+      </ul>
+
+      <p><strong>Integrated Systems Testing</strong><br>
+      This is where BAS commissioning and fire alarm commissioning intersect. Verify:</p>
+      <ul>
+        <li>Fire alarm signal reaches BAS correctly — hardwired contact or network integration</li>
+        <li>BAS responds correctly to fire alarm signal — fan shutdown sequence, damper positions, elevator recall</li>
+        <li>HVAC smoke control sequences activate correctly</li>
+        <li>All smoke dampers go to correct position on alarm</li>
+        <li>Suppression system pre-action sequence operates correctly — verify with suppression contractor</li>
+      </ul>
+
+      <p><strong>Documentation Requirements</strong></p>
+      <ul>
+        <li>Completed point-by-point test forms for every device</li>
+        <li>ASD system flow test results</li>
+        <li>Integrated systems test results</li>
+        <li>Any deficiencies noted and resolved</li>
+        <li>Certificate of completion signed by licensed fire alarm technician</li>
+      </ul>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 10 -->
+    <section id="ch10" class="reveal">
+      <h2 class="chapter-header">Chapter 10 — <span>BAS and Fire Alarm Integration</span></h2>
+
+      <p><strong>This is the most critical integration point on any data center project.</strong></p>
+
+      <p>The interface between the Building Automation System and the Fire Alarm System must be verified completely before any occupied testing or owner acceptance.</p>
+
+      <p><strong>Integration Methods — Ranked by Reliability:</strong></p>
+
+      <p><strong>1. Hardwired Dry Contact (Most Reliable)</strong><br>
+      The fire alarm panel provides dry contact outputs that signal the BAS. The BAS monitors these contacts as binary inputs. When the fire alarm activates, the contact closes, the BAS detects the change, and executes the smoke control sequence.</p>
+
+      <p>This method is the most reliable because it is the simplest. No network dependency. No software handshake. Just a contact open or closed.</p>
+
+      <p>During commissioning verify:</p>
+      <ul>
+        <li>Contact status reads correctly in the BAS under normal conditions</li>
+        <li>Contact status changes correctly when fire alarm activates</li>
+        <li>BAS executes correct sequence within required time when contact changes</li>
+      </ul>
+
+      <p><strong>2. BACnet Integration (Richest Data)</strong><br>
+      When both systems are capable, BACnet integration provides more detailed alarm information — specific zone, specific device, alarm type. The fire alarm panel exposes BACnet objects that the BAS reads via BACnet/IP.</p>
+
+      <p>This method provides more data but adds network dependency. Always verify that hardwired backup contacts exist for critical functions — never rely solely on network integration for life safety functions.</p>
+
+      <p><strong>3. OPC Integration</strong><br>
+      OPC server on the fire alarm system communicates with OPC client on the BAS. Provides good data exchange but adds software dependency. Use hardwired contacts for critical outputs.</p>
+
+      <h3 class="sub-header">Smoke Control Sequences — <span>What the BAS Must Do</span></h3>
+
+      <p>When a fire alarm activates in a data center, the BAS must execute specific smoke control sequences. These sequences are defined in the life safety section of the design documents and must be tested completely before owner acceptance.</p>
+
+      <p><strong>Typical Data Center Smoke Control Requirements:</strong></p>
+
+      <p><strong>General Alarm — Full Building</strong></p>
+      <ul>
+        <li>All supply fans — verify response per design (typically shutdown or switch to smoke purge mode)</li>
+        <li>All return and exhaust fans — verify response per design</li>
+        <li>All smoke dampers — verify drive to correct position (open or closed per design intent)</li>
+        <li>All stairwell pressurization fans — verify activation</li>
+        <li>Elevator recall — verify coordination with elevator contractor</li>
+        <li>Emergency lighting — verify activation</li>
+      </ul>
+
+      <p><strong>Data Hall Specific Alarm</strong></p>
+      <ul>
+        <li>Precision cooling units — verify response per design (some designs require CRACs to continue operating during fire alarm to prevent equipment overheating)</li>
+        <li>Raised floor supply dampers — verify position</li>
+        <li>Pre-action suppression system interface — verify sequence with suppression contractor</li>
+        <li>Data hall exhaust — verify activation for smoke purge if designed</li>
+      </ul>
+
+      <p><strong>Suppression System Pre-Discharge Warning</strong></p>
+      <ul>
+        <li>Audible/visual warning devices — verify activation</li>
+        <li>Time delay — verify correct delay period before suppression discharge</li>
+        <li>Abort switch function — verify abort capability works correctly</li>
+        <li>Personnel egress verification — coordinate with fire alarm contractor</li>
+      </ul>
+
+      <div class="field-note">
+        <p><strong>Critical note:</strong> The smoke control sequence in a data center is more complex than a standard commercial building because the equipment being protected (servers and storage) generates significant heat that must be managed even during a fire event. Some precision cooling units are designed to continue operating during a fire alarm. Verify the design intent for every piece of equipment before accepting the smoke control sequence as correct.</p>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 11 -->
+    <section id="ch11" class="reveal">
+      <h2 class="chapter-header">Chapter 11 — <span>Tools and Software</span></h2>
+
+      <p><strong>Required Software for Siemens Commissioning:</strong></p>
+
+      <p><strong>Desigo CC Engineering Software</strong><br>
+      The Siemens engineering environment for Desigo CC. Used for all programming, configuration, and diagnostics on Desigo CC systems. Requires Siemens training and authorization. Obtain credentials and software access before arriving on site.</p>
+
+      <p><strong>Insight Workstation Software</strong><br>
+      The engineering and operator interface for APOGEE systems. Windows-based. Obtain installation media and license before commissioning begins.</p>
+
+      <p><strong>XWP — Extended Workstation Programming</strong><br>
+      The programming tool for APOGEE field panel controllers (MEC, REC, TEC). Used to load and verify controller programming. Required for any APOGEE field panel troubleshooting.</p>
+
+      <p><strong>Cerberus PRO Engineering Tool (FS720)</strong><br>
+      The programming and diagnostic software for Cerberus PRO fire alarm systems. Used by licensed fire alarm technicians. As a BAS integrator you will use this in a read-only capacity to verify integration point status.</p>
+
+      <p><strong>Field Diagnostics Tools:</strong></p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Tool</th><th>Use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>YABE (BACnet Explorer)</td><td>Independent BACnet device discovery and point verification</td></tr>
+            <tr><td>Modbus Poll</td><td>Independent Modbus register reading and verification</td></tr>
+            <tr><td>Wireshark</td><td>Network packet capture for BACnet/IP and Modbus TCP diagnostics</td></tr>
+            <tr><td>PuTTY</td><td>Serial terminal for RS-485 diagnostics</td></tr>
+            <tr><td>Siemens Service Tool (handheld)</td><td>Local controller diagnostics without laptop</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Test Equipment:</strong></p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Equipment</th><th>Use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Multimeter</td><td>Signal verification, continuity testing, voltage measurement</td></tr>
+            <tr><td>4-20mA Loop Calibrator</td><td>Simulate and verify analog input signals</td></tr>
+            <tr><td>RS-485 Line Analyzer</td><td>MS/TP bus diagnostics, signal quality measurement</td></tr>
+            <tr><td>Network Cable Tester</td><td>Ethernet wiring verification</td></tr>
+            <tr><td>Laptop with USB-to-RS485 adapter</td><td>Serial communication with legacy controllers</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CHAPTER 12 -->
+    <section id="ch12" class="reveal">
+      <h2 class="chapter-header">Chapter 12 — <span>Exercise — Group Discussion</span></h2>
+
+      <p>Using the Siemens system documentation provided for your project, work through the following:</p>
+
+      <p><strong>1 — Platform Identification</strong><br>
+      Identify which Siemens platform is installed on your project — Desigo CC or APOGEE. What evidence tells you which platform you have? What are the first three things you verify before beginning commissioning on that platform?</p>
+
+      <p><strong>2 — Controller Verification</strong><br>
+      Identify all Siemens PXC controllers on the project. For each controller:</p>
+      <ul>
+        <li>What is the Device ID?</li>
+        <li>What is the IP address?</li>
+        <li>How many IO points does it have?</li>
+        <li>What equipment does it control?</li>
+        <li>What is the current LED status?</li>
+      </ul>
+
+      <p><strong>3 — BACnet Point Verification</strong><br>
+      Using YABE, discover all BACnet devices on the BAS network. For each device:</p>
+      <ul>
+        <li>Does it appear in YABE?</li>
+        <li>Does the Device ID match the project documentation?</li>
+        <li>Select three points on each controller and verify the value matches field conditions</li>
+      </ul>
+
+      <p><strong>4 — Fire Alarm Integration</strong><br>
+      Identify the fire alarm to BAS interface on your project:</p>
+      <ul>
+        <li>What integration method is used — hardwired or network?</li>
+        <li>Where are the hardwired contacts terminated in the BAS?</li>
+        <li>What BAS sequence activates on general fire alarm?</li>
+        <li>What BAS sequence activates on data hall alarm?</li>
+        <li>Have the sequences been tested?</li>
+      </ul>
+
+      <p><strong>5 — Discussion Questions</strong></p>
+      <ul>
+        <li>You discover a PXC controller with a red ERR LED. What are your first three diagnostic steps?</li>
+        <li>A Modbus-integrated UPS is not showing data in Desigo CC. What is your troubleshooting sequence?</li>
+        <li>The fire alarm triggers but the precision cooling units do not respond as designed. Who do you call first?</li>
+      </ul>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CORE PRINCIPLE / CLOSING -->
+    <section class="reveal">
+      <h2 class="chapter-header">Core Principle — <span>Siemens Is the Platform. You Are the Commissioning Agent.</span></h2>
+
+      <p>Siemens provides the tools, the controllers, the software, and the integration capability. Your job is to verify that what was designed is what was installed, and that what was installed actually works.</p>
+
+      <p>The Siemens platform does not commission itself. The programming does not verify itself. The integration does not test itself.</p>
+
+      <p>You do that.</p>
+
+      <p>With the drawings. With the tools. With the methodical process covered in this session and every session before it.</p>
+
+      <p>When you sign off on a Siemens-controlled system in a data center, you are making a statement that the cooling plant, the environmental monitoring, the fire alarm integration, and the smoke control sequences will perform as designed when the facility is running at full capacity and something goes wrong.</p>
+
+      <p><strong>Something will always go wrong eventually.</strong></p>
+
+      <p>Your commissioning work is the reason it doesn't become a catastrophe when it does.</p>
+    </section>
+
+    <!-- CLOSING BLOCK -->
+    <div class="closing-block reveal">
+      <div class="closing-statement">You are not just here to check systems.</div>
+      <div class="closing-statement accent">You are here to make them work — and make them last.</div>
+      <div class="closing-credit">Siemens Building Automation Systems</div>
+      <div class="closing-credit-sub">Data Center Commissioning Field Guide</div>
+      <div class="closing-credit-sub">Shane Thomas Strough</div>
+    </div>
+
+    <!-- BACK LINK -->
+    <div class="back-link-wrap">
+      <a class="back-link" href="insights.html">&larr; Back to Field Notes</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Shane Thomas Strough</span>
+    <span style="font-family:'Fraunces',serif; font-style:italic; font-size:0.7rem; color:var(--muted);">Sovereign. Honest. Aware. Navigating. Evolving.</span>
+    <span class="footer-copy">&copy; 2026 &middot; shanestrough.com</span>
+  </footer>
+
+  <script>
+    // --- MOBILE MENU ---
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+
+    // --- INTERSECTION OBSERVER ---
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
