@@ -30,7 +30,8 @@
       "https://www.linkedin.com/in/shane-thomas-strough/",
       "https://medium.com/@shane-thomas-strough",
       "https://github.com/shane-thomas-strough",
-      "https://shanestrough.substack.com"
+      "https://shanestrough.substack.com",
+      "https://www.youtube.com/@ShaneThomasStrough"
     ],
     "jobTitle": "Founder & Principal Architect",
     "worksFor": {
@@ -73,6 +74,25 @@
       "@type": "PostalAddress",
       "addressCountry": "US",
       "addressRegion": "FL"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD Schema: Video -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Shane Thomas Strough — 75th Anniversary Gala",
+    "description": "Shane Thomas Strough at the 75th anniversary corporate celebration. Director-level Integration and Commissioning Leader with 15+ years executing zero-downtime cutovers across DoD, federal, hyperscale data center, aerospace, and industrial infrastructure.",
+    "thumbnailUrl": "https://img.youtube.com/vi/F8d0t349LKg/maxresdefault.jpg",
+    "uploadDate": "2026-03-26",
+    "contentUrl": "https://www.youtube.com/watch?v=F8d0t349LKg",
+    "embedUrl": "https://www.youtube.com/embed/F8d0t349LKg",
+    "publisher": {
+      "@type": "Person",
+      "name": "Shane Thomas Strough",
+      "url": "https://shanestrough.com"
     }
   }
   </script>
@@ -840,6 +860,36 @@
       color: var(--muted);
       margin-top: 0.3rem;
       display: block;
+    }
+
+    /* ─── VIDEO EMBED ─── */
+    .video-embed {
+      margin-top: 3rem;
+      grid-column: 1 / -1;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 1rem;
     }
 
     /* ─── CONTACT ─── */
@@ -1744,6 +1794,12 @@
         </div>
       </div>
     </div>
+    <div class="video-embed reveal" style="max-width:1200px; margin:3rem auto 0; padding:0 2.5rem;">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/F8d0t349LKg" title="Shane Thomas Strough — 75th Anniversary Gala" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="video-label">75th Anniversary Gala · Shane Thomas Strough</p>
+    </div>
   </div>
 
   <!-- CONSULTING SERVICES -->
@@ -1828,6 +1884,10 @@
           <span class="link-label">Substack — Subscribe to the Brief</span>
           <span class="link-arrow">↗</span>
         </a>
+        <a class="contact-link" href="https://www.youtube.com/@ShaneThomasStrough" target="_blank" rel="noopener">
+          <span class="link-label">YouTube — Watch</span>
+          <span class="link-arrow">↗</span>
+        </a>
         <a class="contact-link" href="/cdn-cgi/l/email-protection#e7948f8689829493958892808fa7808a868e8bc984888a">
           <span class="link-label">Email — Direct Line</span>
           <span class="link-arrow">↗</span>
@@ -1843,6 +1903,7 @@
       <a href="insights.html">Field Notes</a>
       <a href="https://www.linkedin.com/in/shane-thomas-strough/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://medium.com/@shane-thomas-strough" target="_blank" rel="noopener">Medium</a>
+      <a href="https://www.youtube.com/@ShaneThomasStrough" target="_blank" rel="noopener">YouTube</a>
     </div>
     <span class="footer-tag">Sovereign. Honest. Aware. Navigating. Evolving.</span>
     <span class="footer-copy">© 2026 · shanestrough.com</span>
