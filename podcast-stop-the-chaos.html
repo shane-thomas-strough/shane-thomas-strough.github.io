@@ -54,6 +54,7 @@
   }
   </script>
 
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,400;0,600;0,900;1,300&display=swap" rel="stylesheet" />
 
@@ -506,6 +507,29 @@
       text-transform: uppercase;
     }
 
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--electric); }
+
+    .footer-tag {
+      font-size: 0.6rem;
+      color: var(--muted);
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+    }
+
     /* --- REVEAL --- */
     .reveal {
       opacity: 0;
@@ -542,6 +566,7 @@
       .stats-section { padding: 0 1.5rem 3rem; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
     }
 
     @media (max-width: 600px) {
@@ -762,9 +787,15 @@
   </div>
 
   <!-- FOOTER -->
-  <footer>
+  <footer role="contentinfo">
     <span class="footer-logo">Shane Thomas Strough</span>
-    <span style="font-family:'Fraunces',serif; font-style:italic; font-size:0.7rem; color:var(--muted);">Sovereign. Honest. Aware. Navigating. Evolving.</span>
+    <div class="footer-links">
+      <a href="insights.html">Field Notes</a>
+      <a href="https://www.linkedin.com/in/shane-thomas-strough/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://medium.com/@shane-thomas-strough" target="_blank" rel="noopener">Medium</a>
+      <a href="https://www.youtube.com/@ShaneThomasStrough" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <span class="footer-tag">Sovereign. Honest. Aware. Navigating. Evolving.</span>
     <span class="footer-copy">&copy; 2026 &middot; shanestrough.com</span>
   </footer>
 
