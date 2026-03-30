@@ -4,27 +4,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Singular — Shane Thomas Strough</title>
-  <meta name="description" content="'Singular' — a poem by Shane Thomas Strough, El Gringo Clandestino. Written during Semana Santa 2026, Playa El Palmarcito, El Salvador. But strange is only what the ordinary calls the singular." />
-  <meta name="keywords" content="Shane Thomas Strough, Shane Strough, poetry, Singular, El Gringo Clandestino, Palmarcito, El Salvador, Semana Santa, The Palmarcito Papers, original poetry" />
-  <link rel="canonical" href="https://shanestrough.com/poetry-singular.html" />
+  <title>SHANE — Shane Thomas Strough</title>
+  <meta name="description" content="'SHANE' — an acrostic poem by Shane Thomas Strough. Written at Palmarcito, El Salvador, Day 43 — 4am. Sovereign. Honest. Aware. Navigating. Evolving. The Palmarcito Papers." />
+  <meta name="keywords" content="Shane Thomas Strough, Shane Strough, poetry, SHANE, acrostic, Palmarcito, El Salvador, The Palmarcito Papers, original poetry, Sovereign Honest Aware Navigating Evolving" />
+  <link rel="canonical" href="https://shanestrough.com/poetry-shane.html" />
 
-  <meta property="og:title" content="Singular — Shane Thomas Strough" />
-  <meta property="og:description" content="A poem written during Semana Santa 2026, Playa El Palmarcito, El Salvador. Strange is only what the ordinary calls the singular." />
-  <meta property="og:url" content="https://shanestrough.com/poetry-singular.html" />
+  <meta property="og:title" content="SHANE — Shane Thomas Strough" />
+  <meta property="og:description" content="An acrostic poem. Sovereign in spirit. Honest before truth. Aware of the unseen. Navigating by the inner star. Evolving toward the fullest measure of his fire." />
+  <meta property="og:url" content="https://shanestrough.com/poetry-shane.html" />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://shanestrough.com/images/the-accent-of-the-soul-og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Singular — Shane Thomas Strough" />
+  <meta name="twitter:title" content="SHANE — Shane Thomas Strough" />
   <meta name="twitter:image" content="https://shanestrough.com/images/the-accent-of-the-soul-og.png" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    "name": "Singular",
+    "name": "SHANE",
+    "alternateName": "An Acrostic",
     "author": {
       "@type": "Person",
       "name": "Shane Thomas Strough",
@@ -33,7 +34,7 @@
     "dateCreated": "2026-03-28",
     "locationCreated": {
       "@type": "Place",
-      "name": "Playa El Palmarcito, El Salvador"
+      "name": "Palmarcito, El Salvador"
     },
     "genre": "Poetry",
     "inLanguage": "en",
@@ -41,8 +42,8 @@
       "@type": "CreativeWork",
       "name": "The Palmarcito Papers"
     },
-    "about": "A poem on authenticity, singularity, and refusing to perform a life instead of living it.",
-    "url": "https://shanestrough.com/poetry-singular.html"
+    "about": "An acrostic poem — Sovereign, Honest, Aware, Navigating, Evolving.",
+    "url": "https://shanestrough.com/poetry-shane.html"
   }
   </script>
 
@@ -193,15 +194,15 @@
 
     .page-title span { color: var(--warm); }
 
-    .page-byline {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
+    .page-subtitle {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--warm);
       margin-top: 1.5rem;
       position: relative;
       z-index: 1;
+      opacity: 0.8;
     }
 
     .page-meta {
@@ -210,7 +211,7 @@
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       position: relative;
       z-index: 1;
     }
@@ -223,6 +224,17 @@
       vertical-align: middle;
       margin: 0 1rem;
       opacity: 0.6;
+    }
+
+    .page-byline {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      position: relative;
+      z-index: 1;
     }
 
     .header-glow {
@@ -257,6 +269,20 @@
       height: 2rem;
     }
 
+    .section-break {
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-break-line {
+      width: 60px;
+      height: 1px;
+      background: var(--warm);
+      opacity: 0.3;
+    }
+
     .stanza--emphasis {
       color: var(--white);
     }
@@ -264,12 +290,35 @@
     .stanza--warm {
       color: var(--warm);
       font-style: italic;
-      font-size: clamp(1.1rem, 2.2vw, 1.25rem);
     }
 
     .stanza--closing {
-      color: var(--white);
-      font-size: clamp(1.1rem, 2.2vw, 1.25rem);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: 0.05em;
+      color: var(--warm);
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .acrostic-word {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: 0.08em;
+      color: var(--warm);
+      margin-bottom: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .acrostic-summary {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      line-height: 2;
+      color: var(--warm);
+      text-align: center;
+      margin: 2rem 0;
+      opacity: 0.9;
     }
 
     .poem-attribution {
@@ -423,6 +472,8 @@
       .page-title { font-size: clamp(2.5rem, 12vw, 4rem); }
       .page-meta .meta-dot { margin: 0 0.5rem; }
       .stanza { font-size: 0.95rem; line-height: 1.9; }
+      .stanza--closing { font-size: clamp(1.5rem, 8vw, 2rem); }
+      .acrostic-word { font-size: clamp(1.5rem, 8vw, 2rem); }
     }
   </style>
 </head>
@@ -449,14 +500,15 @@
   <header class="page-header">
     <div class="header-glow" aria-hidden="true"></div>
     <div class="breadcrumb">
-      <a href="index.html">shanestrough.com</a> / <a href="poetry.html">Poetry</a> / Singular
+      <a href="index.html">shanestrough.com</a> / <a href="poetry.html">Poetry</a> / SHANE
     </div>
     <h1 class="page-title">
-      <span>Singular</span>
+      <span>SHANE</span>
     </h1>
-    <div class="page-byline">Shane Thomas Strough &middot; El Gringo Clandestino</div>
+    <div class="page-subtitle">An Acrostic</div>
+    <div class="page-byline">Shane Thomas Strough</div>
     <div class="page-meta">
-      Playa El Palmarcito, El Salvador <span class="meta-dot"></span> Semana Santa 2026 <span class="meta-dot"></span> The Palmarcito Papers
+      Palmarcito, El Salvador <span class="meta-dot"></span> Day 43 &mdash; 4am <span class="meta-dot"></span> The Palmarcito Papers
     </div>
   </header>
 
@@ -464,104 +516,209 @@
   <main class="poem-container" role="main">
     <article>
 
-      <div class="stanza reveal-slow">
-        They called it strange,<br>
-        the way he moved&mdash;<br>
-        no feed, no filter,<br>
-        no curated proof<br>
-        for someone else's scroll.
-      </div>
+      <!-- S — Sovereign -->
+      <div class="acrostic-word reveal-slow">Sovereign&mdash;</div>
 
       <div class="stanza reveal-slow">
-        Just a man,<br>
-        a midnight pot,<br>
-        a Pacific<br>
-        sixty meters from the steps.
-      </div>
-
-      <div class="section-gap"></div>
-
-      <div class="stanza reveal-slow">
-        Strange, they said,<br>
-        to build a platform<br>
-        from a casita floor.<br>
-        To ask the same question<br>
-        every morning<br>
-        to a woman seventeen years gone<br>
-        who answered in two seconds<br>
-        as if she had been waiting<br>
-        just beyond the door.
+        not by the leave of men,<br>
+        nor by the thin, perishing thunder of their praise,<br>
+        but by that inward kingdom<br>
+        no hand may counterfeit,<br>
+        no vote confer,<br>
+        no statute sanctify.
       </div>
 
       <div class="stanza reveal-slow">
-        Strange<br>
-        to name the welcome screen after her<br>
-        before she ever saw it.
-      </div>
-
-      <div class="section-gap"></div>
-
-      <div class="stanza reveal-slow">
-        Strange<br>
-        to cook at midnight.<br>
-        To dive alone.<br>
-        To fear the open water<br>
-        and drop in anyway.<br>
-        To keep letters wrapped in incense<br>
-        for seventeen years<br>
-        and still know every word.
-      </div>
-
-      <div class="section-gap"></div>
-
-      <div class="stanza stanza--warm reveal-slow">
-        But strange is only what the ordinary calls<br>
-        the singular.
-      </div>
-
-      <div class="section-gap"></div>
-
-      <div class="stanza reveal-slow">
-        The man who does not perform a life<br>
-        but lives it<br>
-        to the bone.
+        A realm first ruled by conscience,<br>
+        then by courage,<br>
+        then by the quiet, inextinguishable flame<br>
+        that would sooner burn alone<br>
+        than bow before what is false.
       </div>
 
       <div class="stanza reveal-slow">
-        Who builds what does not exist<br>
-        because the gap offends him.
+        He stands not crownless, but self-crowned&mdash;<br>
+        his oath the only metal fit to touch his brow.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <!-- H — Honest -->
+      <div class="acrostic-word reveal-slow">Honest&mdash;</div>
+
+      <div class="stanza reveal-slow">
+        though truth should come unsoftened,<br>
+        with salt upon its tongue<br>
+        and iron in its grasp;<br>
+        though it should strip the painted room to beam and nail,<br>
+        break the bright glass of easier stories,<br>
+        and leave the soul with nowhere left to hide.
       </div>
 
       <div class="stanza reveal-slow">
-        Who loves what he loves<br>
-        without apology,<br>
-        without schedule,<br>
-        without waiting for the calendar<br>
-        to approve desire.
+        So be it.
       </div>
 
       <div class="stanza reveal-slow">
-        Who enters every large thing afraid<br>
-        because fear is not the verdict&mdash;<br>
-        only the edge<br>
-        that keeps him sharp.
+        Better the clean wound made by truth<br>
+        than all the perfumed mercies of illusion.<br>
+        Better the blade that heals by opening<br>
+        than the velvet lie that lets a man decay in comfort.
       </div>
 
-      <div class="section-gap"></div>
+      <div class="stanza reveal-slow">
+        He will not call ease holy<br>
+        when it has merely made a chapel of fear.
+      </div>
 
-      <div class="stanza stanza--closing reveal-slow">
-        They called it strange.<br>
-        He called it<br>
-        Tuesday.
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <!-- A — Aware -->
+      <div class="acrostic-word reveal-slow">Aware&mdash;</div>
+
+      <div class="stanza reveal-slow">
+        of weather gathering long before the storm is named,<br>
+        of undertow beneath the glittering wave,<br>
+        of silence laboring underneath all speech,<br>
+        of the old deep signal under thought<br>
+        moving like moon-pull beneath the tide.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He listens where others merely hear.<br>
+        He reads the dim edge of things.<br>
+        He knows the dark is not empty&mdash;<br>
+        only veiled.
+      </div>
+
+      <div class="stanza reveal-slow">
+        And in that veil he feels<br>
+        the hidden architecture of meaning:<br>
+        the pressure in the air before lightning,<br>
+        the hush in the room before truth,<br>
+        the inward bell that rings<br>
+        before the mind can tell the heart its reason.
+      </div>
+
+      <div class="stanza reveal-slow">
+        To be aware is not merely to notice.<br>
+        It is to stand inside the living field<br>
+        and know oneself addressed.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <!-- N — Navigating -->
+      <div class="acrostic-word reveal-slow">Navigating&mdash;</div>
+
+      <div class="stanza reveal-slow">
+        not always by chart,<br>
+        for charts are faithful only to what has already been found,<br>
+        and no worthy road was ever wholly drawn;<br>
+        not always by lantern,<br>
+        for some nights require a deeper kind of sight;<br>
+        but by star,<br>
+        by scar,<br>
+        by weather,<br>
+        by wonder,<br>
+        by that grave compass hidden in the ribs<br>
+        which trembles still toward what is truest<br>
+        even when all visible roads fall away.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He has learned that not all losing is error,<br>
+        nor all delay defeat.<br>
+        Some crossings ask for darkness.<br>
+        Some seas reveal themselves only to the vessel<br>
+        already willing to be changed by them.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He does not ask an easy passage&mdash;<br>
+        only one worth the voyage.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Not certainty,<br>
+        but direction.<br>
+        Not safety at any cost,<br>
+        but arrival still himself.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <!-- E — Evolving -->
+      <div class="acrostic-word reveal-slow">Evolving&mdash;</div>
+
+      <div class="stanza reveal-slow">
+        not away from what he is,<br>
+        but more deeply into it;<br>
+        as ore through furnace,<br>
+        as timber through winter,<br>
+        as coastline through centuries of wave and wind,<br>
+        as a man through grief,<br>
+        through wonder,<br>
+        through the stern refinements of time.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Not polished into blandness.<br>
+        Not reduced for the comfort of the crowd.
+      </div>
+
+      <div class="stanza reveal-slow">
+        But clarified&mdash;<br>
+        the dross burned off,<br>
+        the center brought nearer the surface,<br>
+        the hidden grain made visible at last.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He is not finished.<br>
+        Thank God he is not finished.
+      </div>
+
+      <div class="stanza reveal-slow">
+        For to be finished is to be closed,<br>
+        and he was not made for closure<br>
+        but for becoming&mdash;<br>
+        for the long obedience to what is highest in him,<br>
+        for the difficult enlargement of the soul,<br>
+        for the earned and final music of his own name.
+      </div>
+
+      <div class="stanza reveal-slow">
+        And so he goes on:<br>
+        not perfect,<br>
+        not final,<br>
+        but truer each time he enters the fire<br>
+        and returns carrying more light than he took in.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <!-- Closing Acrostic -->
+      <div class="stanza--closing reveal-slow">SHANE</div>
+
+      <div class="acrostic-summary reveal-slow">
+        Sovereign in spirit.<br>
+        Honest before truth.<br>
+        Aware of the unseen.<br>
+        Navigating by the inner star.<br>
+        Evolving toward the fullest measure of his fire.
       </div>
 
       <!-- Attribution -->
       <div class="poem-attribution reveal-slow">
-        <div class="poem-attribution-name">— Shane Thomas Strough</div>
-        <div class="poem-attribution-detail">El Gringo Clandestino</div>
+        <div class="poem-attribution-name">&mdash; Shane Thomas Strough</div>
         <div class="poem-attribution-detail">Palmarcito, El Salvador</div>
-        <div class="poem-attribution-detail">Semana Santa 2026</div>
-        <div class="poem-attribution-detail">The Palmarcito Papers</div>
+        <div class="poem-attribution-detail">Day 43 &mdash; 4am</div>
       </div>
 
     </article>
@@ -569,9 +726,9 @@
 
   <!-- POEM NAVIGATION -->
   <div class="poem-nav">
-    <div class="poem-nav-prev"><a href="poetry-nobody.html">&larr; Previous Poem</a></div>
+    <div class="poem-nav-prev"><a href="poetry-gina.html">&larr; Previous Poem</a></div>
     <div class="poem-nav-center"><a href="poetry.html">All Poetry</a></div>
-    <div class="poem-nav-next"><a href="poetry-gina.html">Next Poem &rarr;</a></div>
+    <div class="poem-nav-next"><a href="poetry-worth.html">Next Poem &rarr;</a></div>
   </div>
 
   <!-- FOOTER -->
