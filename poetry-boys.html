@@ -431,55 +431,40 @@
       margin-top: 0.4rem;
     }
 
-    /* ─── MORE POETRY LINK ─── */
-    .more-poetry {
-      text-align: center;
-      padding: 5rem 2.5rem;
+    /* ─── POEM NAV ─── */
+    .poem-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 4rem;
+      border-top: 1px solid var(--border);
     }
 
-    .more-poetry a {
+    .poem-nav a {
       font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
       text-decoration: none;
       transition: color 0.3s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.8rem;
     }
 
-    .more-poetry a:hover { color: var(--warm); }
+    .poem-nav a:hover { color: var(--warm); }
 
-    .more-poetry .arrow {
-      display: inline-block;
-      width: 30px;
-      height: 1px;
-      background: var(--warm);
-      opacity: 0.5;
-      position: relative;
+    .poem-nav-center a { color: var(--warm); }
+    .poem-nav-center a:hover { color: var(--white); }
+
+    .poem-nav-prev,
+    .poem-nav-next {
+      min-width: 140px;
     }
 
-    .more-poetry .arrow::after {
-      content: '';
-      position: absolute;
-      right: 0; top: -3px;
-      width: 7px; height: 7px;
-      border-right: 1px solid var(--warm);
-      border-top: 1px solid var(--warm);
-      transform: rotate(45deg);
-      opacity: 0.5;
-    }
-
-    .more-poetry-title {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-size: 0.9rem;
-      color: var(--warm);
-      margin-top: 0.8rem;
-      opacity: 0.7;
-    }
+    .poem-nav-prev { text-align: left; }
+    .poem-nav-next { text-align: right; }
+    .poem-nav-center { text-align: center; }
 
     /* ─── FOOTER ─── */
     footer {
@@ -566,6 +551,8 @@
       .poem-container { padding: 2rem 1.5rem 4rem; }
       .story-section { padding: 4rem 1.5rem; }
       .story-section--seamless { padding: 2rem 1.5rem 4rem; }
+      .poem-nav { padding: 2rem 1.5rem 3rem; flex-wrap: wrap; gap: 1rem; }
+      .poem-nav-prev, .poem-nav-next { min-width: auto; }
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
     }
@@ -1891,13 +1878,11 @@ how to use it.</p>
   </section>
 
 
-  <!-- MORE POETRY -->
-  <div class="more-poetry reveal">
-    <a href="poetry.html">
-      <span class="arrow"></span>
-      More Poetry
-    </a>
-    <div class="more-poetry-title">The Accent of the Soul</div>
+  <!-- POEM NAVIGATION -->
+  <div class="poem-nav">
+    <div class="poem-nav-prev"><a href="poetry-accent.html">&larr; Previous Poem</a></div>
+    <div class="poem-nav-center"><a href="poetry.html">All Poetry</a></div>
+    <div class="poem-nav-next"><a href="poetry-nobody.html">Next Poem &rarr;</a></div>
   </div>
 
   <!-- FOOTER -->

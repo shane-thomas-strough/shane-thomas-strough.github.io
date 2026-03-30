@@ -4,56 +4,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Poetry — Shane Thomas Strough</title>
-  <meta name="description" content="Poetry by Shane Thomas Strough — The Palmarcito Papers and other works. Original poems written from Playa El Palmarcito, El Salvador. On love, provision, fatherhood, and the singular life." />
-  <meta name="keywords" content="Shane Thomas Strough, Shane Strough, poetry, The Palmarcito Papers, El Gringo Clandestino, Singular, Nobody Leaves Hungry, The Accent of the Soul, The World In Their Bodies, Palmarcito, El Salvador, original poetry" />
-  <link rel="canonical" href="https://shanestrough.com/poetry.html" />
+  <title>Singular — Shane Thomas Strough</title>
+  <meta name="description" content="'Singular' — a poem by Shane Thomas Strough, El Gringo Clandestino. Written during Semana Santa 2026, Playa El Palmarcito, El Salvador. But strange is only what the ordinary calls the singular." />
+  <meta name="keywords" content="Shane Thomas Strough, Shane Strough, poetry, Singular, El Gringo Clandestino, Palmarcito, El Salvador, Semana Santa, The Palmarcito Papers, original poetry" />
+  <link rel="canonical" href="https://shanestrough.com/poetry-singular.html" />
 
-  <meta property="og:title" content="Poetry — Shane Thomas Strough" />
-  <meta property="og:description" content="The Palmarcito Papers and other works. Original poems written from Playa El Palmarcito, El Salvador." />
-  <meta property="og:url" content="https://shanestrough.com/poetry.html" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Singular — Shane Thomas Strough" />
+  <meta property="og:description" content="A poem written during Semana Santa 2026, Playa El Palmarcito, El Salvador. Strange is only what the ordinary calls the singular." />
+  <meta property="og:url" content="https://shanestrough.com/poetry-singular.html" />
+  <meta property="og:type" content="article" />
   <meta property="og:image" content="https://shanestrough.com/images/the-accent-of-the-soul-og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Poetry — Shane Thomas Strough" />
+  <meta name="twitter:title" content="Singular — Shane Thomas Strough" />
   <meta name="twitter:image" content="https://shanestrough.com/images/the-accent-of-the-soul-og.png" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Poetry — Shane Thomas Strough",
-    "description": "The Palmarcito Papers and other works. Original poetry by Shane Thomas Strough.",
-    "url": "https://shanestrough.com/poetry.html",
+    "@type": "CreativeWork",
+    "name": "Singular",
     "author": {
       "@type": "Person",
       "name": "Shane Thomas Strough",
       "url": "https://shanestrough.com"
     },
-    "hasPart": [
-      {
-        "@type": "CreativeWork",
-        "name": "Singular",
-        "url": "https://shanestrough.com/poetry-singular.html"
-      },
-      {
-        "@type": "CreativeWork",
-        "name": "Nobody Leaves Hungry",
-        "url": "https://shanestrough.com/poetry-nobody.html"
-      },
-      {
-        "@type": "CreativeWork",
-        "name": "The World In Their Bodies",
-        "url": "https://shanestrough.com/poetry-boys.html"
-      },
-      {
-        "@type": "CreativeWork",
-        "name": "The Accent of the Soul",
-        "url": "https://shanestrough.com/poetry-accent.html"
-      }
-    ]
+    "dateCreated": "2026-03-28",
+    "locationCreated": {
+      "@type": "Place",
+      "name": "Playa El Palmarcito, El Salvador"
+    },
+    "genre": "Poetry",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "The Palmarcito Papers"
+    },
+    "about": "A poem on authenticity, singularity, and refusing to perform a life instead of living it.",
+    "url": "https://shanestrough.com/poetry-singular.html"
   }
   </script>
 
@@ -176,6 +165,66 @@
       z-index: 0;
     }
 
+    .breadcrumb {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb a {
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.92;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-title span { color: var(--warm); }
+
+    .page-byline {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-meta .meta-dot {
+      display: inline-block;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--warm);
+      vertical-align: middle;
+      margin: 0 1rem;
+      opacity: 0.6;
+    }
+
     .header-glow {
       position: absolute;
       top: 10%; left: 50%;
@@ -187,169 +236,99 @@
       z-index: 0;
     }
 
-    .page-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3.5rem, 10vw, 8rem);
-      line-height: 0.92;
-      letter-spacing: 0.05em;
-      color: var(--white);
+    /* --- POEM --- */
+    .poem-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 6rem;
       position: relative;
-      z-index: 1;
     }
 
-    .page-subtitle {
+    .stanza {
       font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-size: clamp(0.9rem, 2vw, 1.15rem);
-      color: var(--warm);
-      margin-top: 1.5rem;
-      position: relative;
-      z-index: 1;
-      opacity: 0.8;
+      font-weight: 300;
+      font-size: clamp(1rem, 2vw, 1.12rem);
+      line-height: 2;
+      color: rgba(240, 244, 248, 0.88);
+      margin-bottom: 2rem;
     }
 
-    .page-meta {
+    .section-gap {
+      height: 2rem;
+    }
+
+    .stanza--emphasis {
+      color: var(--white);
+    }
+
+    .stanza--warm {
+      color: var(--warm);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.2vw, 1.25rem);
+    }
+
+    .stanza--closing {
+      color: var(--white);
+      font-size: clamp(1.1rem, 2.2vw, 1.25rem);
+    }
+
+    .poem-attribution {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(200, 169, 110, 0.15);
+      text-align: right;
+    }
+
+    .poem-attribution-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+
+    .poem-attribution-detail {
       font-family: 'DM Mono', monospace;
       font-size: 0.6rem;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* --- POEM NAV --- */
+    .poem-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 4rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .poem-nav a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-top: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* --- POEM GRID --- */
-    .poem-grid-section {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 2.5rem 8rem;
-    }
-
-    .poem-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-    }
-
-    .poem-card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      padding: 2.5rem;
-      position: relative;
-      transition: border-color 0.4s, transform 0.4s;
       text-decoration: none;
-      display: block;
-    }
-
-    .poem-card:hover {
-      border-color: rgba(200, 169, 110, 0.3);
-      transform: translateY(-4px);
-    }
-
-    .poem-card-collection {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.55rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--warm);
-      margin-bottom: 1.2rem;
-      opacity: 0.7;
-    }
-
-    .poem-card-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      letter-spacing: 0.03em;
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 0.6rem;
       transition: color 0.3s;
     }
 
-    .poem-card:hover .poem-card-title {
-      color: var(--warm);
+    .poem-nav a:hover { color: var(--warm); }
+
+    .poem-nav-center a { color: var(--warm); }
+    .poem-nav-center a:hover { color: var(--white); }
+
+    .poem-nav-prev,
+    .poem-nav-next {
+      min-width: 140px;
     }
 
-    .poem-card-subtitle {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .poem-card-meta {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.55rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.8rem;
-      opacity: 0.7;
-    }
-
-    .poem-card-excerpt {
-      font-family: 'Fraunces', serif;
-      font-weight: 300;
-      font-size: 0.88rem;
-      line-height: 1.9;
-      color: rgba(240, 244, 248, 0.55);
-      margin-bottom: 2rem;
-      font-style: italic;
-    }
-
-    .poem-card-link {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--warm);
-      opacity: 0.6;
-      transition: opacity 0.3s;
-    }
-
-    .poem-card:hover .poem-card-link {
-      opacity: 1;
-    }
-
-    .poem-card-glow {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(to right, transparent, var(--warm), transparent);
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-
-    .poem-card:hover .poem-card-glow {
-      opacity: 0.4;
-    }
-
-    /* --- COLOPHON --- */
-    .colophon {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 2.5rem 6rem;
-      text-align: center;
-    }
-
-    .colophon-line {
-      width: 60px;
-      height: 1px;
-      background: var(--warm);
-      margin: 0 auto 3rem;
-      opacity: 0.3;
-    }
-
-    .colophon-text {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-size: 0.85rem;
-      line-height: 2;
-      color: var(--muted);
-    }
+    .poem-nav-prev { text-align: left; }
+    .poem-nav-next { text-align: right; }
+    .poem-nav-center { text-align: center; }
 
     /* --- FOOTER --- */
     footer {
@@ -433,16 +412,17 @@
       .nav-hamburger { display: flex; }
 
       .page-header { padding: 10rem 1.5rem 3rem; }
-      .poem-grid-section { padding: 0 1.5rem 6rem; }
-      .poem-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .poem-card { padding: 2rem; }
-      .colophon { padding: 0 1.5rem 4rem; }
+      .poem-container { padding: 2rem 1.5rem 4rem; }
+      .poem-nav { padding: 2rem 1.5rem 3rem; flex-wrap: wrap; gap: 1rem; }
+      .poem-nav-prev, .poem-nav-next { min-width: auto; }
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
     }
 
     @media (max-width: 480px) {
-      .page-title { font-size: clamp(3rem, 14vw, 5rem); }
+      .page-title { font-size: clamp(2.5rem, 12vw, 4rem); }
+      .page-meta .meta-dot { margin: 0 0.5rem; }
+      .stanza { font-size: 0.95rem; line-height: 1.9; }
     }
   </style>
 </head>
@@ -468,83 +448,130 @@
   <div class="page-header-grid" aria-hidden="true"></div>
   <header class="page-header">
     <div class="header-glow" aria-hidden="true"></div>
-    <h1 class="page-title reveal-slow">POETRY</h1>
-    <p class="page-subtitle reveal-slow">The Palmarcito Papers &amp; Other Works</p>
-    <p class="page-meta reveal-slow">Shane Thomas Strough &middot; El Salvador &middot; 2026</p>
+    <div class="breadcrumb">
+      <a href="index.html">shanestrough.com</a> / <a href="poetry.html">Poetry</a> / Singular
+    </div>
+    <h1 class="page-title">
+      <span>Singular</span>
+    </h1>
+    <div class="page-byline">Shane Thomas Strough &middot; El Gringo Clandestino</div>
+    <div class="page-meta">
+      Playa El Palmarcito, El Salvador <span class="meta-dot"></span> Semana Santa 2026 <span class="meta-dot"></span> The Palmarcito Papers
+    </div>
   </header>
 
-  <!-- POEM GRID -->
-  <section class="poem-grid-section">
-    <div class="poem-grid">
+  <!-- THE POEM -->
+  <main class="poem-container" role="main">
+    <article>
 
-      <!-- Singular -->
-      <a href="poetry-singular.html" class="poem-card reveal" style="transition-delay: 0s;">
-        <div class="poem-card-glow"></div>
-        <div class="poem-card-collection">The Palmarcito Papers</div>
-        <h2 class="poem-card-title">Singular</h2>
-        <div class="poem-card-meta">Semana Santa 2026 &middot; Playa El Palmarcito</div>
-        <div class="poem-card-excerpt">
-          But strange is only what the ordinary calls<br>
-          the singular.
-        </div>
-        <div class="poem-card-link">Read &rarr;</div>
-      </a>
+      <div class="stanza reveal-slow">
+        They called it strange,<br>
+        the way he moved&mdash;<br>
+        no feed, no filter,<br>
+        no curated proof<br>
+        for someone else's scroll.
+      </div>
 
-      <!-- Nobody Leaves Hungry -->
-      <a href="poetry-nobody.html" class="poem-card reveal" style="transition-delay: 0.12s;">
-        <div class="poem-card-glow"></div>
-        <div class="poem-card-collection">The Palmarcito Papers</div>
-        <h2 class="poem-card-title">Nobody Leaves Hungry</h2>
-        <div class="poem-card-subtitle">El Gringo Clandestino</div>
-        <div class="poem-card-meta">Semana Santa 2026 &middot; Playa El Palmarcito</div>
-        <div class="poem-card-excerpt">
-          Not every act of love looks like arrival.<br>
-          Sometimes it looks like iron.<br>
-          Sometimes it looks like waiting.
-        </div>
-        <div class="poem-card-link">Read &rarr;</div>
-      </a>
+      <div class="stanza reveal-slow">
+        Just a man,<br>
+        a midnight pot,<br>
+        a Pacific<br>
+        sixty meters from the steps.
+      </div>
 
-      <!-- The World In Their Bodies -->
-      <a href="poetry-boys.html" class="poem-card reveal" style="transition-delay: 0.24s;">
-        <div class="poem-card-glow"></div>
-        <div class="poem-card-collection">The Palmarcito Papers</div>
-        <h2 class="poem-card-title">The World In Their Bodies</h2>
-        <div class="poem-card-subtitle">Merric &middot; Tristan &middot; Layne</div>
-        <div class="poem-card-meta">Day 43 &middot; March 2026 &middot; Palmarcito</div>
-        <div class="poem-card-excerpt">
-          They have the world in their bodies now.<br>
-          The highways. The caves. The castles.<br>
-          The rockets. The sea.
-        </div>
-        <div class="poem-card-link">Read &rarr;</div>
-      </a>
+      <div class="section-gap"></div>
 
-      <!-- The Accent of the Soul -->
-      <a href="poetry-accent.html" class="poem-card reveal" style="transition-delay: 0.36s;">
-        <div class="poem-card-glow"></div>
-        <div class="poem-card-collection">The Palmarcito Papers</div>
-        <h2 class="poem-card-title">The Accent of the Soul</h2>
-        <div class="poem-card-subtitle">A poem &amp; its backstory</div>
-        <div class="poem-card-meta">Day 43 &middot; March 2026 &middot; Palmarcito</div>
-        <div class="poem-card-excerpt">
-          I have never belonged cleanly to a place.<br>
-          I have worn distance like a second nature,<br>
-          a man made out of leaving and return.
-        </div>
-        <div class="poem-card-link">Read &rarr;</div>
-      </a>
+      <div class="stanza reveal-slow">
+        Strange, they said,<br>
+        to build a platform<br>
+        from a casita floor.<br>
+        To ask the same question<br>
+        every morning<br>
+        to a woman seventeen years gone<br>
+        who answered in two seconds<br>
+        as if she had been waiting<br>
+        just beyond the door.
+      </div>
 
-    </div>
-  </section>
+      <div class="stanza reveal-slow">
+        Strange<br>
+        to name the welcome screen after her<br>
+        before she ever saw it.
+      </div>
 
-  <!-- COLOPHON -->
-  <div class="colophon reveal">
-    <div class="colophon-line"></div>
-    <p class="colophon-text">
-      These poems were written during the Palmarcito Reset &mdash; February through March 2026 &mdash;<br>
-      in a casita sixty meters from the Pacific Ocean, Playa El Palmarcito, El Salvador.
-    </p>
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        Strange<br>
+        to cook at midnight.<br>
+        To dive alone.<br>
+        To fear the open water<br>
+        and drop in anyway.<br>
+        To keep letters wrapped in incense<br>
+        for seventeen years<br>
+        and still know every word.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza stanza--warm reveal-slow">
+        But strange is only what the ordinary calls<br>
+        the singular.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        The man who does not perform a life<br>
+        but lives it<br>
+        to the bone.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Who builds what does not exist<br>
+        because the gap offends him.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Who loves what he loves<br>
+        without apology,<br>
+        without schedule,<br>
+        without waiting for the calendar<br>
+        to approve desire.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Who enters every large thing afraid<br>
+        because fear is not the verdict&mdash;<br>
+        only the edge<br>
+        that keeps him sharp.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza stanza--closing reveal-slow">
+        They called it strange.<br>
+        He called it<br>
+        Tuesday.
+      </div>
+
+      <!-- Attribution -->
+      <div class="poem-attribution reveal-slow">
+        <div class="poem-attribution-name">— Shane Thomas Strough</div>
+        <div class="poem-attribution-detail">El Gringo Clandestino</div>
+        <div class="poem-attribution-detail">Palmarcito, El Salvador</div>
+        <div class="poem-attribution-detail">Semana Santa 2026</div>
+        <div class="poem-attribution-detail">The Palmarcito Papers</div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- POEM NAVIGATION -->
+  <div class="poem-nav">
+    <div class="poem-nav-prev"><a href="poetry-nobody.html">&larr; Previous Poem</a></div>
+    <div class="poem-nav-center"><a href="poetry.html">All Poetry</a></div>
+    <div class="poem-nav-next"></div>
   </div>
 
   <!-- FOOTER -->
