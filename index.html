@@ -217,7 +217,8 @@
       transition: color 0.2s;
     }
 
-    .nav-links a:hover { color: var(--electric); }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--electric); }
 
     .nav-cta {
       background: transparent !important;
@@ -441,6 +442,44 @@
     @keyframes scrollPulse {
       0%, 100% { opacity: 0.3; }
       50% { opacity: 1; }
+    }
+
+    /* ─── WHATS NEW BANNER ─── */
+    .whats-new {
+      background: var(--deep);
+      border-bottom: 1px solid var(--border);
+      padding: 0.7rem 2.5rem;
+      text-align: center;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      position: relative;
+    }
+
+    .whats-new::before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0; left: 0;
+      width: 3px;
+      background: var(--warm);
+    }
+
+    .whats-new-label {
+      color: var(--warm);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-right: 0.5rem;
+    }
+
+    .whats-new a {
+      color: var(--warm);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .whats-new a:hover {
+      color: var(--electric);
     }
 
     /* ─── STATUS BAR ─── */
@@ -679,7 +718,7 @@
     /* ─── FEATURED ARTICLES ─── */
     .featured-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       margin-top: 3rem;
     }
@@ -1065,6 +1104,10 @@
       50% { opacity: 0; }
     }
 
+    @media (max-width: 900px) {
+      .featured-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
     /* ─── MOBILE ─── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
@@ -1087,6 +1130,8 @@
 
       .human-inner { grid-template-columns: 1fr; gap: 3rem; }
       .contact-inner { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
+
+      .featured-grid { grid-template-columns: 1fr; }
 
       .status-bar { gap: 1.5rem; padding: 0.8rem 1.5rem; }
       .status-item { font-size: 0.55rem; }
@@ -1418,13 +1463,10 @@
     <a class="nav-logo" href="/">STS</a>
     <ul class="nav-links" id="nav-links">
       <li><a href="about.html">About</a></li>
-      <li><a href="#expertise">Expertise</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#systems">Systems</a></li>
-      <li><a href="#services">Services</a></li>
       <li><a href="insights.html">Field Notes</a></li>
       <li><a href="poetry.html">Poetry</a></li>
-      <li><a href="#contact" class="nav-cta">Contact</a></li>
+      <li><a href="podcast-stop-the-chaos.html">Podcast</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -1478,6 +1520,11 @@
       <span>Scroll</span>
     </div>
   </header>
+
+  <!-- WHAT'S NEW BANNER -->
+  <div class="whats-new">
+    <span class="whats-new-label">New:</span> 11 poems published in The Palmarcito Papers <a href="poetry.html">&rarr; Read the collection</a>
+  </div>
 
   <!-- STATUS BAR -->
   <div class="status-bar" aria-label="Current status">
@@ -1650,36 +1697,48 @@
   <!-- FEATURED FIELD NOTES -->
   <section id="writing">
     <p class="section-label reveal">Thought Leadership</p>
-    <h2 class="section-title reveal">Featured<br>Field Notes</h2>
+    <h2 class="section-title reveal">Recent<br>Work</h2>
     <div class="featured-grid">
-      <a class="article-card reveal" href="https://medium.com/@shane-thomas-strough/mitigating-logistical-risks-in-international-mission-critical-construction-214009336399" target="_blank" rel="noopener">
-        <div class="article-tag">International Construction · Logistics</div>
-        <h3 class="article-title">Mitigating Logistical Risks in International Mission-Critical Construction</h3>
-        <p class="article-desc">How to navigate concurrent transnational deployments, dual-compliance mandates, and ODC constraints — with field-tested frameworks that actually hold under pressure.</p>
-        <span class="article-arrow">Read on Medium →</span>
-      </a>
-      <a class="article-card reveal" href="https://medium.com/@shane-thomas-strough/zero-downtime-cutovers-replacing-backbone-infrastructure-in-mission-critical-facilities-69fef425323f" target="_blank" rel="noopener">
-        <div class="article-tag">Electrical · Live Environments</div>
-        <h3 class="article-title">The Anatomy of a Zero-Downtime Cutover in Live, Mission-Critical Facilities</h3>
-        <p class="article-desc">A zero-downtime cutover is won in planning, not during the overnight window. The MOP, temporary power engineering, OT ambush prevention, and why re-energization is commissioning — not celebration.</p>
-        <span class="article-arrow">Read on Medium →</span>
-      </a>
-      <a class="article-card reveal" href="field-notes-siemens-bas.html">
-        <div class="article-tag">Commissioning · BAS · Siemens</div>
-        <h3 class="article-title">Siemens Building Automation Systems — Data Center Commissioning Field Guide</h3>
-        <p class="article-desc">Complete Cx Boot Camp field guide covering Desigo CC, APOGEE, BACnet/Modbus integration, and commissioning workflows for mission-critical data centers.</p>
-        <span class="article-arrow">Read Field Guide →</span>
-      </a>
       <a class="article-card reveal" href="podcast-stop-the-chaos.html">
-        <div class="article-tag">Podcast · Communication · Leadership</div>
+        <div class="article-tag">Podcast</div>
         <h3 class="article-title">Stop the Chaos: Why Nuclear-Grade Communication is the Ultimate Data Center Control</h3>
         <p class="article-desc">Four core disciplines borrowed from nuclear power and aviation for eliminating procedural chaos in hyperscale data center construction.</p>
-        <span class="article-arrow">Listen to Episode →</span>
+        <span class="article-arrow">Listen to Episode &rarr;</span>
+      </a>
+      <a class="article-card reveal" href="field-notes-siemens-bas.html">
+        <div class="article-tag">Field Guide</div>
+        <h3 class="article-title">Siemens Building Automation Systems — Data Center Commissioning Field Guide</h3>
+        <p class="article-desc">Complete Cx Boot Camp field guide covering Desigo CC, APOGEE, BACnet/Modbus integration, and commissioning workflows for mission-critical data centers.</p>
+        <span class="article-arrow">Read Field Guide &rarr;</span>
+      </a>
+      <a class="article-card reveal" href="poetry-navigating.html">
+        <div class="article-tag">Poetry</div>
+        <h3 class="article-title">NAVIGATING: A Triptych</h3>
+        <p class="article-desc">Two whole souls. One shared center. A three-part poem on love, provision, and the compass that holds — written from Playa El Palmarcito, El Salvador.</p>
+        <span class="article-arrow">Read Poem &rarr;</span>
+      </a>
+      <a class="article-card reveal" href="poetry-worth.html">
+        <div class="article-tag">Poetry</div>
+        <h3 class="article-title">Worth Not Leaving</h3>
+        <p class="article-desc">Not every act of love looks like arrival. Sometimes it looks like knowing exactly how long a thing must remain on the flame before it becomes tender enough to offer.</p>
+        <span class="article-arrow">Read Poem &rarr;</span>
+      </a>
+      <a class="article-card reveal" href="https://medium.com/@shane-thomas-strough/mitigating-logistical-risks-in-international-mission-critical-construction-214009336399" target="_blank" rel="noopener">
+        <div class="article-tag">Medium</div>
+        <h3 class="article-title">Mitigating Logistical Risks in International Mission-Critical Construction</h3>
+        <p class="article-desc">How to navigate concurrent transnational deployments, dual-compliance mandates, and ODC constraints — with field-tested frameworks that actually hold under pressure.</p>
+        <span class="article-arrow">Read on Medium &rarr;</span>
+      </a>
+      <a class="article-card reveal" href="https://medium.com/@shane-thomas-strough/zero-downtime-cutovers-replacing-backbone-infrastructure-in-mission-critical-facilities-69fef425323f" target="_blank" rel="noopener">
+        <div class="article-tag">Medium</div>
+        <h3 class="article-title">The Anatomy of a Zero-Downtime Cutover in Live, Mission-Critical Facilities</h3>
+        <p class="article-desc">A zero-downtime cutover is won in planning, not during the overnight window. The MOP, temporary power engineering, OT ambush prevention, and why re-energization is commissioning — not celebration.</p>
+        <span class="article-arrow">Read on Medium &rarr;</span>
       </a>
     </div>
     <div class="library-cta">
       <a href="insights.html" class="btn-library">
-        <span>[ Access the Full Technical Library →  ]</span>
+        <span>[ Explore All Work &rarr; ]</span>
       </a>
     </div>
   </section>
