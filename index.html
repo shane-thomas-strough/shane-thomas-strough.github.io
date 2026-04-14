@@ -64,6 +64,18 @@
       "https://shanestrough.com/images/shane-thomas-strough-professional-headshot-mc-dean-1.jpg",
       "https://shanestrough.com/images/shane-thomas-strough-florida.jpg.jpg",
       "https://shanestrough.com/images/shane-thomas-strough-blue-origin-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-lc36-portrait-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-team-lc36-group-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-tower-looking-down-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-looking-up-through-steel-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-road-to-space-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-launch-pad-crew-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-building-sign-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-raptor-family-nesting-tower-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-raptor-nesting-tower-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-spacex-launch-from-tower-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-faa-obstruction-light-interior-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-tower-climb-crew-1.jpg",
       "https://shanestrough.com/images/shane-thomas-strough-london-1.jpg",
       "https://shanestrough.com/images/shane-thomas-strough-datahall-1.jpg",
       "https://shanestrough.com/images/shane-thomas-strough-isle-of-skye-lighthouse-1.jpg",
@@ -1224,8 +1236,7 @@
     /* ─── GALLERY ─── */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto auto;
+      grid-template-columns: repeat(4, 1fr);
       gap: 4px;
       margin-top: 3rem;
     }
@@ -1442,15 +1453,15 @@
     /* ─── RESPONSIVE NEW SECTIONS ─── */
     @media (max-width: 900px) {
       .services-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; }
-      .gallery-item--large { grid-column: span 2; }
-      .gallery-item--wide { grid-column: span 2; }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 600px) {
       .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-item--large,
-      .gallery-item--wide { grid-column: span 1; }
       .services-section { padding: 4rem 1.5rem; }
     }
 
@@ -1747,77 +1758,82 @@
     <h2 class="section-title reveal">Execution<br>in the Wild</h2>
     <div class="gallery-grid reveal">
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-lng-tanks-1.jpg" alt="Shane Thomas Strough — LNG tank farm infrastructure commissioning" loading="lazy" />
+        <img src="images/shane-thomas-strough-blue-origin-lc36-portrait-1.jpg" alt="Shane Thomas Strough at LC-36 launch complex, Cape Canaveral" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">LNG Tank Farm · Hazardous Area Classification</span>
+          <span class="gallery-label">LC-36 · Between the Towers</span>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-panel-1.jpg" alt="Shane Thomas Strough — Telecom and electrical panel integration" loading="lazy" />
+        <img src="images/shane-thomas-strough-blue-origin-tower-looking-down-1.jpg" alt="Shane Thomas Strough — 500ft looking down from Vehicle Access Tower" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">Telecom &amp; Electrical Integration</span>
+          <span class="gallery-label">500ft · Looking Down</span>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-pump-room-1.jpg" alt="Shane Thomas Strough — Mechanical pump array SIMOPS execution" loading="lazy" />
+        <img src="images/shane-thomas-strough-blue-origin-looking-up-through-steel-1.jpg" alt="Looking up through the steel structure of the launch tower" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">Mechanical Pump Arrays · SIMOPS</span>
+          <span class="gallery-label">Looking Up Through Steel</span>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-florida-mission-critical-switchgear.jpg.jpg" alt="Shane Thomas Strough — Switchgear management and commissioning" loading="lazy" />
+        <img src="images/shane-thomas-strough-raptor-family-nesting-tower-1.jpg" alt="Raptors nesting in the launch tower steel" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">Switchgear · Zero-Downtime Protocol</span>
+          <span class="gallery-label">Raptors in the Tower</span>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-high-angle-rescue-certification-1.jpg" alt="Shane Thomas Strough — High-angle rescue certification and tower climb training" loading="lazy" />
+        <img src="images/shane-thomas-strough-data-hall-white-space-1.jpg" alt="Data hall white space with CRAH precision cooling units" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">High-Angle Rescue · Tower Climb</span>
+          <span class="gallery-label">Data Hall White Space</span>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-isle-of-skye-lighthouse-1.jpg" alt="Shane Thomas Strough — Isle of Skye, Scotland overlooking the lighthouse" loading="lazy" />
+        <img src="images/shane-thomas-strough-switchgear-crah-data-center-1.jpg" alt="Switchgear and precision cooling infrastructure in data center" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">Isle of Skye · Scotland</span>
+          <span class="gallery-label">Switchgear &amp; Cooling</span>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-k60-el-salvador-surf-1.jpg" alt="Shane Thomas Strough — Surfboard at K60 point break, El Salvador" loading="lazy" />
+        <img src="images/shane-thomas-strough-water-tower-climb-petzl-1.jpg" alt="Shane Thomas Strough climbing water tower with Petzl helmet" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">K60 Point Break · El Salvador</span>
+          <span class="gallery-label">Water Tower Climb</span>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-wiesbaden-germany-1.jpg" alt="Shane Thomas Strough — Wiesbaden, Germany during DoD infrastructure deployment" loading="lazy" />
+        <img src="images/shane-thomas-strough-blue-origin-road-to-space-1.jpg" alt="Road to Space at LC-36 launch complex" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">Wiesbaden · Germany</span>
+          <span class="gallery-label">Road to Space</span>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-advanced-dive-el-salvador-1.jpg" alt="Shane Thomas Strough — Advanced Open Water dive with goliath grouper, El Salvador" loading="lazy" />
+        <img src="images/shane-thomas-strough-team-fishing-cape-canaveral-1.jpg" alt="Shane Thomas Strough team fishing trip at Cape Canaveral" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">Advanced Open Water · El Salvador</span>
+          <span class="gallery-label">Team · Cape Canaveral</span>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-dungeness-crab-fishing-oregon-1.jpg" alt="Shane Thomas Strough — Dungeness crab fishing off the coast of Oregon" loading="lazy" />
+        <img src="images/shane-thomas-strough-blue-origin-team-lc36-group-1.jpg" alt="Shane Thomas Strough with the LC-36 team at Cape Canaveral" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">Dungeness Crab Fishing · Oregon</span>
+          <span class="gallery-label">LC-36 Team</span>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-family-tintagel-cornwall-1.jpg" alt="Shane Thomas Strough — Family at Tintagel Castle, Cornwall with his three sons" loading="lazy" />
+        <img src="images/shane-thomas-strough-spacex-launch-from-tower-1.jpg" alt="SpaceX launch viewed from the Blue Origin tower" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">Tintagel · Cornwall · Family</span>
+          <span class="gallery-label">SpaceX Launch</span>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/shane-thomas-strough-fishing-boat-sunset-el-salvador-1.jpg" alt="Shane Thomas Strough — Sunset fishing boat with local fishermen, El Salvador" loading="lazy" />
+        <img src="images/shane-thomas-strough-mc-dean-tech-expo-team-1.jpg" alt="Shane Thomas Strough with MC Dean Agile Ninjas team at Tech Expo" loading="lazy" />
         <div class="gallery-overlay">
-          <span class="gallery-label">Sunset with Fishermen · El Salvador</span>
+          <span class="gallery-label">MC Dean Tech Expo</span>
         </div>
       </div>
+    </div>
+    <div class="library-cta reveal">
+      <a href="gallery.html" class="btn-library">
+        <span>[ View Full Gallery &rarr; ]</span>
+      </a>
     </div>
   </section>
 
