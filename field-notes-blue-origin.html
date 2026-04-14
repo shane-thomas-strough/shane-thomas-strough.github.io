@@ -38,7 +38,17 @@
       }
     },
     "url": "https://shanestrough.com/field-notes-blue-origin.html",
-    "image": "https://shanestrough.com/images/shane-thomas-strough-blue-origin-1.jpg",
+    "image": [
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-lc36-portrait-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-tower-looking-down-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-raptor-family-nesting-tower-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-electrical-fault-burned-wiring-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-team-lc36-group-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-faa-obstruction-light-interior-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-spacex-launch-from-tower-1.jpg",
+      "https://shanestrough.com/images/shane-thomas-strough-blue-origin-looking-up-through-steel-1.jpg"
+    ],
     "publisher": {
       "@type": "Person",
       "name": "Shane Thomas Strough"
@@ -355,6 +365,34 @@
       margin-bottom: 0 !important;
     }
 
+    .article-photo {
+      margin: 2.5rem 0;
+      padding: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .article-photo img {
+      width: 100%;
+      display: block;
+      filter: brightness(0.85);
+      transition: filter 0.3s;
+    }
+
+    .article-photo:hover img {
+      filter: brightness(1);
+    }
+
+    .article-photo-caption {
+      padding: 0.8rem 1rem;
+      background: var(--deep);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
     /* --- AUTHOR BIO --- */
     .author-bio {
       margin-top: 4rem;
@@ -605,6 +643,11 @@
     <section class="reveal">
       <h2 class="section-header">Two Towers. <span>Two Completely Different Realities.</span></h2>
 
+      <figure class="article-photo">
+        <img src="images/shane-thomas-strough-blue-origin-lc36-portrait-1.jpg" alt="Shane Thomas Strough at Blue Origin LC-36 between the Vehicle Access Tower and Lightning Protection Tower" loading="lazy" />
+        <figcaption class="article-photo-caption">LC-36 · Between the Vehicle Access Tower and Lightning Protection Tower · Cape Canaveral</figcaption>
+      </figure>
+
       <p>The first thing you learn at a launch complex is that not all structures are equal. The Vehicle Access Tower, the VAT, has a buck hoist. Mechanical lift. You load your equipment, your tools, your materials, and you ride up. The work at altitude is still demanding, technical, and unforgiving. But the hoist changes the physical calculus of the job fundamentally.</p>
 
       <p>The Lightning Protection Tower, the LPT, has no buck hoist. No mechanical assist of any kind. Everything that goes up that tower goes up by hand. Every component. Every tool. Every piece of equipment. Every panel. Every spool of wire. Every connector, resistor, and transformer. Tethered, carried, climbed. One foot at a time for hundreds of feet in Florida heat, with the Atlantic breeze as the only relief available.</p>
@@ -615,6 +658,11 @@
 
       <p>There were moments on that tower when I needed to put eyes on the condition myself before the rest of the team committed to the next move. In high-consequence work, field leadership sometimes means taking on the uncertainty first so the crew does not have to. That is not a romantic statement. It is an operational one. When the clock is running and the conditions are changing, judgment matters. I was deliberate about those decisions, deliberate about the risk, and even more deliberate about making sure the team had what they needed before they ever left the ground.</p>
 
+      <figure class="article-photo">
+        <img src="images/shane-thomas-strough-blue-origin-tower-looking-down-1.jpg" alt="Looking down from 500 feet on the Blue Origin launch tower at Cape Canaveral" loading="lazy" />
+        <figcaption class="article-photo-caption">Looking Down · 500ft · Vehicle Access Tower</figcaption>
+      </figure>
+
       <div class="pull-quote">
         <p>Everything that goes up the LPT goes up by hand. One foot at a time. Stage correctly the first time or pay the ninety-minute price.</p>
       </div>
@@ -623,6 +671,11 @@
     <!-- PEREGRINE FALCONS -->
     <section class="reveal">
       <h2 class="section-header">The <span>Peregrine Falcons</span> at 360 Feet</h2>
+
+      <figure class="article-photo">
+        <img src="images/shane-thomas-strough-raptor-family-nesting-tower-1.jpg" alt="Raptors nesting in the steel of the Blue Origin launch tower with an egg" loading="lazy" />
+        <figcaption class="article-photo-caption">Raptors Nesting in the Tower Steel · With Egg · ~360ft</figcaption>
+      </figure>
 
       <p>Nobody put this in the project specifications.</p>
 
@@ -663,6 +716,11 @@
     <!-- TRANSFORMER -->
     <section class="reveal">
       <h2 class="section-header">What <span>400 Feet</span> Does to a Transformer</h2>
+
+      <figure class="article-photo">
+        <img src="images/shane-thomas-strough-electrical-fault-burned-wiring-1.jpg" alt="Burned and corroded wiring found during Blue Origin launch tower diagnostics" loading="lazy" />
+        <figcaption class="article-photo-caption">Electrical Fault Diagnostics · Burned Wiring · Marine Environment Corrosion</figcaption>
+      </figure>
 
       <p>We had established barricade zones around the base of the LPT for exactly this reason. Anything moved at altitude carries consequences out of all proportion to its size once gravity has room to work. The physics are not ambiguous about this.</p>
 
@@ -708,6 +766,11 @@
     <section class="reveal">
       <h2 class="section-header">Build the Team <span>the Problem Requires</span></h2>
 
+      <figure class="article-photo">
+        <img src="images/shane-thomas-strough-blue-origin-team-lc36-group-1.jpg" alt="Shane Thomas Strough and the full LC-36 team at Blue Origin Cape Canaveral" loading="lazy" />
+        <figcaption class="article-photo-caption">The LC-36 Team · Cape Canaveral · "Build the team the problem requires"</figcaption>
+      </figure>
+
       <p>Before we set foot on a launch structure, I assembled a crew specifically for this engagement. One master electrician. Two journeymen. One apprentice. A controls technician. A communications specialist. A crane operator. A dedicated safety manager.</p>
 
       <p>Then I got every member of that team certified in high-angle tower climbing and rescue. Including the project manager. Including the field engineer. Everyone.</p>
@@ -752,6 +815,11 @@
     <section class="reveal">
       <h2 class="section-header">The <span>FAA Fines</span> Stopped</h2>
 
+      <figure class="article-photo">
+        <img src="images/shane-thomas-strough-faa-obstruction-light-interior-1.jpg" alt="Interior of an FAA obstruction light on the Blue Origin launch tower" loading="lazy" />
+        <figcaption class="article-photo-caption">Inside one of the FAA obstruction lights — the components that had to work perfectly, every time, to keep the program in compliance.</figcaption>
+      </figure>
+
       <p>The technical solution involved corrected sequence logic, replaced components across multiple systems, rebuilt communication pathways between the launch tower infrastructure and the range safety systems, and a comprehensive documentation package that gave the FAA everything required to verify compliance and formally close every outstanding finding.</p>
 
       <p>But the technical solution was the last twenty percent of the work. The first eighty percent was everything described above: saying yes before knowing exactly how, listening before acting, assembling the right team, getting that team to altitude, making hard calls about who was credentialed and who was operationally suited, doing it the hard way once and then fixing the crane, planning the food, respecting the falcons, treating communication as life safety, having the conversations at 500 feet that do not happen anywhere else, and fitting all of it between 236 buildings at Camp Lejeune and a water treatment plant and a wastewater plant and a self-healing communications ring.</p>
@@ -769,9 +837,19 @@
 
       <p>In the evenings after the crew wrapped, I would sometimes drive through the Kennedy Space Center grounds with the windows down. Major Tom playing through the speakers. The Space Coast at dusk looks like another planet. Launch complexes standing in the flat Florida landscape. The smell of the Atlantic. The particular silence of a place from which human beings have been launched into orbit.</p>
 
+      <figure class="article-photo">
+        <img src="images/shane-thomas-strough-spacex-launch-from-tower-1.jpg" alt="SpaceX launch viewed from Blue Origin Launch Complex 36" loading="lazy" />
+        <figcaption class="article-photo-caption">A SpaceX launch viewed from the Blue Origin tower — close enough that the ground shook before the sound arrived.</figcaption>
+      </figure>
+
       <p>I watched live SpaceX launches from close enough range that the ground shook before the sound arrived. When the sound arrived, it hit you in the chest. It is one of the most visceral reminders I have ever experienced of what human engineering can accomplish when everyone in the chain does their part without compromise.</p>
 
       <p>I watched sea turtles hatch and make their way to the ocean while conducting lighting inspections on the launch tower. Ancient creatures navigating by the light of the horizon, walking past the boots of the people building the infrastructure that sends other humans toward the stars. The turtles were there before the launch pads existed. They will be there after everything we built has been decommissioned and replaced.</p>
+
+      <figure class="article-photo">
+        <img src="images/shane-thomas-strough-blue-origin-looking-up-through-steel-1.jpg" alt="Looking up through the steel structure of Blue Origin's launch tower at night" loading="lazy" />
+        <figcaption class="article-photo-caption">Looking up through the steel of the launch tower — Cape Canaveral infrastructure at a scale that changes your sense of proportion.</figcaption>
+      </figure>
 
       <p>I climbed a water tower so large it altered your sense of scale. Not because my scope required it. Because understanding a place means understanding it from every angle available to you. I lay on top of it and looked at the Atlantic and the launch complexes and thought about what it means to build things that matter in places that matter for purposes that extend well beyond any single career or contract.</p>
 
