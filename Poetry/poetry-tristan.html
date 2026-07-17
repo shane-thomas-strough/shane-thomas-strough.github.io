@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Search engine indexing: automated -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRISTAN — Shane Thomas Strough</title>
+  <meta name="description" content="'TRISTAN' — an acrostic poem by Shane Thomas Strough. Written at Palmarcito, El Salvador, Day 43 — 5am. Tenacious, Resilient, Ironhearted, Selfless, Tender, Authentic, Never-yielding. The Palmarcito Papers." />
+  <meta name="keywords" content="Shane Thomas Strough, Shane Strough, poetry, TRISTAN, acrostic, Palmarcito, El Salvador, The Palmarcito Papers, original poetry, Tenacious Resilient Ironhearted Selfless Tender Authentic Never-yielding" />
+  <link rel="canonical" href="https://shanestrough.com/poetry-tristan.html" />
+
+  <meta property="og:title" content="TRISTAN — Shane Thomas Strough" />
+  <meta property="og:description" content="An acrostic poem for my second son. Tenacious in spirit. Resilient through trial. Ironhearted at the center. Selfless in love. Tender without shame. Authentic in soul. Never-yielding in what is right." />
+  <meta property="og:url" content="https://shanestrough.com/poetry-tristan.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://shanestrough.com/images/the-accent-of-the-soul-og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TRISTAN — Shane Thomas Strough" />
+  <meta name="twitter:image" content="https://shanestrough.com/images/the-accent-of-the-soul-og.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "TRISTAN",
+    "alternateName": "An Acrostic · For My Second Son",
+    "author": {
+      "@type": "Person",
+      "name": "Shane Thomas Strough",
+      "url": "https://shanestrough.com"
+    },
+    "dateCreated": "2026-03-28",
+    "locationCreated": {
+      "@type": "Place",
+      "name": "Palmarcito, El Salvador"
+    },
+    "genre": "Poetry",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "The Palmarcito Papers"
+    },
+    "about": "An acrostic poem — Tenacious, Resilient, Ironhearted, Selfless, Tender, Authentic, Never-yielding.",
+    "url": "https://shanestrough.com/poetry-tristan.html"
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,600;0,900;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black: #080A0C;
+      --deep: #0D1117;
+      --panel: #111820;
+      --border: #1E2D3D;
+      --electric: #00E5FF;
+      --teal: #00B4C6;
+      --dim-teal: rgba(0, 229, 255, 0.12);
+      --white: #F0F4F8;
+      --muted: #6B8099;
+      --warm: #C8A96E;
+      --dim-warm: rgba(200, 169, 110, 0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--warm); }
+
+    /* --- NAV --- */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: rgba(8, 10, 12, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--electric); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px; height: 1px;
+      background: var(--electric);
+    }
+
+    /* --- PAGE HEADER --- */
+    .page-header {
+      padding: 14rem 2.5rem 5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+    }
+
+    .page-header-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200, 169, 110, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 169, 110, 0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .breadcrumb {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb a {
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.92;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-title span { color: var(--warm); }
+
+    .page-subtitle {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--warm);
+      margin-top: 1.5rem;
+      position: relative;
+      z-index: 1;
+      opacity: 0.8;
+    }
+
+    .page-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-meta .meta-dot {
+      display: inline-block;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--warm);
+      vertical-align: middle;
+      margin: 0 1rem;
+      opacity: 0.6;
+    }
+
+    .page-byline {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-glow {
+      position: absolute;
+      top: 10%; left: 50%;
+      transform: translateX(-50%);
+      width: 50vw; height: 50vw;
+      max-width: 600px; max-height: 600px;
+      background: radial-gradient(ellipse, rgba(200, 169, 110, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* --- POEM --- */
+    .poem-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 6rem;
+      position: relative;
+    }
+
+    .stanza {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: clamp(1rem, 2vw, 1.12rem);
+      line-height: 2;
+      color: rgba(240, 244, 248, 0.88);
+      margin-bottom: 2rem;
+    }
+
+    .section-gap {
+      height: 2rem;
+    }
+
+    .section-break {
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-break-line {
+      width: 60px;
+      height: 1px;
+      background: var(--warm);
+      opacity: 0.3;
+    }
+
+    .stanza--emphasis {
+      color: var(--white);
+    }
+
+    .stanza--warm {
+      color: var(--warm);
+      font-style: italic;
+    }
+
+    .stanza--closing {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: 0.05em;
+      color: var(--warm);
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .acrostic-word {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: 0.08em;
+      color: var(--warm);
+      margin-bottom: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .acrostic-summary {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      line-height: 2;
+      color: var(--warm);
+      text-align: center;
+      margin: 2rem 0;
+      opacity: 0.9;
+    }
+
+    .poem-attribution {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(200, 169, 110, 0.15);
+      text-align: right;
+    }
+
+    .poem-attribution-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+
+    .poem-attribution-detail {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* --- POEM NAV --- */
+    .poem-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 4rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .poem-nav a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .poem-nav a:hover { color: var(--warm); }
+
+    .poem-nav-center a { color: var(--warm); }
+    .poem-nav-center a:hover { color: var(--white); }
+
+    .poem-nav-prev,
+    .poem-nav-next {
+      min-width: 140px;
+    }
+
+    .poem-nav-prev { text-align: left; }
+    .poem-nav-next { text-align: right; }
+    .poem-nav-center { text-align: center; }
+
+    /* --- FOOTER --- */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+    }
+
+    .footer-copy {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--electric); }
+
+    .footer-tag {
+      font-size: 0.6rem;
+      color: var(--muted);
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+    }
+
+    /* --- REVEAL --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal-slow {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-slow.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- MOBILE --- */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 56px; left: 0; right: 0;
+        background: rgba(8,10,12,0.97);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links.open { display: flex; }
+      .nav-hamburger { display: flex; }
+
+      .page-header { padding: 10rem 1.5rem 3rem; }
+      .poem-container { padding: 2rem 1.5rem 4rem; }
+      .poem-nav { padding: 2rem 1.5rem 3rem; flex-wrap: wrap; gap: 1rem; }
+      .poem-nav-prev, .poem-nav-next { min-width: auto; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .page-title { font-size: clamp(2.5rem, 12vw, 4rem); }
+      .page-meta .meta-dot { margin: 0 0.5rem; }
+      .stanza { font-size: 0.95rem; line-height: 1.9; }
+      .stanza--closing { font-size: clamp(1.5rem, 8vw, 2rem); }
+      .acrostic-word { font-size: clamp(1.5rem, 8vw, 2rem); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">STS</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="insights.html">Field Notes</a></li>
+      <li><a href="poetry.html" class="active">Poetry</a></li>
+      <li><a href="podcast-stop-the-chaos.html">Podcast</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header-grid" aria-hidden="true"></div>
+  <header class="page-header">
+    <div class="header-glow" aria-hidden="true"></div>
+    <div class="breadcrumb">
+      <a href="index.html">shanestrough.com</a> / <a href="poetry.html">Poetry</a> / TRISTAN
+    </div>
+    <h1 class="page-title">
+      <span>TRISTAN</span>
+    </h1>
+    <div class="page-subtitle">An Acrostic &middot; For My Second Son</div>
+    <div class="page-byline">Shane Thomas Strough</div>
+    <div class="page-meta">
+      Palmarcito, El Salvador <span class="meta-dot"></span> Day 43 &mdash; 5am <span class="meta-dot"></span> The Palmarcito Papers
+    </div>
+  </header>
+
+  <!-- THE POEM -->
+  <main class="poem-container" role="main">
+    <article>
+
+      <!-- T — Tenacious -->
+      <div class="acrostic-word reveal-slow">Tenacious&mdash;</div>
+
+      <div class="stanza reveal-slow">
+        not loud about it,<br>
+        not theatrical in struggle,<br>
+        but built with that stubborn inner fastening<br>
+        that holds when easier spirits come undone.
+      </div>
+
+      <div class="stanza reveal-slow">
+        When things grow difficult,<br>
+        he does not scatter.<br>
+        He sets his jaw.<br>
+        He leans in.<br>
+        He keeps going.
+      </div>
+
+      <div class="stanza reveal-slow">
+        There is something in him<br>
+        that does not make quick peace with defeat.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <!-- R — Resilient -->
+      <div class="acrostic-word reveal-slow">Resilient&mdash;</div>
+
+      <div class="stanza reveal-slow">
+        not because life has asked nothing of him,<br>
+        but because he has already begun<br>
+        to answer pressure with form.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Some bend and lose themselves.<br>
+        Some harden and lose their warmth.<br>
+        He does neither.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He takes the blow,<br>
+        finds his footing,<br>
+        and returns with more of himself still intact.
+      </div>
+
+      <div class="stanza reveal-slow">
+        This is resilience in its truest shape:<br>
+        not untouchedness,<br>
+        but recovery with spirit preserved.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <!-- I — Ironhearted -->
+      <div class="acrostic-word reveal-slow">Ironhearted&mdash;</div>
+
+      <div class="stanza reveal-slow">
+        a rare word for a rare making.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Not cold-hearted. Never that.<br>
+        Not closed,<br>
+        not harsh,<br>
+        not armored against love.
+      </div>
+
+      <div class="stanza reveal-slow">
+        But ironhearted in the old and rightful sense:<br>
+        strong at the center,<br>
+        weight-bearing,<br>
+        dependable under strain.
+      </div>
+
+      <div class="stanza reveal-slow">
+        The kind of heart that can hold pain<br>
+        without surrendering goodness.<br>
+        The kind of heart that can endure<br>
+        without becoming cruel.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <!-- S — Selfless -->
+      <div class="acrostic-word reveal-slow">Selfless&mdash;</div>
+
+      <div class="stanza reveal-slow">
+        not in the way that erases the self,<br>
+        but in the nobler way:<br>
+        the instinct to look outward,<br>
+        to help first,<br>
+        to carry what he can for another<br>
+        before counting the cost to himself.
+      </div>
+
+      <div class="stanza reveal-slow">
+        There is kindness in him<br>
+        that does not advertise.<br>
+        Love in him<br>
+        that acts before it speaks.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He gives naturally&mdash;<br>
+        the way a strong hand reaches,<br>
+        the way a good boy notices,<br>
+        the way a true soul serves<br>
+        without needing to be seen doing it.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <!-- T — Tender -->
+      <div class="acrostic-word reveal-slow">Tender&mdash;</div>
+
+      <div class="stanza reveal-slow">
+        and this may be the holiest part.
+      </div>
+
+      <div class="stanza reveal-slow">
+        For the world has many hard people.<br>
+        It has many rough voices,<br>
+        many blunt instruments,<br>
+        many boys taught too early<br>
+        that gentleness is weakness<br>
+        and care is something to be hidden.
+      </div>
+
+      <div class="stanza reveal-slow">
+        But Tristan carries another inheritance.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He is strong without becoming severe.<br>
+        Soft-hearted without becoming fragile.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He does not have to choose<br>
+        between steel and mercy.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He was built, somehow,<br>
+        to carry both.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <!-- A — Authentic -->
+      <div class="acrostic-word reveal-slow">Authentic&mdash;</div>
+
+      <div class="stanza reveal-slow">
+        unaltered at the core.<br>
+        No counterfeit shine.<br>
+        No need to perform himself into worth.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He feels real because he is real.<br>
+        When he loves, it is real.<br>
+        When he stands, it is real.<br>
+        When he is wounded,<br>
+        the wound is real&mdash;<br>
+        and so is the courage with which he bears it.
+      </div>
+
+      <div class="stanza reveal-slow">
+        There is nothing borrowed in him.<br>
+        He comes by his spirit honestly.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <!-- N — Never-yielding -->
+      <div class="acrostic-word reveal-slow">Never-yielding&mdash;</div>
+
+      <div class="stanza reveal-slow">
+        not to hardship,<br>
+        not to fear,<br>
+        not to the smaller voice that says<br>
+        be silent,<br>
+        stand down,<br>
+        let wrong pass unchallenged.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He is not afraid to stand for what is right<br>
+        even when quiet would cost him less.
+      </div>
+
+      <div class="stanza reveal-slow">
+        This, too, is knighthood.<br>
+        Not costume.<br>
+        Not storybook pose.<br>
+        But moral stamina.<br>
+        The willingness to remain upright<br>
+        when compromise would be easier.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <div class="stanza reveal-slow">
+        He was named for Sir Tristan,<br>
+        and for blood that came before him.<br>
+        A knight,<br>
+        and an ancestor.<br>
+        A legend,<br>
+        and a lineage.
+      </div>
+
+      <div class="stanza reveal-slow">
+        And somehow the name fit.
+      </div>
+
+      <div class="stanza reveal-slow">
+        For he loves the waters&mdash;<br>
+        fishing beside his father,<br>
+        swimming into the living world,<br>
+        exploring as though wonder itself<br>
+        were a country worth defending.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He has moved through castles,<br>
+        through caves,<br>
+        through rockets and cities,<br>
+        through France,<br>
+        Scotland,<br>
+        England,<br>
+        New York,<br>
+        London&mdash;<br>
+        the wide and storied world<br>
+        already entering him.
+      </div>
+
+      <div class="stanza reveal-slow">
+        But what will matter most<br>
+        is not only where he has gone.<br>
+        It is how he has gone:<br>
+        with grit,<br>
+        with kindness,<br>
+        with courage,<br>
+        with the strange and beautiful union<br>
+        of gentleness and strength.
+      </div>
+
+      <div class="stanza reveal-slow">
+        That combination is rare.<br>
+        Rarer than brilliance.<br>
+        Rarer than boldness alone.<br>
+        It is the mark of a true knight.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <div class="stanza reveal-slow">
+        So let it be said plainly:
+      </div>
+
+      <div class="stanza reveal-slow">
+        Tristan Nikolas-Ray Strough<br>
+        does not need to become hard<br>
+        to become strong.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He already bears the better pattern.
+      </div>
+
+      <div class="stanza reveal-slow">
+        To endure<br>
+        without losing tenderness.<br>
+        To stand<br>
+        without losing kindness.<br>
+        To fight for what is right<br>
+        without becoming hungry for battle.<br>
+        To carry an iron heart<br>
+        that still knows how to love.
+      </div>
+
+      <div class="stanza reveal-slow">
+        That is the greater chivalry.<br>
+        That is the deeper courage.
+      </div>
+
+      <!-- Section Break -->
+      <div class="section-break"><div class="section-break-line"></div></div>
+
+      <div class="stanza reveal-slow">
+        And if one were to speak his name<br>
+        not merely as record,<br>
+        but as blessing,<br>
+        it might sound like this:
+      </div>
+
+      <!-- Closing Acrostic -->
+      <div class="stanza--closing reveal-slow">TRISTAN</div>
+
+      <div class="acrostic-summary reveal-slow">
+        Tenacious in spirit.<br>
+        Resilient through trial.<br>
+        Ironhearted at the center.<br>
+        Selfless in love.<br>
+        Tender without shame.<br>
+        Authentic in soul.<br>
+        Never-yielding in what is right.
+      </div>
+
+      <div class="acrostic-summary reveal-slow">
+        The knight.<br>
+        The good heart.<br>
+        The one who keeps going.
+      </div>
+
+      <!-- Attribution -->
+      <div class="poem-attribution reveal-slow">
+        <div class="poem-attribution-name">&mdash; Shane Thomas Strough</div>
+        <div class="poem-attribution-detail">Palmarcito, El Salvador</div>
+        <div class="poem-attribution-detail">Day 43 &mdash; 5am</div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- POEM NAVIGATION -->
+  <div class="poem-nav">
+    <div class="poem-nav-prev"><a href="poetry-merric.html">&larr; Previous Poem</a></div>
+    <div class="poem-nav-center"><a href="poetry.html">All Poetry</a></div>
+    <div class="poem-nav-next"><a href="poetry-layne.html">Next Poem &rarr;</a></div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <span class="footer-logo">Shane Thomas Strough</span>
+    <div class="footer-links">
+      <a href="insights.html">Field Notes</a>
+      <a href="https://www.linkedin.com/in/shane-thomas-strough/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://medium.com/@shane-thomas-strough" target="_blank" rel="noopener">Medium</a>
+      <a href="https://www.youtube.com/@ShaneThomasStrough" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <span class="footer-tag">Sovereign. Honest. Aware. Navigating. Evolving.</span>
+    <span class="footer-copy">&copy; 2026 &middot; shanestrough.com</span>
+  </footer>
+
+  <script>
+    // --- MOBILE MENU ---
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+
+    // --- INTERSECTION OBSERVER ---
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('.reveal, .reveal-slow').forEach(el => observer.observe(el));
+  </script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5d22bf2453fb4610b9604bec47f5cbb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

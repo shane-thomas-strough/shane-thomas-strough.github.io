@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Search engine indexing: automated -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Singular — Shane Thomas Strough</title>
+  <meta name="description" content="'Singular' — a poem by Shane Thomas Strough, El Gringo Clandestino. Written during Semana Santa 2026, Playa El Palmarcito, El Salvador. But strange is only what the ordinary calls the singular." />
+  <meta name="keywords" content="Shane Thomas Strough, Shane Strough, poetry, Singular, El Gringo Clandestino, Palmarcito, El Salvador, Semana Santa, The Palmarcito Papers, original poetry" />
+  <link rel="canonical" href="https://shanestrough.com/poetry-singular.html" />
+
+  <meta property="og:title" content="Singular — Shane Thomas Strough" />
+  <meta property="og:description" content="A poem written during Semana Santa 2026, Playa El Palmarcito, El Salvador. Strange is only what the ordinary calls the singular." />
+  <meta property="og:url" content="https://shanestrough.com/poetry-singular.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://shanestrough.com/images/the-accent-of-the-soul-og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Singular — Shane Thomas Strough" />
+  <meta name="twitter:image" content="https://shanestrough.com/images/the-accent-of-the-soul-og.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Singular",
+    "author": {
+      "@type": "Person",
+      "name": "Shane Thomas Strough",
+      "url": "https://shanestrough.com"
+    },
+    "dateCreated": "2026-03-28",
+    "locationCreated": {
+      "@type": "Place",
+      "name": "Playa El Palmarcito, El Salvador"
+    },
+    "genre": "Poetry",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "The Palmarcito Papers"
+    },
+    "about": "A poem on authenticity, singularity, and refusing to perform a life instead of living it.",
+    "url": "https://shanestrough.com/poetry-singular.html"
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,600;0,900;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black: #080A0C;
+      --deep: #0D1117;
+      --panel: #111820;
+      --border: #1E2D3D;
+      --electric: #00E5FF;
+      --teal: #00B4C6;
+      --dim-teal: rgba(0, 229, 255, 0.12);
+      --white: #F0F4F8;
+      --muted: #6B8099;
+      --warm: #C8A96E;
+      --dim-warm: rgba(200, 169, 110, 0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--warm); }
+
+    /* --- NAV --- */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: rgba(8, 10, 12, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--electric); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px; height: 1px;
+      background: var(--electric);
+    }
+
+    /* --- PAGE HEADER --- */
+    .page-header {
+      padding: 14rem 2.5rem 5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+    }
+
+    .page-header-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200, 169, 110, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 169, 110, 0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .breadcrumb {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb a {
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.92;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-title span { color: var(--warm); }
+
+    .page-byline {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-meta .meta-dot {
+      display: inline-block;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--warm);
+      vertical-align: middle;
+      margin: 0 1rem;
+      opacity: 0.6;
+    }
+
+    .header-glow {
+      position: absolute;
+      top: 10%; left: 50%;
+      transform: translateX(-50%);
+      width: 50vw; height: 50vw;
+      max-width: 600px; max-height: 600px;
+      background: radial-gradient(ellipse, rgba(200, 169, 110, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* --- POEM --- */
+    .poem-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 6rem;
+      position: relative;
+    }
+
+    .stanza {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: clamp(1rem, 2vw, 1.12rem);
+      line-height: 2;
+      color: rgba(240, 244, 248, 0.88);
+      margin-bottom: 2rem;
+    }
+
+    .section-gap {
+      height: 2rem;
+    }
+
+    .stanza--emphasis {
+      color: var(--white);
+    }
+
+    .stanza--warm {
+      color: var(--warm);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.2vw, 1.25rem);
+    }
+
+    .stanza--closing {
+      color: var(--white);
+      font-size: clamp(1.1rem, 2.2vw, 1.25rem);
+    }
+
+    .poem-attribution {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(200, 169, 110, 0.15);
+      text-align: right;
+    }
+
+    .poem-attribution-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+
+    .poem-attribution-detail {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* --- POEM NAV --- */
+    .poem-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 4rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .poem-nav a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .poem-nav a:hover { color: var(--warm); }
+
+    .poem-nav-center a { color: var(--warm); }
+    .poem-nav-center a:hover { color: var(--white); }
+
+    .poem-nav-prev,
+    .poem-nav-next {
+      min-width: 140px;
+    }
+
+    .poem-nav-prev { text-align: left; }
+    .poem-nav-next { text-align: right; }
+    .poem-nav-center { text-align: center; }
+
+    /* --- FOOTER --- */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+    }
+
+    .footer-copy {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--electric); }
+
+    .footer-tag {
+      font-size: 0.6rem;
+      color: var(--muted);
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+    }
+
+    /* --- REVEAL --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal-slow {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-slow.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- MOBILE --- */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 56px; left: 0; right: 0;
+        background: rgba(8,10,12,0.97);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links.open { display: flex; }
+      .nav-hamburger { display: flex; }
+
+      .page-header { padding: 10rem 1.5rem 3rem; }
+      .poem-container { padding: 2rem 1.5rem 4rem; }
+      .poem-nav { padding: 2rem 1.5rem 3rem; flex-wrap: wrap; gap: 1rem; }
+      .poem-nav-prev, .poem-nav-next { min-width: auto; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .page-title { font-size: clamp(2.5rem, 12vw, 4rem); }
+      .page-meta .meta-dot { margin: 0 0.5rem; }
+      .stanza { font-size: 0.95rem; line-height: 1.9; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">STS</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="insights.html">Field Notes</a></li>
+      <li><a href="poetry.html" class="active">Poetry</a></li>
+      <li><a href="podcast-stop-the-chaos.html">Podcast</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header-grid" aria-hidden="true"></div>
+  <header class="page-header">
+    <div class="header-glow" aria-hidden="true"></div>
+    <div class="breadcrumb">
+      <a href="index.html">shanestrough.com</a> / <a href="poetry.html">Poetry</a> / Singular
+    </div>
+    <h1 class="page-title">
+      <span>Singular</span>
+    </h1>
+    <div class="page-byline">Shane Thomas Strough &middot; El Gringo Clandestino</div>
+    <div class="page-meta">
+      Playa El Palmarcito, El Salvador <span class="meta-dot"></span> Semana Santa 2026 <span class="meta-dot"></span> The Palmarcito Papers
+    </div>
+  </header>
+
+  <!-- THE POEM -->
+  <main class="poem-container" role="main">
+    <article>
+
+      <div class="stanza reveal-slow">
+        They called it strange,<br>
+        the way he moved&mdash;<br>
+        no feed, no filter,<br>
+        no curated proof<br>
+        for someone else's scroll.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Just a man,<br>
+        a midnight pot,<br>
+        a Pacific<br>
+        sixty meters from the steps.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        Strange, they said,<br>
+        to build a platform<br>
+        from a casita floor.<br>
+        To ask the same question<br>
+        every morning<br>
+        to a woman seventeen years gone<br>
+        who answered in two seconds<br>
+        as if she had been waiting<br>
+        just beyond the door.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Strange<br>
+        to name the welcome screen after her<br>
+        before she ever saw it.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        Strange<br>
+        to cook at midnight.<br>
+        To dive alone.<br>
+        To fear the open water<br>
+        and drop in anyway.<br>
+        To keep letters wrapped in incense<br>
+        for seventeen years<br>
+        and still know every word.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza stanza--warm reveal-slow">
+        But strange is only what the ordinary calls<br>
+        the singular.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        The man who does not perform a life<br>
+        but lives it<br>
+        to the bone.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Who builds what does not exist<br>
+        because the gap offends him.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Who loves what he loves<br>
+        without apology,<br>
+        without schedule,<br>
+        without waiting for the calendar<br>
+        to approve desire.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Who enters every large thing afraid<br>
+        because fear is not the verdict&mdash;<br>
+        only the edge<br>
+        that keeps him sharp.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza stanza--closing reveal-slow">
+        They called it strange.<br>
+        He called it<br>
+        Tuesday.
+      </div>
+
+      <!-- Attribution -->
+      <div class="poem-attribution reveal-slow">
+        <div class="poem-attribution-name">— Shane Thomas Strough</div>
+        <div class="poem-attribution-detail">El Gringo Clandestino</div>
+        <div class="poem-attribution-detail">Palmarcito, El Salvador</div>
+        <div class="poem-attribution-detail">Semana Santa 2026</div>
+        <div class="poem-attribution-detail">The Palmarcito Papers</div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- POEM NAVIGATION -->
+  <div class="poem-nav">
+    <div class="poem-nav-prev"><a href="poetry-nobody.html">&larr; Previous Poem</a></div>
+    <div class="poem-nav-center"><a href="poetry.html">All Poetry</a></div>
+    <div class="poem-nav-next"><a href="poetry-gina.html">Next Poem &rarr;</a></div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <span class="footer-logo">Shane Thomas Strough</span>
+    <div class="footer-links">
+      <a href="insights.html">Field Notes</a>
+      <a href="https://www.linkedin.com/in/shane-thomas-strough/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://medium.com/@shane-thomas-strough" target="_blank" rel="noopener">Medium</a>
+      <a href="https://www.youtube.com/@ShaneThomasStrough" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <span class="footer-tag">Sovereign. Honest. Aware. Navigating. Evolving.</span>
+    <span class="footer-copy">&copy; 2026 &middot; shanestrough.com</span>
+  </footer>
+
+  <script>
+    // --- MOBILE MENU ---
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+
+    // --- INTERSECTION OBSERVER ---
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('.reveal, .reveal-slow').forEach(el => observer.observe(el));
+  </script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5d22bf2453fb4610b9604bec47f5cbb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

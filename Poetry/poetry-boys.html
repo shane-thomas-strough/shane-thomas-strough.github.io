@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The World In Their Bodies — Shane Thomas Strough</title>
+  <meta name="description" content="'The World In Their Bodies' — a poetry collection for three sons: Merric, Tristan, and Layne. Written on Day 43 of the Palmarcito Reset, El Salvador. By Shane Thomas Strough." />
+  <meta name="keywords" content="Shane Thomas Strough, Shane Strough, poetry, The World In Their Bodies, Merric, Tristan, Layne, Palmarcito, El Salvador, fatherhood, sons, acrostic poetry" />
+  <link rel="canonical" href="https://shanestrough.com/poetry-boys.html" />
+
+  <meta property="og:title" content="The World In Their Bodies — Shane Thomas Strough" />
+  <meta property="og:description" content="A poetry collection for three sons — Merric, Tristan, and Layne. Written on Day 43 of the Palmarcito Reset, El Salvador. A father's testimony of formation, courage, and becoming." />
+  <meta property="og:url" content="https://shanestrough.com/poetry-boys.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://shanestrough.com/images/shane-thomas-strough-family-tintagel-cornwall-1.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The World In Their Bodies — Shane Thomas Strough" />
+  <meta name="twitter:image" content="https://shanestrough.com/images/shane-thomas-strough-family-tintagel-cornwall-1.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "The World In Their Bodies",
+    "author": {
+      "@type": "Person",
+      "name": "Shane Thomas Strough",
+      "url": "https://shanestrough.com"
+    },
+    "dateCreated": "2026-03-27",
+    "locationCreated": {
+      "@type": "Place",
+      "name": "Palmarcito, El Salvador"
+    },
+    "genre": "Poetry",
+    "inLanguage": "en",
+    "about": "A poetry collection for three sons — Merric, Tristan, and Layne — on formation, courage, and becoming.",
+    "url": "https://shanestrough.com/poetry-boys.html"
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,600;0,900;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black: #080A0C;
+      --deep: #0D1117;
+      --panel: #111820;
+      --border: #1E2D3D;
+      --electric: #00E5FF;
+      --teal: #00B4C6;
+      --dim-teal: rgba(0, 229, 255, 0.12);
+      --white: #F0F4F8;
+      --muted: #6B8099;
+      --warm: #C8A96E;
+      --dim-warm: rgba(200, 169, 110, 0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--warm); }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: rgba(8, 10, 12, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--electric); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px; height: 1px;
+      background: var(--electric);
+    }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      padding: 14rem 2.5rem 5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+    }
+
+    .page-header-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200, 169, 110, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 169, 110, 0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .breadcrumb {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb a {
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.92;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-title span { color: var(--warm); }
+
+    .page-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-meta .meta-dot {
+      display: inline-block;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--warm);
+      vertical-align: middle;
+      margin: 0 1rem;
+      opacity: 0.6;
+    }
+
+    .header-glow {
+      position: absolute;
+      top: 10%; left: 50%;
+      transform: translateX(-50%);
+      width: 50vw; height: 50vw;
+      max-width: 600px; max-height: 600px;
+      background: radial-gradient(ellipse, rgba(200, 169, 110, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── POEM ─── */
+    .poem-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 6rem;
+      position: relative;
+    }
+
+    .stanza {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: clamp(1rem, 2vw, 1.12rem);
+      line-height: 2;
+      color: rgba(240, 244, 248, 0.88);
+      margin-bottom: 2rem;
+    }
+
+    .section-gap {
+      height: 2rem;
+    }
+
+    .refrain {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+      color: var(--warm);
+      margin: 0.5rem 0 2rem;
+      letter-spacing: 0.03em;
+    }
+
+    .stanza--emphasis {
+      color: var(--white);
+    }
+
+    /* ─── SECTION DIVIDER ─── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--warm), transparent);
+      opacity: 0.2;
+    }
+
+    .section-divider {
+      text-align: center;
+      padding: 4rem 2.5rem;
+      position: relative;
+    }
+
+    .section-divider-line {
+      width: 60px;
+      height: 1px;
+      background: var(--warm);
+      margin: 0 auto;
+      opacity: 0.4;
+    }
+
+    /* ─── POEM SECTION HEADERS ─── */
+    .poem-section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      padding-top: 2rem;
+    }
+
+    .poem-section-numeral {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .poem-section-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      letter-spacing: 0.05em;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    /* ─── ACROSTIC SUMMARY ─── */
+    .acrostic-summary {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2.5rem 2rem;
+      border-top: 1px solid rgba(200, 169, 110, 0.15);
+      border-bottom: 1px solid rgba(200, 169, 110, 0.15);
+    }
+
+    .acrostic-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: 0.12em;
+      color: var(--warm);
+      margin-bottom: 1.2rem;
+    }
+
+    .acrostic-line {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      line-height: 2;
+      color: rgba(240, 244, 248, 0.7);
+    }
+
+    /* ─── STORY (PROLOGUE/EPILOGUE) ─── */
+    .story-section {
+      background: var(--deep);
+      border-top: 1px solid var(--border);
+      padding: 6rem 2.5rem;
+    }
+
+    .story-section--seamless {
+      background: var(--black);
+      border-top: none;
+      padding: 2rem 2.5rem 6rem;
+    }
+
+    .story-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .story-header {
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .story-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 0.03em;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .story-subtitle {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-top: 0.8rem;
+    }
+
+    .story-break {
+      width: 40px;
+      height: 1px;
+      background: var(--warm);
+      margin: 3rem 0;
+      opacity: 0.4;
+    }
+
+    .story-break--center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .story-text {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+      line-height: 2;
+      color: rgba(107, 128, 153, 0.9);
+      margin-bottom: 1.5rem;
+    }
+
+    .story-text:last-child { margin-bottom: 0; }
+
+    .story-text em {
+      color: rgba(200, 169, 110, 0.8);
+      font-style: italic;
+    }
+
+    .story-text strong {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .story-text--highlight {
+      color: rgba(240, 244, 248, 0.7);
+    }
+
+    .story-text--standalone {
+      font-size: 1.05rem;
+      color: rgba(240, 244, 248, 0.6);
+    }
+
+    /* ─── ATTRIBUTION ─── */
+    .poem-attribution {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(200, 169, 110, 0.15);
+      text-align: right;
+    }
+
+    .poem-attribution-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+
+    .poem-attribution-detail {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* ─── POEM NAV ─── */
+    .poem-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 4rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .poem-nav a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .poem-nav a:hover { color: var(--warm); }
+
+    .poem-nav-center a { color: var(--warm); }
+    .poem-nav-center a:hover { color: var(--white); }
+
+    .poem-nav-prev,
+    .poem-nav-next {
+      min-width: 140px;
+    }
+
+    .poem-nav-prev { text-align: left; }
+    .poem-nav-next { text-align: right; }
+    .poem-nav-center { text-align: center; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+    }
+
+    .footer-copy {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--electric); }
+
+    .footer-tag {
+      font-size: 0.6rem;
+      color: var(--muted);
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+    }
+
+    /* ─── REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal-slow {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-slow.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 56px; left: 0; right: 0;
+        background: rgba(8,10,12,0.97);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links.open { display: flex; }
+      .nav-hamburger { display: flex; }
+
+      .page-header { padding: 10rem 1.5rem 3rem; }
+      .poem-container { padding: 2rem 1.5rem 4rem; }
+      .story-section { padding: 4rem 1.5rem; }
+      .story-section--seamless { padding: 2rem 1.5rem 4rem; }
+      .poem-nav { padding: 2rem 1.5rem 3rem; flex-wrap: wrap; gap: 1rem; }
+      .poem-nav-prev, .poem-nav-next { min-width: auto; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .page-title { font-size: clamp(2.5rem, 12vw, 4rem); }
+      .page-meta .meta-dot { margin: 0 0.5rem; }
+      .stanza { font-size: 0.95rem; line-height: 1.9; }
+      .refrain { font-size: 1.05rem; }
+      .poem-section-name { font-size: clamp(2rem, 10vw, 3.5rem); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">STS</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="insights.html">Field Notes</a></li>
+      <li><a href="poetry.html" class="active">Poetry</a></li>
+      <li><a href="podcast-stop-the-chaos.html">Podcast</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header-grid" aria-hidden="true"></div>
+  <header class="page-header">
+    <div class="header-glow" aria-hidden="true"></div>
+    <div class="breadcrumb">
+      <a href="index.html">shanestrough.com</a> / <a href="poetry.html">Poetry</a> / The World In Their Bodies
+    </div>
+    <h1 class="page-title">
+      The World<br>
+      <span>In Their Bodies</span>
+    </h1>
+    <div class="page-meta">
+      Day 43 <span class="meta-dot"></span> 5am <span class="meta-dot"></span> Palmarcito, El Salvador <span class="meta-dot"></span> March 2026
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- PROLOGUE                            -->
+  <!-- ═══════════════════════════════════ -->
+
+  <section class="story-section">
+    <div class="story-inner">
+
+      <div class="story-header reveal">
+        <h2 class="story-title">Prologue</h2>
+      </div>
+
+      <div class="story-break story-break--center"></div>
+
+      <p class="story-text story-text--highlight reveal">This is not a record of travel.</p>
+
+      <p class="story-text story-text--standalone reveal">Travel is too small a word for what happened.</p>
+
+      <p class="story-text reveal">Travel suggests itinerary, tickets, photographs, souvenirs bought under fluorescent light. It suggests a temporary passage through places that remain, in the end, mostly external to the one who passed through them. A person goes, looks, leaves, and calls that experience. But that is not what happened here. These boys were not moved across a map like luggage. They were not shown the world from behind glass. They entered it. They lived inside it. They let it mark them, and it did.</p>
+
+      <p class="story-text reveal">The cave was not a destination. It was wet stone, rising tide, and three boys who had to climb out before the water claimed the lower world. The castle was not a backdrop for a photograph. They woke on its grounds. They walked the paths of the dead as though history were not a lesson to memorize but an atmosphere to breathe. The fishing boat was not an excursion. One of them slept in the captain's quarters. The forest was not a scenic stop. It was blood, shaved hair, a wound met cleanly, and a child who barely flinched.</p>
+
+      <p class="story-text story-text--highlight reveal">This is the difference.</p>
+
+      <p class="story-text reveal">Some children are taught that the world is something to consume. Mine were taught that it is something to enter. Some are taught to observe life as though it were a screen, bright and untouchable. Mine climbed it, walked it, hauled it from the sea, spoke to it in other languages, descended into it, rode through it, got cut by it, stared back at it, and learned that it would answer if met directly.</p>
+
+      <p class="story-text reveal">They walked London on foot and learned that cities are not postcards but living organisms. They circled the British Isles not as tourists, but as inhabitants of weather, history, and long roads. They climbed in Cornwall and learned that rock must be read, not conquered blindly. They stood at Tintagel and entered Merlin's Cave beneath the ruins, not knowing that story would become body before the hour was done. They felt Scotland in the old way — through mist, stone, distance, and the strange hush that settles over a place that has outlived explanation. They stayed on the grounds of Dunvegan and woke inside eight hundred years of continuity. They walked the Farne Islands in nesting season, where the birds had not been trained to fear or entertain, and so the boys met something increasingly rare: a world not arranged for them, but real in itself.</p>
+
+      <p class="story-text reveal">They lived for months in Germany and let language become play. They stood in France not as spectators but as pit crew, hands dirty, useful, necessary. They watched rockets rise on the Space Coast and felt in their ribs the old human instinct to go beyond the visible boundary. Offshore, they learned the weight of living water. A tuna almost as large as a boy. Crab traps rising hand over hand from the deep. Seals on the coast. Snakes in the hand. Wild fowl wherever they went. Rollerblades underfoot until the son surpassed the father, which is exactly how it should be. Coasters earned by growth. Haunted houses met without collapse. Miles and miles and miles with a song in the mouth.</p>
+
+      <p class="story-text story-text--highlight reveal">This is not enrichment.</p>
+
+      <p class="story-text story-text--standalone reveal">It is formation.</p>
+
+      <p class="story-text reveal">The world entered them in pieces first: salt, stone, tide, cold, risk, altitude, engines, languages, history, cities, forests, decks, caves, cliffs, noise, silence. Then, over time, those pieces ceased to be separate. They became coordinates. Not memories only, though they are that. Not stories only, though they will be told. Coordinates. Internal points of reference by which a soul may someday orient itself when the road is dark and no map arrives in time.</p>
+
+      <p class="story-text story-text--highlight reveal">This matters more than most people know.</p>
+
+      <p class="story-text reveal">A boy who has climbed out of a cave with the tide coming in does not understand fear the way a boy raised entirely indoors understands it. A boy who has hauled on the living weight of the sea does not understand effort the same way. A boy who has walked castle grounds at dawn, heard foreign words fall naturally into his own mouth, stood under the concussion of rocket fire, ridden mile after mile with a song he helped invent, or slept in the captain's quarters of a working vessel — such a boy is carrying more than memories. He is carrying proof.</p>
+
+      <p class="story-text story-text--highlight reveal">Proof that the world is real.<br>
+Proof that he can meet it.<br>
+Proof that wonder is not fantasy.<br>
+Proof that danger need not be worshipped to be survived.<br>
+Proof that history is not dead.<br>
+Proof that courage can be practiced.<br>
+Proof that life is not a theory.</p>
+
+      <p class="story-text reveal">These boys were pulled out of school and thought, perhaps at first, that they were on vacation. They were not. They were receiving an education few institutions know how to give: an education in contact, in consequence, in awe, in self-trust, in brotherhood, in participation, in the felt scale of the world and their own place within it. They were learning that knowledge is not always delivered in units and worksheets. Sometimes it comes as wet rock under the hand. Sometimes as a foreign word spoken back correctly. Sometimes as exhaustion after a real climb. Sometimes as the trembling line between thrill and fear. Sometimes as the understanding that your father came back for you. Then back again for your brother. Then back again for the next one. Rising water. No speech. Just action. Just love in its oldest form: return.</p>
+
+      <p class="story-text story-text--highlight reveal">I have never left those boys.</p>
+
+      <p class="story-text story-text--standalone reveal">Not in the way that matters.</p>
+
+      <p class="story-text reveal">I have shown them the world not to impress them with its size, but to teach them that they belong inside it. That it is survivable. That it is magnificent. That it does not yield itself to the timid, but it does open, over time, to the attentive, the brave, the willing, the awake. I wanted them to know early what too many men learn too late: that life is not meant to be observed from a distance. It is meant to be lived with the hands, the lungs, the legs, the eyes, the nerve, the whole body brought to bear.</p>
+
+      <p class="story-text reveal">And so this work is not merely about who they are in temperament, though it will name that. It is about how temperament met world. How each boy took the same roads, the same weather, the same father, the same great rough curriculum of reality — and became more distinctly himself inside it. The eldest carrying weight and leadership. The knight-hearted one carrying grit without losing tenderness. The youngest carrying song, wonder, and fearless joy. Three boys. One brotherhood. One world entered fully enough that it can now be felt from the inside.</p>
+
+      <p class="story-text story-text--highlight reveal">That is what these poems attempt to honor.</p>
+
+      <p class="story-text reveal">Not perfection.<br>
+Not performance.<br>
+Not some polished myth of childhood without blood or difficulty.</p>
+
+      <p class="story-text story-text--standalone reveal">Something better.</p>
+
+      <p class="story-text reveal">A record of becoming.<br>
+A witness to formation.<br>
+A father's testimony that these boys have already done things that would break lesser spirits, and have done them not once, but again and again, while laughing, learning, hardening where they should harden, softening where they should soften, and growing toward a strength I pray will someday exceed my own.</p>
+
+      <p class="story-text story-text--highlight reveal">They have the world in their bodies now.</p>
+
+      <p class="story-text reveal">The highways.<br>
+The caves.<br>
+The castles.<br>
+The rockets.<br>
+The sea.<br>
+The languages.<br>
+The cliffs.<br>
+The rain.<br>
+The forests.<br>
+The fish.<br>
+The songs.<br>
+The miles.<br>
+The proof.</p>
+
+      <p class="story-text story-text--standalone reveal">No one can take that back.</p>
+
+      <p class="story-text story-text--highlight reveal">And that, in the end, is the point.</p>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- I. MERRIC                           -->
+  <!-- ═══════════════════════════════════ -->
+
+  <div class="section-divider reveal">
+    <div class="section-divider-line"></div>
+  </div>
+
+  <main class="poem-container" role="main">
+    <article>
+
+      <div class="poem-section-header reveal">
+        <div class="poem-section-numeral">I.</div>
+        <h2 class="poem-section-name">MERRIC</h2>
+      </div>
+
+      <!-- Mighty -->
+      <div class="refrain reveal-slow">Mighty—</div>
+
+      <div class="stanza reveal-slow">
+        not merely in strength,<br>
+        though strength is in him,<br>
+        but in the older sense:<br>
+        large of spirit,<br>
+        difficult to diminish,<br>
+        already carrying more than many grown men<br>
+        know how to bear.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He was named for Alexander,<br>
+        and something in him answered—<br>
+        not the hunger to rule,<br>
+        but the instinct to go first,<br>
+        to shoulder weight,<br>
+        to meet the unknown head-on<br>
+        and make a way where none was handed to him.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Enduring -->
+      <div class="refrain reveal-slow">Enduring—</div>
+
+      <div class="stanza reveal-slow">
+        through pain,<br>
+        through distance,<br>
+        through the rough apprenticeship<br>
+        of being eldest.
+      </div>
+
+      <div class="stanza reveal-slow">
+        A split head in the Montana woods,<br>
+        machete, firewood, blood—<br>
+        his father shaving him clean to reach the wound,<br>
+        and still he barely flinched.
+      </div>
+
+      <div class="stanza reveal-slow">
+        There are children who retreat from trial.<br>
+        He does not.<br>
+        He sets himself against it.<br>
+        He bears it.<br>
+        And in bearing it,<br>
+        becomes more clearly himself.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Radiant -->
+      <div class="refrain reveal-slow">Radiant—</div>
+
+      <div class="stanza reveal-slow">
+        not with performance,<br>
+        not with borrowed brightness,<br>
+        but with that unmistakable light<br>
+        that appears when a soul is fully present.
+      </div>
+
+      <div class="stanza reveal-slow">
+        At Tintagel,<br>
+        something in him recognized something older.<br>
+        He did not move through that place like a tourist.<br>
+        He stood in it as though history<br>
+        were speaking in a language just below speech,<br>
+        and he could almost hear it.
+      </div>
+
+      <div class="stanza reveal-slow">
+        That is a kind of radiance too:<br>
+        not shining for attention,<br>
+        but being lit from within<br>
+        by wonder honestly felt.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Remarkable -->
+      <div class="refrain reveal-slow">Remarkable—</div>
+
+      <div class="stanza reveal-slow">
+        in the true sense of the word:<br>
+        worthy of remark,<br>
+        worthy of memory,<br>
+        worthy of being spoken of again.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Brilliant with numbers.<br>
+        Quick with pattern.<br>
+        Quick with courage.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Rollerblades under his feet<br>
+        until even the father who taught him<br>
+        must smile and admit<br>
+        the student has surpassed the teacher.
+      </div>
+
+      <div class="stanza reveal-slow">
+        A hundred-pound tuna at the rail,<br>
+        fish almost his own size,<br>
+        and still he did not give up.
+      </div>
+
+      <div class="stanza reveal-slow">
+        This is how the remarkable reveals itself:<br>
+        not in applause,<br>
+        but under weight.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Intuitive -->
+      <div class="refrain reveal-slow">Intuitive—</div>
+
+      <div class="stanza reveal-slow">
+        alive to the deeper signal.
+      </div>
+
+      <div class="stanza reveal-slow">
+        A boy who picks up language like a game,<br>
+        German words falling naturally into his mouth<br>
+        as though they had been waiting there.<br>
+        Fearless in speaking to people<br>
+        in the language of their own world.<br>
+        Feeling a place before explaining it.<br>
+        Reading the room,<br>
+        the moment,<br>
+        the oldness in stone.
+      </div>
+
+      <div class="stanza reveal-slow">
+        There are maps that live on paper,<br>
+        and there are maps that live in the body.<br>
+        He seems already to trust the second kind.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Courageous -->
+      <div class="refrain reveal-slow">Courageous—</div>
+
+      <div class="stanza reveal-slow">
+        not because fear is absent,<br>
+        but because he has already begun<br>
+        to make a companion of it.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Cornwall rock.<br>
+        Kootenai woods.<br>
+        Merlin's Cave with the tide rising.<br>
+        Castles.<br>
+        Cities.<br>
+        Coasters earned by inches.<br>
+        Haunted nights handled better than most adults.
+      </div>
+
+      <div class="stanza reveal-slow">
+        The first one into the adventure.<br>
+        Captain for a reason.<br>
+        The eldest.<br>
+        The leader.<br>
+        The one who will often go ahead<br>
+        so others may know it can be done.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        And yet there is this too:
+      </div>
+
+      <div class="stanza reveal-slow">
+        at thirteen,<br>
+        he carries too much<br>
+        and does not always know where to set it down.
+      </div>
+
+      <div class="stanza reveal-slow">
+        The strong are often mistaken<br>
+        for those who need less tenderness.<br>
+        This is one of the world's oldest errors.
+      </div>
+
+      <div class="stanza reveal-slow">
+        For the boy who goes first<br>
+        must still be allowed to rest.<br>
+        The one who leads<br>
+        must still be held.<br>
+        The one who endures<br>
+        must still be shown<br>
+        that love does not depend<br>
+        on how much he can carry.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        So let it be said plainly:
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        Merric Alexander Strough<br>
+        was named after greatness,<br>
+        but he need not conquer the world<br>
+        to justify his name.
+      </div>
+
+      <div class="stanza reveal-slow">
+        It is enough, already,<br>
+        that he meets the world<br>
+        with such living force.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Enough that he enters it awake.<br>
+        Enough that he bears leadership early.<br>
+        Enough that he is building, even now,<br>
+        the kind of courage that does not harden into cruelty,<br>
+        the kind of strength that does not forget wonder,<br>
+        the kind of leadership that goes first<br>
+        so others may be less afraid.
+      </div>
+
+      <div class="stanza reveal-slow">
+        That is the better inheritance.<br>
+        That is the truer crown.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        And if one were to speak his name<br>
+        not merely as record,<br>
+        but as blessing,<br>
+        it might sound like this:
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        Mighty in spirit.<br>
+        Enduring in trial.<br>
+        Radiant in presence.<br>
+        Remarkable under weight.<br>
+        Intuitive to the deeper signal.<br>
+        Courageous enough to go first.
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        Captain.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Acrostic Summary: MERRIC -->
+      <div class="acrostic-summary reveal-slow">
+        <div class="acrostic-name">MERRIC</div>
+        <div class="acrostic-line">
+          Mighty in spirit. Enduring through trial. Radiant with presence.<br>
+          Remarkable in resolve. Intuitive to the deeper signal. Courageous enough to go first.
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- II. TRISTAN                         -->
+  <!-- ═══════════════════════════════════ -->
+
+  <div class="section-divider reveal">
+    <div class="section-divider-line"></div>
+  </div>
+
+  <div class="poem-container">
+    <article>
+
+      <div class="poem-section-header reveal">
+        <div class="poem-section-numeral">II.</div>
+        <h2 class="poem-section-name">TRISTAN</h2>
+      </div>
+
+      <!-- Tenacious -->
+      <div class="refrain reveal-slow">Tenacious—</div>
+
+      <div class="stanza reveal-slow">
+        not loud about it,<br>
+        not theatrical in struggle,<br>
+        but built with that inner fastening<br>
+        that holds when easier spirits come undone.
+      </div>
+
+      <div class="stanza reveal-slow">
+        When things grow difficult,<br>
+        he does not scatter.<br>
+        He sets his jaw.<br>
+        He leans in.<br>
+        He keeps going.
+      </div>
+
+      <div class="stanza reveal-slow">
+        There is something in him<br>
+        that does not make quick peace with defeat.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Resilient -->
+      <div class="refrain reveal-slow">Resilient—</div>
+
+      <div class="stanza reveal-slow">
+        not because life has asked nothing of him,<br>
+        but because he has already begun<br>
+        to answer pressure with form.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Some bend and lose themselves.<br>
+        Some harden and lose their warmth.<br>
+        He does neither.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He takes the blow,<br>
+        finds his footing,<br>
+        and returns with more of himself still intact.
+      </div>
+
+      <div class="stanza reveal-slow">
+        This is resilience in its truest shape:<br>
+        not untouchedness,<br>
+        but recovery with spirit preserved.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Ironhearted -->
+      <div class="refrain reveal-slow">Ironhearted—</div>
+
+      <div class="stanza reveal-slow">
+        a rare word for a rare making.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Not cold-hearted. Never that.<br>
+        Not closed.<br>
+        Not harsh.<br>
+        Not armored against love.
+      </div>
+
+      <div class="stanza reveal-slow">
+        But ironhearted in the rightful sense:<br>
+        strong at the center,<br>
+        weight-bearing,<br>
+        dependable under strain.
+      </div>
+
+      <div class="stanza reveal-slow">
+        The kind of heart that can hold pain<br>
+        without surrendering goodness.<br>
+        The kind of heart that can endure<br>
+        without becoming cruel.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Selfless -->
+      <div class="refrain reveal-slow">Selfless—</div>
+
+      <div class="stanza reveal-slow">
+        not in the way that erases the self,<br>
+        but in the nobler way:<br>
+        the instinct to look outward,<br>
+        to help first,<br>
+        to carry what he can for another<br>
+        before counting the cost to himself.
+      </div>
+
+      <div class="stanza reveal-slow">
+        There is kindness in him<br>
+        that does not advertise.<br>
+        Love in him<br>
+        that acts before it speaks.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He gives naturally—<br>
+        the way a strong hand reaches,<br>
+        the way a good soul notices,<br>
+        the way a true knight serves<br>
+        without needing to be seen doing it.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Tender -->
+      <div class="refrain reveal-slow">Tender—</div>
+
+      <div class="stanza reveal-slow">
+        and this may be the holiest part.
+      </div>
+
+      <div class="stanza reveal-slow">
+        For the world has many hard people.<br>
+        Many rough voices.<br>
+        Many boys taught too early<br>
+        that gentleness is weakness<br>
+        and care must be hidden.
+      </div>
+
+      <div class="stanza reveal-slow">
+        But Tristan carries another inheritance.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He is strong without becoming severe.<br>
+        Soft-hearted without becoming fragile.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He does not have to choose<br>
+        between steel and mercy.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He was built, somehow,<br>
+        to carry both.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Authentic -->
+      <div class="refrain reveal-slow">Authentic—</div>
+
+      <div class="stanza reveal-slow">
+        unaltered at the core.<br>
+        No counterfeit shine.<br>
+        No need to perform himself into worth.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He feels real because he is real.<br>
+        When he loves, it is real.<br>
+        When he stands, it is real.<br>
+        When he is wounded,<br>
+        the wound is real—<br>
+        and so is the courage with which he bears it.
+      </div>
+
+      <div class="stanza reveal-slow">
+        There is nothing borrowed in him.<br>
+        He comes by his spirit honestly.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Never-yielding -->
+      <div class="refrain reveal-slow">Never-yielding—</div>
+
+      <div class="stanza reveal-slow">
+        not to hardship,<br>
+        not to fear,<br>
+        not to the smaller voice that says<br>
+        be silent,<br>
+        stand down,<br>
+        let wrong pass unchallenged.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He is not afraid to stand for what is right<br>
+        even when quiet would cost him less.
+      </div>
+
+      <div class="stanza reveal-slow">
+        This, too, is knighthood.<br>
+        Not costume.<br>
+        Not storybook posture.<br>
+        But moral stamina.<br>
+        The willingness to remain upright<br>
+        when compromise would be easier.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        He was named for Sir Tristan<br>
+        and for blood that came before him—<br>
+        a knight,<br>
+        and a grandfather's line.<br>
+        Legend and lineage<br>
+        meeting in one boy.
+      </div>
+
+      <div class="stanza reveal-slow">
+        And somehow the name fit.
+      </div>
+
+      <div class="stanza reveal-slow">
+        For he loves the waters—<br>
+        fishing beside his father,<br>
+        swimming into the living world,<br>
+        exploring as though wonder itself<br>
+        were a country worth defending.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He has moved through castles,<br>
+        through caves,<br>
+        through rockets and cities,<br>
+        through France,<br>
+        Scotland,<br>
+        England,<br>
+        New York,<br>
+        London—<br>
+        the wide and storied world<br>
+        already entering him.
+      </div>
+
+      <div class="stanza reveal-slow">
+        But what will matter most<br>
+        is not only where he has gone.
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        It is how he has gone:
+      </div>
+
+      <div class="stanza reveal-slow">
+        with grit,<br>
+        with kindness,<br>
+        with courage,<br>
+        with the rare and beautiful union<br>
+        of gentleness and strength.
+      </div>
+
+      <div class="stanza reveal-slow">
+        That combination is rarer than brilliance.<br>
+        Rarer than boldness alone.<br>
+        It is the mark of a true knight.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        So let it be said plainly:
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        Tristan Nikolas-Ray Strough<br>
+        does not need to become hard<br>
+        to become strong.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He already bears the better pattern:
+      </div>
+
+      <div class="stanza reveal-slow">
+        to endure<br>
+        without losing tenderness,<br>
+        to stand<br>
+        without losing kindness,<br>
+        to fight for what is right<br>
+        without becoming hungry for battle,<br>
+        to carry an iron heart<br>
+        that still knows how to love.
+      </div>
+
+      <div class="stanza reveal-slow">
+        That is the greater chivalry.<br>
+        That is the deeper courage.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        And if one were to speak his name<br>
+        not merely as record,<br>
+        but as blessing,<br>
+        it might sound like this:
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        Tenacious in spirit.<br>
+        Resilient in trial.<br>
+        Ironhearted at the center.<br>
+        Selfless in love.<br>
+        Tender without shame.<br>
+        Authentic in soul.<br>
+        Never-yielding in what is right.
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        The knight.<br>
+        The good heart.<br>
+        The one who keeps going.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Acrostic Summary: TRISTAN -->
+      <div class="acrostic-summary reveal-slow">
+        <div class="acrostic-name">TRISTAN</div>
+        <div class="acrostic-line">
+          Tenacious in spirit. Resilient through trial. Ironhearted at the center.<br>
+          Selfless in love. Tender without shame. Authentic in soul. Never-yielding in what is right.
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- III. LAYNE                          -->
+  <!-- ═══════════════════════════════════ -->
+
+  <div class="section-divider reveal">
+    <div class="section-divider-line"></div>
+  </div>
+
+  <div class="poem-container">
+    <article>
+
+      <div class="poem-section-header reveal">
+        <div class="poem-section-numeral">III.</div>
+        <h2 class="poem-section-name">LAYNE</h2>
+      </div>
+
+      <!-- Limitless -->
+      <div class="refrain reveal-slow">Limitless—</div>
+
+      <div class="stanza reveal-slow">
+        not because the world has no edges,<br>
+        but because he meets them<br>
+        as though they were invitations.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He seems to arrive in life<br>
+        already leaning toward the next wonder,<br>
+        already halfway into the adventure<br>
+        before others have finished naming it.
+      </div>
+
+      <div class="stanza reveal-slow">
+        There is in him that rare excess of spirit<br>
+        that does not ask first whether something can be done,<br>
+        but whether it might be worth trying.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He was named for a rider of legend,<br>
+        and something in him took the lesson early:<br>
+        lean in,<br>
+        hold on,<br>
+        laugh at the dust,<br>
+        and go.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Animated -->
+      <div class="refrain reveal-slow">Animated—</div>
+
+      <div class="stanza reveal-slow">
+        bright with motion,<br>
+        alive in voice and gesture,<br>
+        a boy who does not merely pass through a day<br>
+        but fills it.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He sings because the world is there.<br>
+        He invents because joy arrives faster than instruction.
+      </div>
+
+      <div class="stanza reveal-slow">
+        A porcupine song made with his father,<br>
+        then sung mile after mile after mile,<br>
+        as though delight itself<br>
+        were worthy of repetition.
+      </div>
+
+      <div class="stanza reveal-slow">
+        And it is.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Some souls move like careful handwriting.<br>
+        He arrives like music.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Young-hearted -->
+      <div class="refrain reveal-slow">Young-hearted—</div>
+
+      <div class="stanza reveal-slow">
+        and not only because he is young,<br>
+        but because his spirit keeps the door wide open.
+      </div>
+
+      <div class="stanza reveal-slow">
+        The gappy grin.<br>
+        That long season of the toothless beaver smile.<br>
+        The kindness that rises naturally.<br>
+        The ready laugh.<br>
+        The ease with which wonder finds him.
+      </div>
+
+      <div class="stanza reveal-slow">
+        These are not small things.
+      </div>
+
+      <div class="stanza reveal-slow">
+        There are people who spend whole lives<br>
+        trying to recover<br>
+        what he carries freely now:<br>
+        that unguarded gladness,<br>
+        that clean astonishment,<br>
+        that way of meeting the world<br>
+        before cynicism has had its say.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Neverending -->
+      <div class="refrain reveal-slow">Neverending—</div>
+
+      <div class="stanza reveal-slow">
+        in curiosity,<br>
+        in motion,<br>
+        in appetite for the next thing to learn,<br>
+        touch, climb, catch, question, name.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He is the kind of child<br>
+        for whom one world is never enough.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Fishing vessels, captain's quarters,<br>
+        seals along the coast,<br>
+        snakes in the hand,<br>
+        wild fowl in strange places,<br>
+        rocket fire on the Space Coast,<br>
+        crab traps rising from the water<br>
+        under the pull of his own effort—
+      </div>
+
+      <div class="stanza reveal-slow">
+        he does not stand at the edge of life<br>
+        as a spectator.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He enters.<br>
+        Again and again.
+      </div>
+
+      <div class="stanza reveal-slow">
+        The fearless one,<br>
+        not because danger is unreal to him,<br>
+        but because wonder keeps outrunning hesitation.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Expressive -->
+      <div class="refrain reveal-slow">Expressive—</div>
+
+      <div class="stanza reveal-slow">
+        full-hearted in the old, true way.
+      </div>
+
+      <div class="stanza reveal-slow">
+        What he feels moves outward.<br>
+        What he imagines takes shape.<br>
+        What he loves becomes song,<br>
+        becomes story,<br>
+        becomes movement,<br>
+        becomes the whole body saying yes.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He is flexible in limb, yes,<br>
+        but also in spirit—<br>
+        willing, curious, game for nearly anything.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He bends toward experience.<br>
+        He opens toward life.
+      </div>
+
+      <div class="stanza reveal-slow">
+        And because he is so vividly himself,<br>
+        the world around him seems to wake up in reply.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        Layne Austin Strough.<br>
+        Laustin-Time.
+      </div>
+
+      <div class="stanza reveal-slow">
+        A name with laughter in it,<br>
+        a nickname already carrying legend.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He was named for Layne Frost,<br>
+        and there is something of that fearless leaning in him—<br>
+        not the recklessness of one who does not care,<br>
+        but the bright courage of one<br>
+        whose blood already knows motion.
+      </div>
+
+      <div class="stanza reveal-slow">
+        The ocean is in him.<br>
+        You can feel it.
+      </div>
+
+      <div class="stanza reveal-slow">
+        In the way he loves to fish,<br>
+        the way he belongs near water,<br>
+        the way adventure seems less like an event<br>
+        than a native language.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Just tall enough, at last,<br>
+        for the great coasters one Christmas—<br>
+        and through that gate he went.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Dungeness crab fishing,<br>
+        hauling traps like a real fisherman.<br>
+        Sleeping in the captain's quarters<br>
+        as though it were the most natural thing in the world.<br>
+        Playing with seals on the coast.<br>
+        Watching rockets rise.<br>
+        Catching snakes.<br>
+        Going mile after mile<br>
+        with a song in his mouth.
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        This is not smallness.<br>
+        This is not background life.
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        This is a soul arriving vividly.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        And yet, beneath the joy,<br>
+        there is kindness—<br>
+        the kind-hearted core,<br>
+        the sweetness that keeps fearlessness<br>
+        from turning wild in the wrong direction.
+      </div>
+
+      <div class="stanza reveal-slow">
+        That matters.
+      </div>
+
+      <div class="stanza reveal-slow">
+        Because joy without kindness becomes chaos.<br>
+        But joy with kindness becomes light.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        So let it be said plainly:
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        Layne Austin Strough<br>
+        was not made to live timidly.
+      </div>
+
+      <div class="stanza reveal-slow">
+        He was made to enter the world<br>
+        with open hands,<br>
+        quick laughter,<br>
+        and a brave and curious heart.
+      </div>
+
+      <div class="stanza reveal-slow">
+        To explore without apology.<br>
+        To sing as he goes.<br>
+        To keep some holy piece of gladness<br>
+        even as he grows older and stronger.<br>
+        To remain alive to surprise.<br>
+        To carry wonder forward<br>
+        instead of outgrowing it.
+      </div>
+
+      <div class="stanza reveal-slow">
+        That is no small inheritance.<br>
+        That is its own kind of greatness.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <div class="stanza reveal-slow">
+        And if one were to speak his name<br>
+        not merely as record,<br>
+        but as blessing,<br>
+        it might sound like this:
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        Limitless in spirit.<br>
+        Animated with joy.<br>
+        Young-hearted in wonder.<br>
+        Neverending in curiosity.<br>
+        Expressive in the full language of his soul.
+      </div>
+
+      <div class="stanza stanza--emphasis reveal-slow">
+        Laustin-Time.<br>
+        The fearless one.<br>
+        The boy with the song.<br>
+        The one who enters laughing.
+      </div>
+
+      <div class="section-gap"></div>
+
+      <!-- Acrostic Summary: LAYNE -->
+      <div class="acrostic-summary reveal-slow">
+        <div class="acrostic-name">LAYNE</div>
+        <div class="acrostic-line">
+          Limitless in spirit. Animated with joy. Young-hearted in wonder.<br>
+          Neverending in curiosity. Expressive in the full language of his soul.
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- EPILOGUE                            -->
+  <!-- ═══════════════════════════════════ -->
+
+  <div class="section-divider reveal">
+    <div class="section-divider-line"></div>
+  </div>
+
+  <section class="story-section">
+    <div class="story-inner">
+
+      <div class="story-header reveal">
+        <h2 class="story-title">Epilogue</h2>
+      </div>
+
+      <div class="story-break story-break--center"></div>
+
+      <p class="story-text reveal">One day they will be men,
+and the world will try, as it always does,
+to convince them that what made them alive as boys
+was childishness.</p>
+
+      <p class="story-text reveal">It will call wonder na&iuml;ve.
+It will call tenderness weakness.
+It will call deep feeling impractical,
+attention inconvenient,
+courage unnecessary until crisis forces its hand.
+It will offer them smaller lives
+in exchange for easier ones.
+Comfort in exchange for aliveness.
+Spectatorship in exchange for participation.
+Distance in exchange for risk.
+Numbness in exchange for pain.</p>
+
+      <p class="story-text reveal">And because the bargain is ancient,
+it will sound reasonable.</p>
+
+      <p class="story-text story-text--highlight reveal">I pray they refuse it.</p>
+
+      <p class="story-text story-text--highlight reveal">I pray they remember what is already in them.</p>
+
+      <p class="story-text reveal">Not merely the stories—
+though the stories matter.
+Not merely the photographs—
+though there are photographs.
+Not merely the names of places crossed,
+castles walked, seas fished, cliffs climbed,
+cities learned by footstep,
+languages tried on the tongue.</p>
+
+      <p class="story-text story-text--highlight reveal">I pray they remember the feeling of the thing.</p>
+
+      <p class="story-text reveal">Wet rock under the hand.<br>
+Cold air in the lungs.<br>
+The engine rumble in the chest before launch.<br>
+The living drag of the sea against the line.<br>
+The sound of birds on an island not arranged for human comfort.<br>
+The smell of rain.<br>
+The ache after real distance.<br>
+The thrill before the gate opens.<br>
+The knowledge that fear can be met.<br>
+The knowledge that wonder can be trusted.<br>
+The knowledge that the world, entered honestly,<br>
+is still immense enough to answer the soul.</p>
+
+      <p class="story-text story-text--highlight reveal">Because that is what they carry now.</p>
+
+      <p class="story-text reveal">Not vacation.<br>
+Not anecdote.<br>
+Not some polished childhood of curated moments.</p>
+
+      <p class="story-text story-text--standalone reveal">Coordinates.</p>
+
+      <p class="story-text reveal">The kind a man reaches for
+when the map fails.
+The kind he consults
+when everyone around him has mistaken safety for wisdom.
+The kind that tell him who he is
+when the hour is difficult
+and no one else can do the remembering for him.</p>
+
+      <p class="story-text story-text--highlight reveal">Merric will know what it is
+to go first
+and keep going.</p>
+
+      <p class="story-text story-text--highlight reveal">Tristan will know what it is
+to stay tender
+and still not yield.</p>
+
+      <p class="story-text story-text--highlight reveal">Layne will know what it is
+to enter the day laughing
+and call that courage.</p>
+
+      <p class="story-text reveal">And all three will know,
+whether they speak of it often or not,
+that they have already lived inside enough reality
+to keep them from being easily fooled by imitation.</p>
+
+      <p class="story-text reveal">They have seen too much sky
+to think a ceiling is the horizon.
+They have walked too much world
+to believe life is meant for screens alone.
+They have felt too much weather
+to be afraid of every storm.
+They have carried too much proof
+to accept a small and bloodless definition of living.</p>
+
+      <p class="story-text story-text--highlight reveal">This, more than anything,
+is what I wanted for them.</p>
+
+      <p class="story-text reveal">Not ease.<br>
+Not prestige.<br>
+Not the polished lie<br>
+of appearing successful while remaining untouched.</p>
+
+      <p class="story-text story-text--standalone reveal">I wanted them to know the real.</p>
+
+      <p class="story-text reveal">The real cave.<br>
+The real tide.<br>
+The real city.<br>
+The real language.<br>
+The real fish.<br>
+The real cliff.<br>
+The real night.<br>
+The real road.<br>
+The real consequence.<br>
+The real beauty.<br>
+The real fear.<br>
+The real return.</p>
+
+      <p class="story-text reveal">And I wanted them to know, just as deeply,
+that their father did not send them into it alone.</p>
+
+      <p class="story-text story-text--highlight reveal">I was there.</p>
+
+      <p class="story-text reveal">On the road.<br>
+In the water.<br>
+On the rock.<br>
+In the cities.<br>
+At the rail.<br>
+In the weather.<br>
+At the mouth of the cave<br>
+with the tide coming in.</p>
+
+      <p class="story-text reveal">And if love has a pure form,
+it may be this:</p>
+
+      <p class="story-text reveal">not saying the world is safe,
+but showing your sons
+that it can be entered bravely;
+not promising they will never bleed,
+but teaching them that blood is not the end of the story;
+not keeping them from every hard thing,
+but giving them a life
+in which hard things are met
+with open eyes, steady hands, and one another.</p>
+
+      <p class="story-text story-text--highlight reveal">That, too, is in their bodies now.</p>
+
+      <p class="story-text reveal">Brotherhood.<br>
+Return.<br>
+Participation.<br>
+Proof.<br>
+And the quiet knowledge<br>
+that the world is not to be feared from afar<br>
+nor worshipped from a distance,<br>
+but lived in.</p>
+
+      <p class="story-text story-text--highlight reveal">So let this stand as record.</p>
+
+      <p class="story-text reveal">These boys were here.
+They entered the world.
+It entered them back.</p>
+
+      <p class="story-text reveal">And whatever men they become,
+whatever names they earn,
+whatever roads still wait ahead of them,
+they will not begin empty.</p>
+
+      <p class="story-text reveal">They begin with highways.<br>
+With castles.<br>
+With caves.<br>
+With rockets.<br>
+With forests.<br>
+With fish.<br>
+With songs.<br>
+With sea.<br>
+With weather.<br>
+With brotherhood.<br>
+With proof.</p>
+
+      <p class="story-text story-text--standalone reveal">They begin with the world in their bodies.</p>
+
+      <p class="story-text story-text--highlight reveal">And may they never forget<br>
+how to use it.</p>
+
+      <div class="story-break"></div>
+
+      <!-- Attribution -->
+      <div class="poem-attribution reveal-slow">
+        <div class="poem-attribution-name">— Shane Thomas Strough</div>
+        <div class="poem-attribution-detail">Palmarcito, El Salvador</div>
+        <div class="poem-attribution-detail">Day 43 — 5am</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- POEM NAVIGATION -->
+  <div class="poem-nav">
+    <div class="poem-nav-prev"><a href="poetry-accent.html">&larr; Previous Poem</a></div>
+    <div class="poem-nav-center"><a href="poetry.html">All Poetry</a></div>
+    <div class="poem-nav-next"><a href="poetry-merric.html">Next Poem &rarr;</a></div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <span class="footer-logo">Shane Thomas Strough</span>
+    <div class="footer-links">
+      <a href="insights.html">Field Notes</a>
+      <a href="https://www.linkedin.com/in/shane-thomas-strough/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://medium.com/@shane-thomas-strough" target="_blank" rel="noopener">Medium</a>
+      <a href="https://www.youtube.com/@ShaneThomasStrough" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <span class="footer-tag">Sovereign. Honest. Aware. Navigating. Evolving.</span>
+    <span class="footer-copy">&copy; 2026 &middot; shanestrough.com</span>
+  </footer>
+
+  <script>
+    // ─── MOBILE MENU ───
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+
+    // ─── INTERSECTION OBSERVER ───
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('.reveal, .reveal-slow').forEach(el => observer.observe(el));
+  </script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5d22bf2453fb4610b9604bec47f5cbb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
