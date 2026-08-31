@@ -560,6 +560,9 @@
     .article-content .pull-quote { margin: 2rem 0; }
     .article-content hr { border: 0; border-top: 1px solid var(--border,#1E2D3D); margin: 2.6rem 0; }
     .article-content h2.section-header { margin-top: 3rem; }
+    .article-content table td, .article-content table th { font-variant-numeric: tabular-nums; }
+    .useful-block { margin: 3rem 0 1rem; padding: 1rem 1.3rem; border: 1px solid var(--border,#1E2D3D); border-radius: 4px; font-family: 'DM Mono', monospace; font-size: 0.85rem; color: var(--muted,#6B8099); }
+    .useful-block a { color: var(--electric,#00E5FF); margin-left: 0.6rem; }
   </style>
 
 <body>
@@ -793,7 +796,7 @@
 <h2 class="section-header">8. Acceptance criteria, hypotheses built to lose</h2>
 <p><strong>H0, generalized overload</strong>, "institutions slow down when workload rises." FDA's tagged AI 510(k) workload rose 19×; its median <em>fell</em> 7 days. <strong>Fails.</strong></p>
 <p><strong>H1, uniform decoupling</strong>, "every domain is already multi-generational." FDA sits at G ≈ 0.43 on Clock A and lower on B and C. <strong>Fails.</strong></p>
-<p><strong>H2, heterogeneous persistent floors</strong>, every loop has a floor, τ_I,d(t) ≥ F_d(t); floors can fall (modular construction, robotics, automated permitting, AI-assisted review); mismatch grows specifically where frontier cadence compresses faster than the relevant floor can. "Atoms versus paper" is shorthand for the real variables: physicality, coordination depth, irreversibility, dependencies, queues, labor, validation, regulatory burden. <strong>Survives, so far.</strong> It dies if completed atom-loops reach and hold R &lt; 1 on the live capability clock, or if fast paper loops turn out to be fast for the wrong reasons (see §9, item 1, this is the program's own next test).</p>
+<p><strong>H2, differentially compressible floors</strong>, different domains exhibit differently compressible operating floors; mismatch grows where a floor compresses more slowly than frontier cadence. Every loop has a floor, τ_I,d(t) ≥ F_d(t); floors can fall (modular construction, robotics, automated permitting, AI-assisted review); mismatch grows specifically where frontier cadence compresses faster than the relevant floor can. "Atoms versus paper" is shorthand for the real variables: physicality, coordination depth, irreversibility, dependencies, queues, labor, validation, regulatory burden. <strong>Survives, so far.</strong> It dies if completed atom-loops reach and hold R &lt; 1 on the live capability clock, or if fast paper loops turn out to be fast for the wrong reasons (see §9, item 1, this is the program's own next test).</p>
 <h2 class="section-header">9. Deficiency list, what this report does not establish</h2>
 <ol>
 <li><strong>Speed is not adequacy.</strong> G measures whether a loop keeps pace, not whether its output still means what it meant. A predicate-based review can stay fast by examining less per unit of novelty. A depth-per-generation companion quantity is future work, and until it exists, the FDA result reads "keeping up <em>on the clock</em>", nothing more.</li>
@@ -840,6 +843,7 @@
 <p>And the consequence that prices the essay's engineering rule: G also scores a <em>planned implementation</em>. G &gt; 1 over a project's life is the quantified version of "architecture half-life shorter than the implementation cycle", the architecture must survive more than one frontier generation before it ships. G ≫ 1 is a continuous migration program wearing a project-management costume.</p>
 <hr />
 <p><em>The pen drew one curve. The work is measuring which layers of reality can bend with it.</em></p>
+<div class="useful-block"><span>Was this useful?</span> <a href="mailto:shanestrough@gmail.com?subject=Useful%3A%20Stale%20State">Yes, tell him &rarr;</a></div>
 </main>
 
 <!-- FOOTER -->
