@@ -608,7 +608,7 @@
 <div class="pull-quote">
 <p>G_d(t₀, t₁) = ∫_{t₀}^{t₁} du / τ_T(u)</p>
 </div>
-<p><em>In plain language:</em> count how many frontier generations elapsed <strong>while this one loop ran</strong>. If τ_T is constant, G = R. If τ_T is a step function, which is how the frontier actually behaves, G is a sum of fractions:</p>
+<p><em>In plain language:</em> count how many frontier generations elapsed <strong>while this one loop ran</strong>. If τ_T is constant, G = R. If τ_T is represented as a step function, as Clock A is here, G becomes a sum of fractions:</p>
 <div class="pull-quote">
 <p>G = Σ (time the loop spent inside step i) / (duration of step i)</p>
 </div>
@@ -765,8 +765,8 @@
 </tr>
 <tr>
 <td>Queue, 2015</td>
-<td style="text-align: right;">0.59</td>
-<td style="text-align: right;">0.59</td>
+<td style="text-align: right;">0.59‡</td>
+<td style="text-align: right;">0.59‡</td>
 <td style="text-align: right;">2.02</td>
 </tr>
 <tr>
@@ -783,6 +783,7 @@
 </tr>
 </tbody>
 </table></div>
+<p>‡ The 2015 queue loop begins mid-2012, slightly before Clock A opens at AlexNet (2012.75) — its A/B values are partial observable exposure from clock start, per the no-back-projection rule. Clock C starts in 2010 and scores the full loop.</p>
 <p>† The 2024 queue row retains the v3.1 late-year endpoint convention; under the mid-year convention it computes ≈ 3.03. Neither value affects any classification.</p>
 <p>The 2023 FDA "spike" exists only on Clock A, it <em>is</em> the notch, and the classification never needed it. On every specification: the 2025 queue is multi-generational, the 2025 FDA review sub-generational. The most favorable queue value against the least favorable FDA value still differ by a factor of ≈5.6 (≈13 on Clock C). The systems are not perched on G = 1.</p><figure class="article-photo"><img src="images/stale-state-ensemble.png" alt="Bar chart of generation exposure G for FDA reviews and grid interconnection queues in selected years, computed on three different frontier-clock definitions, with the G=1 line marked — queue bars far above 1, FDA bars far below" loading="lazy" style="width:100%;height:auto;border:1px solid var(--border,#1E2D3D);border-radius:4px;" /><figcaption class="article-photo-caption">Figure 4 — The denominator ensemble: the same two institutional loops scored on three materially different definitions of a frontier generation. The queue stays multi-generational, the FDA review sub-generational, on every clock.</figcaption></figure>
 <p><strong>Sensitivity inside Clock C, worked.</strong> Let K be the compute multiple defining a generation, so τ_C = ln K / ln 4.7. Because the 2025 queue duration is a published floor (&gt;5y), what happens at τ_C ≥ 5y (K ≥ 4.7⁵ ≈ <strong>2,293×</strong>) is that the observed floor <em>stops guaranteeing</em> G &gt; 1. It does not prove G &lt; 1. The FDA classification (G &lt; 1) fails only when τ_C ≤ 141/365.25 ≈ 0.386y, i.e. K ≤ 4.7^{0.386} ≈ <strong>1.82×</strong>. Inside ≈ 1.82× &lt; K &lt; ≈ 2,293× the floor still guarantees the simple split. A hundred-fold jump is not enough to kill the guarantee.</p>
