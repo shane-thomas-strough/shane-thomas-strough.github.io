@@ -10,7 +10,7 @@
 
 [FIGURE 1, the original envelope. Blue ballpoint, torn edge and all.]
 
-Before the sketch, a disclosure about who's holding the pen. I'm not an economist, a forecaster, or an AI researcher. I spent seventeen years building and commissioning industrial infrastructure across trades, federal facilities, launch pads, hyperscale data centers, and various custom automation systems. I worked one side of this story from inside electrical and communications rooms, and another from boardrooms, project meetings, and business expos. Now I build hybrid AI and structured-data infrastructure (including sovereign AI operating systems for businesses, professionals, and private family estates) and consult on all of the above. I'm building part of the other side of this story with my own hands.
+Before the sketch, a disclosure about who's holding the pen. I'm not an economist, a forecaster, or an AI researcher. I spent seventeen years building and commissioning industrial infrastructure across trades, federal facilities, launch pads, hyperscale data centers, and various custom automation systems. I worked one side of this story from inside electrical and communications rooms, and another from boardrooms, project meetings, and business expos. Now I build hybrid AI and structured-data infrastructure (including sovereign AI operating systems for businesses, professionals, and [private family estates](private-family-estates.html)) and consult on all of the above. I'm building part of the other side of this story with my own hands.
 
 What follows is still just a practitioner connecting dots and doing arithmetic in public. Judge it by the arithmetic.
 

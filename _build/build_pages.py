@@ -48,6 +48,8 @@ EXTRA_CSS = """
     .article-content table td, .article-content table th { font-variant-numeric: tabular-nums; }
     .useful-block { margin: 3rem 0 1rem; padding: 1rem 1.3rem; border: 1px solid var(--border,#1E2D3D); border-radius: 4px; font-family: 'DM Mono', monospace; font-size: 0.85rem; color: var(--muted,#6B8099); }
     .useful-block a { color: var(--electric,#00E5FF); margin-left: 0.6rem; }
+    .article-content a { color: var(--electric,#00E5FF); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(0,229,255,0.35); }
+    .article-content a:hover { text-decoration-color: var(--electric,#00E5FF); }
   </style>
 """
 

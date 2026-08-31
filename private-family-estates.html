@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Family Estates · Shane Thomas Strough</title>
+  <meta name="description" content="A sovereign operating system for a family's whole life: its records, its treasury, its deadlines, its voices. Self-hosted on your property, governed by you, built and stewarded by one engineer who runs his own family on the same system. By private engagement." />
+  <meta name="keywords" content="sovereign AI family office, private family AI, family estate technology, private AI infrastructure, self-hosted family AI, digital family office, family office technology, sovereign AI, Shane Thomas Strough" />
+  <link rel="canonical" href="https://shanestrough.com/private-family-estates.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Private Family Estates · Shane Thomas Strough" />
+  <meta property="og:description" content="A sovereign operating system for a family's whole life. Built on your ground. Answerable to you. By private engagement." />
+  <meta property="og:image" content="https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg" />
+  <meta property="og:url" content="https://shanestrough.com/private-family-estates.html" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Private Family Estates · Shane Thomas Strough" />
+  <meta name="twitter:description" content="A sovereign operating system for a family's whole life. Built on your ground. Answerable to you." />
+  <meta name="twitter:image" content="https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Private Family Estates",
+    "serviceType": "Sovereign AI estate infrastructure for private families",
+    "description": "A private, self-hosted operating system for a family's records, treasury, credit, deadlines, and voice assistants. Built on the family's own hardware and property, governed by the family, delivered as a private engagement: consultation, build, and stewardship.",
+    "url": "https://shanestrough.com/private-family-estates.html",
+    "provider": {
+      "@type": "Person",
+      "name": "Shane Thomas Strough",
+      "url": "https://shanestrough.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://github.com/shane-thomas-strough",
+        "https://medium.com/@shane-thomas-strough"
+      ]
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Private families and family offices"
+    },
+    "areaServed": "United States"
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,400;0,600;0,900;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black: #080A0C;
+      --deep: #0D1117;
+      --panel: #111820;
+      --border: #1E2D3D;
+      --electric: #00E5FF;
+      --teal: #00B4C6;
+      --dim-teal: rgba(0, 229, 255, 0.12);
+      --white: #F0F4F8;
+      --muted: #6B8099;
+      --warm: #C8A96E;
+      --dim-warm: rgba(200, 169, 110, 0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--warm); }
+
+    /* --- NAV --- */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: rgba(8, 10, 12, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--electric); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px; height: 1px;
+      background: var(--electric);
+    }
+
+    /* --- BACKGROUND GRID --- */
+    .page-header-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200, 169, 110, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 169, 110, 0.018) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* --- PAGE HEADER --- */
+    .page-header {
+      padding: 12rem 2.5rem 4rem;
+      max-width: 780px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .breadcrumb {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb a {
+      color: var(--warm);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 0.95;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-title span { color: var(--warm); }
+
+    .page-subtitle {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-top: 1.2rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-byline {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- ARTICLE CONTENT --- */
+    .article-content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 2.5rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- SECTION DIVIDER (centered dots) --- */
+    .section-dots {
+      text-align: center;
+      color: var(--warm);
+      font-size: 1.2rem;
+      letter-spacing: 1em;
+      margin: 3.5rem 0;
+      position: relative;
+    }
+
+    .section-dots::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--warm), transparent);
+      opacity: 0.25;
+    }
+
+    .section-dots span {
+      position: relative;
+      background: var(--black);
+      padding: 0 1.5rem;
+      z-index: 1;
+    }
+
+    /* --- SECTION HEADERS --- */
+    .section-header {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      line-height: 1.05;
+      color: var(--white);
+      margin-top: 3.5rem;
+      margin-bottom: 1.8rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      letter-spacing: 0.02em;
+    }
+
+    .section-header span { color: var(--warm); }
+
+    /* --- BODY TEXT --- */
+    .article-content p {
+      font-family: 'Fraunces', serif;
+      font-size: 1rem;
+      line-height: 1.9;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .article-content p strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .article-content a {
+      color: var(--warm);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(200, 169, 110, 0.4);
+    }
+
+    .article-content a:hover { text-decoration-color: var(--warm); }
+
+    /* --- PULL QUOTES --- */
+    .pull-quote {
+      border-left: 3px solid var(--warm);
+      background: var(--dim-warm);
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .pull-quote p {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--white);
+      margin-bottom: 0 !important;
+    }
+
+    /* --- ROOMS + ENGAGEMENT STEPS --- */
+    .room, .step {
+      display: flex;
+      gap: 2rem;
+      padding: 2.2rem 0 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .room-index, .step-index {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      color: var(--warm);
+      min-width: 3.4rem;
+      padding-top: 0.5rem;
+    }
+
+    .room-name, .step-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+
+    .room p, .step p { margin-bottom: 0.8rem; }
+
+    /* --- CONTACT LINE --- */
+    .contact-line {
+      text-align: center;
+      margin-top: 2.5rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-line p {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.02rem;
+      line-height: 1.9;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .contact-line a {
+      color: var(--warm);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(200, 169, 110, 0.4);
+    }
+
+    .contact-line a:hover { text-decoration-color: var(--warm); }
+
+    /* --- FOOTER --- */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      color: var(--electric);
+    }
+
+    .footer-copy {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--electric); }
+
+    .footer-tag {
+      font-size: 0.6rem;
+      color: var(--muted);
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+    }
+
+    /* --- REVEAL --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 56px; left: 0; right: 0;
+        background: rgba(8,10,12,0.97);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links.open { display: flex; }
+      .nav-hamburger { display: flex; }
+      .page-header { padding: 9rem 1.5rem 3rem; }
+      .article-content { padding: 0 1.5rem 3rem; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    @media (max-width: 600px) {
+      .page-title { font-size: clamp(1.8rem, 7vw, 2.8rem); }
+      .section-header { font-size: 1.5rem; }
+      .pull-quote { padding: 1.2rem 1.5rem; }
+      .pull-quote p { font-size: 0.95rem; }
+      .room, .step { flex-direction: column; gap: 0.6rem; }
+      .room-index, .step-index { padding-top: 0; }
+    }
+
+    @media (max-width: 480px) {
+      .article-content p { font-size: 0.92rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">STS</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="insights.html">Field Notes</a></li>
+      <li><a href="poetry.html">Poetry</a></li>
+      <li><a href="podcast-stop-the-chaos.html">Podcast</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- BACKGROUND GRID -->
+  <div class="page-header-grid" aria-hidden="true"></div>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header reveal">
+    <div class="breadcrumb">
+      <a href="index.html">shanestrough.com</a> / Private Family Estates
+    </div>
+    <h1 class="page-title">
+      Private<br>
+      <span>Family Estates</span>
+    </h1>
+    <p class="page-subtitle">A sovereign operating system for a family's whole life. Built on your ground. Answerable to you.</p>
+    <p class="page-byline">Shane Thomas Strough &middot; Private Client Practice &middot; By Introduction</p>
+  </header>
+
+  <!-- ARTICLE CONTENT -->
+  <main class="article-content">
+
+    <section class="reveal">
+      <p>Consider what a family's life actually runs on. The photographs and letters that make up its memory. The deeds, accounts, and policies that make up its holdings. The renewals, filings, and deadlines that make up its obligations. The voices of its members, speaking in its own rooms. In nearly every household I have looked inside, careful ones included, almost all of it lives on other people's computers.</p>
+
+      <p>Those computers belong to vendors. The vendors hold a family's memory under terms that change quarterly, staff it with whoever they hired this year, monetize what the fine print allows, and increasingly train AI on whatever is not explicitly fenced off. Any one of them can reprice, suspend, misplace, or quietly read what it holds. The family's recourse is a support ticket. For most households that is an inconvenience. For an estate, it is an inheritance problem.</p>
+
+      <p>There is an asymmetry here worth sitting with. Families that are serious about privacy in the physical world, gated drives, unlisted numbers, staff under NDA, still route their most private material through the least private channel available to them. Not by decision. By default, one convenient signup at a time.</p>
+
+      <div class="pull-quote">
+        <p>A family that would never let a stranger hold the deed to the house lets a hundred strangers hold everything else.</p>
+      </div>
+
+      <p>What follows describes the alternative I build: a private operating system for everything a family runs on, self-hosted on the family's own ground, governed by the family, and looked after by one engineer whose name you know. Not a product, not a subscription: a built work, like a house, designed to the family, constructed on the property, and handed over with the keys.</p>
+    </section>
+
+    <!-- THE STANDARD -->
+    <section class="reveal">
+      <h2 class="section-header">The Standard <span>It Is Built To</span></h2>
+
+      <p>I spent seventeen years building and commissioning infrastructure that was not allowed to fail: federal installations, hyperscale data centers, launch complexes at Cape Canaveral. Commissioning is a specific discipline. You do not trust what a system says about itself. You verify every circuit against ground truth, you document what you find, and you design out the conditions under which failure can occur.</p>
+
+      <p>For the past several years I have applied that discipline to a quieter structure: sovereign AI and structured-data infrastructure, the work described in <a href="the-comprehension-horizon.html">The Comprehension Horizon</a>. And the estate system was not designed for clients first. I built it for my own family, and my family runs on it today. It reads our records, watches our accounts, keeps our clocks, and speaks in our house, on our hardware. The first full audit it ran across my own finances surfaced five figures of silent annual waste that no single statement had ever made visible.</p>
+
+      <p><strong>I fixed my own house before offering to build anyone else's.</strong></p>
+    </section>
+
+    <!-- THE CLOCK -->
+    <section class="reveal">
+      <h2 class="section-header">The Clock <span>It Is Built Against</span></h2>
+
+      <p>The essay linked above makes a measured argument, and one number from it matters here. At the layer where AI systems actually get built, the interval between shifts that force rework is now twelve to eighteen months, and shrinking. That is shorter than most of the contracts a family is asked to sign. A household that rents its infrastructure has agreed to re-platform its life on someone else's schedule, indefinitely. An estate is a century-scale concern; most now run on quarter-scale infrastructure. That mismatch is fixable.</p>
+
+      <p>The engineering answer is not to chase the frontier. It is to own the ground and treat the frontier as a parts supplier: stable interfaces, replaceable models, records in open formats, commitments that can be reversed. When the next shift arrives, a sovereign estate swaps a component. A rented one begins a migration.</p>
+
+      <p>None of this is theoretical for me. This summer a cloud vendor's billing turbulence took one of my production databases hostage over a sum smaller than a dinner. Because that database was plain Postgres with nothing proprietary woven through it, the entire escape, verified backup, restore test, migration plan, took one afternoon. That is the posture an estate should hold toward every vendor it touches: courteous, and free to leave by morning.</p>
+
+      <div class="pull-quote">
+        <p>The interval between shifts is now shorter than the contracts you are asked to sign.</p>
+      </div>
+    </section>
+
+    <!-- THE ROOMS -->
+    <section class="reveal">
+      <h2 class="section-header">The <span>Rooms</span></h2>
+
+      <p>Every estate system is built to order, and no two families need the same house. These are the rooms I know how to build. My own family's system is where each is proven first: some have run for years, the newest are being framed in my own house right now, and nothing reaches a client that has not lived under my roof.</p>
+
+      <div class="room">
+        <div class="room-index">I</div>
+        <div>
+          <h3 class="room-name">The Library</h3>
+          <p>The family's records, correspondence, photographs, and papers, kept in open formats on the family's own hardware, made quietly searchable and conversational. Access inside the household is tiered by architecture: what a child may ask of it, what a parent may, and what an advisor may ever see are different things, enforced by the system rather than by trust.</p>
+        </div>
+      </div>
+
+      <div class="room">
+        <div class="room-index">II</div>
+        <div>
+          <h3 class="room-name">The Treasury</h3>
+          <p>Accounts, properties, policies, and obligations gathered into one ledger the family owns, every number traceable to the statement it came from. Runway under scenarios you choose. Beneath it, a standing audit that hunts subscriptions, billing errors, and the quiet leaks that never appear on any single statement.</p>
+        </div>
+      </div>
+
+      <div class="room">
+        <div class="room-index">III</div>
+        <div>
+          <h3 class="room-name">The Watch</h3>
+          <p>Credit files and identity, monitored for every member of the household, children included, with freezes managed as a standing posture rather than an emergency response. The quiet defenses a family rarely thinks about until the year it wishes it had.</p>
+        </div>
+      </div>
+
+      <div class="room">
+        <div class="room-index">IV</div>
+        <div>
+          <h3 class="room-name">The Clock</h3>
+          <p>Renewals, filings, benefit windows, records requests, statutory deadlines. Every clock the family is on, held by a system that does not forget and does not get busy, with the paperwork drafted while the deadline is still distant.</p>
+        </div>
+      </div>
+
+      <div class="room">
+        <div class="room-index">V</div>
+        <div>
+          <h3 class="room-name">The Voice</h3>
+          <p>Assistants that run on hardware inside the house and speak, if the family wishes, in voices the family owns outright. A briefing in the morning, answers drawn from the family's own records through the day. What is said in your rooms stays in your rooms. Nothing spoken in the house trains anyone else's model.</p>
+        </div>
+      </div>
+
+      <div class="room">
+        <div class="room-index">VI</div>
+        <div>
+          <h3 class="room-name">The Ground</h3>
+          <p>What makes the rest sovereign. Self-hosted infrastructure on the property, open formats throughout, backups that are verified by restoring them, models treated as replaceable parts, and an audit log of every administrative action, mine included, that the family can read at will. The family reaches all of it from anywhere over a private encrypted network; no one else can reach it at all. No vendor can pause it. No subscription lapse can hold it hostage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCRETION -->
+    <section class="reveal">
+      <h2 class="section-header">On <span>Discretion</span></h2>
+
+      <p>This page is the whole of the marketing. There are no case studies beneath it and there never will be: no client names, no photographs of other people's houses, no testimonials. Engagements run under NDA as a default, mine offered before yours is asked for.</p>
+
+      <p>The system holds the same standard structurally. Access is granted by the family, scoped by the family, logged where the family can see it, and ends the day the family says it ends. The keys, the hardware, and every byte on it are yours.</p>
+    </section>
+
+    <!-- ENGAGEMENT -->
+    <section class="reveal">
+      <h2 class="section-header">How an Engagement <span>Runs</span></h2>
+
+      <div class="step">
+        <div class="step-index">01</div>
+        <div>
+          <h3 class="step-name">The Conversation</h3>
+          <p>Unhurried, in person or in writing, under NDA if you prefer: how the family actually runs, and where it is exposed. If we continue, it ends in a written design the family owns: hardware, rooms, boundaries, and what stays out of scope. If I am not the right builder for what you need, I will say so and point you somewhere honest.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-index">02</div>
+        <div>
+          <h3 class="step-name">The Build</h3>
+          <p>The system stands up on your property, room by room, on hardware the family owns. It is commissioned the way launch infrastructure is commissioned: verified against ground truth, documented completely, handed over with nothing hidden.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-index">03</div>
+        <div>
+          <h3 class="step-name">The Stewardship</h3>
+          <p>A retainer keeps the estate current as the frontier moves: stronger models swapped in as they arrive, defenses renewed, backups re-proven on a schedule. The family can end it at any time and keep everything, including the documentation to run the house without me.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSE -->
+    <section class="reveal">
+      <div class="section-dots"><span>&middot; &middot; &middot;</span></div>
+
+      <p>The families that move through the next decade calmly will be the ones whose infrastructure was already theirs. That is a buildable condition.</p>
+
+      <div class="contact-line">
+        <p>The practice takes a small number of families at a time. Introductions in writing: <a href="/cdn-cgi/l/email-protection#e7948f8689829493958892808fa7808a868e8bc984888a">correspondence</a>, or through <a href="https://www.linkedin.com/in/shane-thomas-strough/" target="_blank" rel="noopener">LinkedIn</a>. It stays between us either way.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <span class="footer-logo">Shane Thomas Strough</span>
+    <div class="footer-links">
+      <a href="insights.html">Field Notes</a>
+      <a href="https://www.linkedin.com/in/shane-thomas-strough/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://medium.com/@shane-thomas-strough" target="_blank" rel="noopener">Medium</a>
+      <a href="https://www.youtube.com/@ShaneThomasStrough" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <span class="footer-tag">Sovereign. Honest. Aware. Navigating. Evolving.</span>
+    <span class="footer-copy">&copy; 2026 &middot; shanestrough.com</span>
+  </footer>
+
+  <script>
+    // --- MOBILE MENU ---
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+
+    // --- INTERSECTION OBSERVER ---
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5d22bf2453fb4610b9604bec47f5cbb4"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
