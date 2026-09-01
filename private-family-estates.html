@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Family Estates · Shane Thomas Strough</title>
+  <title>Private Family Estates · Sovereign AI &amp; Digital Infrastructure · Shane Thomas Strough</title>
   <meta name="description" content="A sovereign operating system for a family's whole life: its records, its treasury, its deadlines, its voices. Self-hosted on your property, governed by you, built and stewarded by one engineer who runs his own family on the same system. By private engagement." />
   <meta name="keywords" content="sovereign AI family office, private family AI, family estate technology, private AI infrastructure, self-hosted family AI, digital family office, family office technology, sovereign AI, Shane Thomas Strough" />
   <link rel="canonical" href="https://shanestrough.com/private-family-estates.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Private Family Estates · Shane Thomas Strough" />
+  <meta property="og:title" content="Private Family Estates · Sovereign AI &amp; Digital Infrastructure" />
   <meta property="og:description" content="A sovereign operating system for a family's whole life. Built on your ground. Answerable to you. By private engagement." />
-  <meta property="og:image" content="https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg" />
+  <meta property="og:image" content="https://shanestrough.com/images/private-family-estates-og.png" />
   <meta property="og:url" content="https://shanestrough.com/private-family-estates.html" />
   <meta property="og:type" content="website" />
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Private Family Estates · Shane Thomas Strough" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Private Family Estates · Sovereign AI &amp; Digital Infrastructure" />
   <meta name="twitter:description" content="A sovereign operating system for a family's whole life. Built on your ground. Answerable to you." />
-  <meta name="twitter:image" content="https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg" />
+  <meta name="twitter:image" content="https://shanestrough.com/images/private-family-estates-og.png" />
 
   <script type="application/ld+json">
   {
@@ -26,7 +26,7 @@
     "@type": "Service",
     "name": "Private Family Estates",
     "serviceType": "Sovereign AI estate infrastructure for private families",
-    "description": "A private, self-hosted operating system for a family's records, treasury, credit, deadlines, and voice assistants. Built on the family's own hardware and property, governed by the family, delivered as a private engagement: consultation, build, and stewardship.",
+    "description": "A private, self-hosted operating system for a family's records, treasury, credit, deadlines, voice assistants, and succession. Built on the family's own hardware and property, governed by the family, designed to survive its vendors, its models, and its builder. Delivered as a private engagement: consultation, build, and stewardship.",
     "url": "https://shanestrough.com/private-family-estates.html",
     "provider": {
       "@type": "Person",
@@ -47,10 +47,54 @@
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,400;0,600;0,900;1,300&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add('js');</script>
 
   <style>
+    /* Self-hosted type. This page argues for owning your infrastructure;
+       it does not get to borrow its letters from Google. */
+    @font-face {
+      font-family: 'Bebas Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(fonts/bebas-neue-400.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'DM Mono';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(fonts/dm-mono-300.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'DM Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(fonts/dm-mono-400.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'DM Mono';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(fonts/dm-mono-500.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'Fraunces';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(fonts/fraunces-var.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'Fraunces';
+      font-style: italic;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(fonts/fraunces-italic-var.woff2) format('woff2');
+    }
+
     :root {
       --black: #080A0C;
       --deep: #0D1117;
@@ -60,7 +104,7 @@
       --teal: #00B4C6;
       --dim-teal: rgba(0, 229, 255, 0.12);
       --white: #F0F4F8;
-      --muted: #6B8099;
+      --muted: #7C90A6;
       --warm: #C8A96E;
       --dim-warm: rgba(200, 169, 110, 0.08);
     }
@@ -74,7 +118,6 @@
       font-family: 'DM Mono', monospace;
       font-weight: 300;
       overflow-x: hidden;
-      cursor: crosshair;
     }
 
     body::before {
@@ -137,6 +180,9 @@
       flex-direction: column;
       gap: 4px;
       cursor: pointer;
+      background: none;
+      border: 0;
+      padding: 0;
     }
 
     .nav-hamburger span {
@@ -411,14 +457,20 @@
       font-style: italic;
     }
 
-    /* --- REVEAL --- */
-    .reveal {
+    /* --- REVEAL ---
+       Progressive enhancement: content is visible by default and only
+       animates when JS has initialized (html.js). No script, no hidden page. */
+    .js .reveal {
       opacity: 0;
       transform: translateY(30px);
       transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .js .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+    }
 
     /* --- RESPONSIVE --- */
     @media (max-width: 768px) {
@@ -450,9 +502,6 @@
       .room-index, .step-index { padding-top: 0; }
     }
 
-    @media (max-width: 480px) {
-      .article-content p { font-size: 0.92rem; }
-    }
   </style>
 </head>
 <body>
@@ -467,9 +516,9 @@
       <li><a href="podcast-stop-the-chaos.html">Podcast</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
-    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </nav>
 
   <!-- BACKGROUND GRID -->
@@ -494,7 +543,7 @@
     <section class="reveal">
       <p>Consider what a family's life actually runs on. The photographs and letters that make up its memory. The deeds, accounts, and policies that make up its holdings. The renewals, filings, and deadlines that make up its obligations. The voices of its members, speaking in its own rooms. In nearly every household I have looked inside, careful ones included, almost all of it lives on other people's computers.</p>
 
-      <p>Those computers belong to vendors. The vendors hold a family's memory under terms that change quarterly, staff it with whoever they hired this year, monetize what the fine print allows, and increasingly train AI on whatever is not explicitly fenced off. Any one of them can reprice, suspend, misplace, or quietly read what it holds. The family's recourse is a support ticket. For most households that is an inconvenience. For an estate, it is an inheritance problem.</p>
+      <p>Those computers belong to vendors. Each vendor holds its piece of the family's memory under its own terms, its own retention rules, its own roadmap, and its own acquisition history, all of which can change without asking. Accounts can be repriced, suspended, misplaced, or closed, and the family's recourse is a support ticket. None of this requires a bad vendor. It only requires the vendor's interests and timelines to differ from the family's, and they always do. For most households that is an inconvenience. For an estate, it is an inheritance problem.</p>
 
       <p>There is an asymmetry here worth sitting with. Families that are serious about privacy in the physical world, gated drives, unlisted numbers, staff under NDA, still route their most private material through the least private channel available to them. Not by decision. By default, one convenient signup at a time.</p>
 
@@ -502,7 +551,9 @@
         <p>A family that would never let a stranger hold the deed to the house lets a hundred strangers hold everything else.</p>
       </div>
 
-      <p>What follows describes the alternative I build: a private operating system for everything a family runs on, self-hosted on the family's own ground, governed by the family, and looked after by one engineer whose name you know. Not a product, not a subscription: a built work, like a house, designed to the family, constructed on the property, and handed over with the keys.</p>
+      <p>What follows describes the alternative I build: a private operating system for everything a family runs on, self-hosted on the family's own ground, governed by the family, and looked after by one accountable engineer whose name you know, on an architecture designed from the first day to outlive him. Not a product, not a subscription: a built work, like a house, designed to the family, constructed on the property, and handed over with the keys.</p>
+
+      <p>A word on category, because the name collides with older ones. This is not estate planning, not wealth management, not a family office. It is the infrastructure layer beneath all three: your attorney remains your attorney, your advisors remain your advisors, and the estate system becomes the family-owned ground their work stands on, with access each of them holds at the family's pleasure.</p>
     </section>
 
     <!-- THE STANDARD -->
@@ -520,7 +571,7 @@
     <section class="reveal">
       <h2 class="section-header">The Clock <span>It Is Built Against</span></h2>
 
-      <p>The essay linked above makes a measured argument, and one number from it matters here. At the layer where AI systems actually get built, the interval between shifts that force rework is now twelve to eighteen months, and shrinking. That is shorter than most of the contracts a family is asked to sign. A household that rents its infrastructure has agreed to re-platform its life on someone else's schedule, indefinitely. An estate is a century-scale concern; most now run on quarter-scale infrastructure. That mismatch is fixable.</p>
+      <p>The essay linked above makes the broader, measured argument. Here it is enough to say how I build. I design around an architecture horizon of roughly twelve to eighteen months, because that is how often this layer has forced rework on the systems I ship. The exact interval matters less than the consequence: it is shorter than the useful life a family expects from anything it builds, and shorter than most of the contracts a family is asked to sign. A household that rents its infrastructure has agreed to re-platform its life on someone else's schedule, indefinitely. An estate is a century-scale concern; most now run on quarter-scale infrastructure. That mismatch is fixable.</p>
 
       <p>The engineering answer is not to chase the frontier. It is to own the ground and treat the frontier as a parts supplier: stable interfaces, replaceable models, records in open formats, commitments that can be reversed. When the next shift arrives, a sovereign estate swaps a component. A rented one begins a migration.</p>
 
@@ -580,10 +631,31 @@
       <div class="room">
         <div class="room-index">VI</div>
         <div>
-          <h3 class="room-name">The Ground</h3>
-          <p>What makes the rest sovereign. Self-hosted infrastructure on the property, open formats throughout, backups that are verified by restoring them, models treated as replaceable parts, and an audit log of every administrative action, mine included, that the family can read at will. The family reaches all of it from anywhere over a private encrypted network; no one else can reach it at all. No vendor can pause it. No subscription lapse can hold it hostage.</p>
+          <h3 class="room-name">The Succession</h3>
+          <p>The room most systems never think to build. Access boundaries that move with time: what a child reaches at twelve is not what they reach at eighteen. Roles that activate on conditions the family defines: a trustee's view, an executor's narrow path of recovery. Archives that can be sealed, records that transfer, records that are destroyed, and records that were never inheritable at all. An estate is built on the assumption that it will outlive its hardware, its models, its builder, and eventually its founders. Succession is designed in from the first day, not assembled in grief.</p>
         </div>
       </div>
+
+      <div class="room">
+        <div class="room-index">VII</div>
+        <div>
+          <h3 class="room-name">The Ground</h3>
+          <p>What makes the rest sovereign. Self-hosted infrastructure on the property, open formats throughout, models treated as replaceable parts, and an audit log of every administrative action, mine included, that the family can read at will. Backups are verified the only way that counts, by restoring them, and encrypted copies rest off the property, held where the holder can read nothing. The family reaches its estate remotely over a private encrypted network; no service faces the public internet, and administrative access is explicitly granted, authenticated, scoped, and logged. No vendor can pause it. No subscription lapse can hold it hostage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOUNDARIES -->
+    <section class="reveal">
+      <h2 class="section-header">The <span>Boundaries</span></h2>
+
+      <p>A sovereign system should know its limits, so the limits are built in rather than promised.</p>
+
+      <p>The estate observes, organizes, reconciles, prepares, and advises. Authority is a separate layer. Moving money, signing anything, altering records, sending correspondence into the world, or granting access stays behind explicit human approval unless the family deliberately writes a narrower rule. <strong>Intelligence does not inherit authority.</strong></p>
+
+      <p>Family data trains no outside model. Administrative access, mine included, is granted, scoped, logged, and revocable. Open formats everywhere practical, so nothing is trapped in a container only one program can open. And the whole system is documented to the standard I learned commissioning: complete enough that another competent engineer could take custody tomorrow.</p>
+
+      <p>That last line is the quiet one that matters most. I will not make your family dependent on me in order to protect it from dependence on everyone else. <strong>The estate is designed to survive its vendors, its models, and me.</strong></p>
     </section>
 
     <!-- DISCRETION -->
@@ -592,7 +664,7 @@
 
       <p>This page is the whole of the marketing. There are no case studies beneath it and there never will be: no client names, no photographs of other people's houses, no testimonials. Engagements run under NDA as a default, mine offered before yours is asked for.</p>
 
-      <p>The system holds the same standard structurally. Access is granted by the family, scoped by the family, logged where the family can see it, and ends the day the family says it ends. The keys, the hardware, and every byte on it are yours.</p>
+      <p>The system holds the same standard structurally. Access is granted by the family, scoped by the family, logged where the family can see it, and ends the day the family says it ends. The hardware is yours. The keys are yours. The data is yours. Nothing essential sits behind my account.</p>
     </section>
 
     <!-- ENGAGEMENT -->
@@ -619,7 +691,7 @@
         <div class="step-index">03</div>
         <div>
           <h3 class="step-name">The Stewardship</h3>
-          <p>A retainer keeps the estate current as the frontier moves: stronger models swapped in as they arrive, defenses renewed, backups re-proven on a schedule. The family can end it at any time and keep everything, including the documentation to run the house without me.</p>
+          <p>A retainer keeps the estate current as the frontier moves: stronger models swapped in as they arrive, defenses renewed, backups re-proven on a schedule. Stewardship is optional, and sovereignty does not end when the retainer does. The family can end it at any time and keep everything, including the documentation to run the house without me.</p>
         </div>
       </div>
     </section>
@@ -653,7 +725,8 @@
   <script>
     // --- MOBILE MENU ---
     function toggleMenu() {
-      document.getElementById('nav-links').classList.toggle('open');
+      const open = document.getElementById('nav-links').classList.toggle('open');
+      document.getElementById('hamburger').setAttribute('aria-expanded', open);
     }
 
     // --- INTERSECTION OBSERVER ---
