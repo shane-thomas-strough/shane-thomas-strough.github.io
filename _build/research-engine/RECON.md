@@ -20,7 +20,7 @@ Evidence key below identifies exact implementations. “Not found” throughout 
 | Website | `7fe2bd235c4eaaa2300bc91a0e7d013cd5b913b0` plus separately inventoried pre-existing dirty files | Static publication and discovery execution; W1–W4 |
 | Requested historical `shane-thomas-strough/Elevare-Edge` | `3982d0125151c64a4941c83b60bca0af13f6e229`, fetched read-only to `/tmp/research-engine-elevare-edge` | Static landing pages, APEX SQL/contracts and infrastructure manifests; E0 |
 | Current `ElevareEdge/elevare-edge-official` | `a697796c33808474e3ccee1c604261948e2daca3` | Contractor business intelligence, acquisition, evidence/visibility scoring; E1–E3 |
-| HELM | `f629d10fda38821551c73029bdeb8b83a1c6f610` | Portfolio decisions, lesson threads, publication authority/history; H1–H2 |
+| HELM | local `f629d10`; newer fetched `origin/main` `a27e761b6a09e909d24fb87c67484956900b053a` also inspected | Portfolio decisions, lesson threads, publication authority/history; H1–H2 |
 | project-atlas | `e0197848dd4ed698c54c20d1aacff5a69dfc3a9f` | Repo atoms and generated portfolio views; P1 |
 
 The historical and current Edge repositories are distinct. The historical repo has no AGENTS/CLAUDE/STATUS/BACKLOG/CHANGELOG files in the fetched tree and no implemented search warehouse. Its declared API routes are specifications, not server implementation. Do not substitute its generic `metrics_daily`/agent workflow SQL for CONSENSUS.
@@ -210,7 +210,7 @@ Priority order:
 5. Broken nested navigation/gallery assets, stale publication count, nonportable pair builder (§8).
 6. Read seam currently returns estate/findings/claim projections and retrieval, not a complete query/history/coverage packet. Existence of a seam does not establish sufficient publication-intelligence access (C6).
 7. Cross-tier boundary: CONSENSUS seam is max-tier 1; private findings cannot be sent as public research input. A safe public evidence projection is a prerequisite, not an implicit up-tier.
-8. HELM focused tests exposed a date-zone defect: `test_source_identity_survives_aggregation` expects UTC today while `lessons.py:129` uses Git `%cs` (commit local date). 2026-09-27 EDT vs 2026-09-28 UTC failed; rerunning that test with `TZ=UTC` passed. No HELM fix claimed.
+8. HELM focused tests on the stale local checkout exposed a date-zone defect: `test_source_identity_survives_aggregation` expects UTC today while `lessons.py:129` uses Git `%cs` (commit local date). 2026-09-27 EDT vs 2026-09-28 UTC failed; rerunning that test with `TZ=UTC` passed. The final status check found this checkout 32 commits behind fetched `origin/main`. That newer source already fixes it (`lessons.py` uses Git `%cI` plus `calendar.day`, HELM-33 / ADR-015); it is not a new unresolved upstream defect. No HELM fix was made here. The lesson authority/history boundary is unchanged in that diff.
 9. `research.py` carries last coverage on function attributes shared across invocations. This is a potential concurrent-research coverage race by code inspection, not a reproduced failure in this mission; address with per-run state before concurrent publication research.
 
 ## 17. Recommended target architecture
@@ -249,8 +249,8 @@ No Shane-authored text changed. Pre-existing Bake-Off, hub/sitemap edits and oth
 
 * CONSENSUS: 97 focused tests passed (`test_signal`, `test_mirror`, `test_aegis_seam`, `test_first_party_enumeration`, `test_evidence_custody`). Initial sandbox run stalled at local API tests and was interrupted; the outside-sandbox rerun completed. Existing dependency deprecation warnings remain.
 * AEGIS: 43 passed (`test_research`, `test_scheduled_tasks`, `test_goals`, `test_sentinel`). These are focused source tests, not a fresh box production commissioning.
-* HELM: 45 passed / 1 failed in `test_lessons` + `test_lessons_seam`; failure and isolated TZ=UTC pass detailed in §16. Do not call this suite green.
-* Edge scoring: result recorded in `VALIDATION.md`.
+* HELM stale local checkout: 45 passed / 1 failed in `test_lessons` + `test_lessons_seam`; failure and isolated TZ=UTC pass detailed in §16. Do not call that run green. The newer fetched source was additionally inspected and all 46 focused tests passed from a detached worktree; see VALIDATION for the separate result.
+* Edge scoring: 38 passed (`attack.test.ts`, `visibility.test.ts`); details in `VALIDATION.md`.
 * Workflow: YAML parsed; every shell block passed `bash -n`; isolated response handling passed 200/202 acceptance and 400/403/429/500 failure cases; restricted Google endpoint/secret absent; IndexNow endpoint retained. No API POST executed.
 * Timer: local `consensus-signal.timer` ActiveState=active, LastTrigger=2026-09-27 07:30:50 EDT, next=2026-09-28 07:25:41 EDT. Timer activity is not proof all search providers succeeded.
 * Local inventory uses CONSENSUS's existing raw parser, not a second observation engine. Run: `python3 _build/research-engine/inventory.py --site ../shanestrough-com --consensus ../elevare-consensus --out /tmp/publication-inventory`.

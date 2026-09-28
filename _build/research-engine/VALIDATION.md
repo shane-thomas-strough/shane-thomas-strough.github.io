@@ -7,8 +7,9 @@ Measured 2026-09-27 EDT / 2026-09-28 UTC. No production writes or external searc
 | CONSENSUS focused SIGNAL, MIRROR, seam, enumeration, custody | 97 passed; sandbox-stalled run interrupted, permitted rerun passed; deprecation warnings |
 | AEGIS research, goals, scheduled tasks, Sentinel | 43 passed |
 | Edge attack and visibility scoring | 38 passed; sandbox pnpm database error resolved by permitted rerun |
-| HELM lessons and lesson seam | 45 passed, 1 failed (local-date vs UTC assertion) |
-| HELM failing test alone with TZ=UTC | passed; code remains unchanged |
+| HELM stale local lessons and lesson seam | 45 passed, 1 failed (local-date vs UTC assertion) |
+| HELM newer fetched origin/main, detached worktree | 46 passed; permitted rerun after sandbox API stall |
+| HELM failing test alone with TZ=UTC | passed; code remains unchanged locally; newer fetched origin/main already fixes date normalization |
 | Workflow YAML and shell syntax | passed |
 | IndexNow status branches 200/202/400/403/429/500 | all expected exit codes; no POST performed |
 | Restricted Google submission endpoint/secret absent | passed |
@@ -58,3 +59,9 @@ The original website worktree's `insights.html`, `sitemap.xml`, untracked Bake-O
 All changes are local on this branch. No remote PR, merge, publish or deploy. The reconnaissance includes cross-system architectural information; inspect it before deciding whether to place it in the public website repository. `_build/` exclusion from Pages is not repository confidentiality.
 
 Final commit identifiers are available with `git log -2 --oneline research/publication-engine-recon` and in the mission return.
+
+## HELM source freshness correction
+
+The original HELM worktree was 32 commits behind fetched `origin/main`. Its unrelated dirty canon files were preserved. Compared lesson/decision services against `a27e761b6a09e909d24fb87c67484956900b053a`: HELM-33 already replaces Git `%cs` with `%cI` and principal-calendar conversion. Thus the failing local test above is stale-checkout evidence, not an unresolved upstream defect. A detached inspection worktree was created at `/tmp/research-engine-helm-current` for the newer source.
+
+Newer-source verification: `PYTHONPATH=src /home/s/projects_root/elevare-helm/.venv/bin/python -m pytest -q tests/test_lessons.py tests/test_lessons_seam.py` from `/tmp/research-engine-helm-current`: **46 passed**. Initial sandbox run stalled and was interrupted; permitted rerun passed. Existing Starlette deprecation warning only.
