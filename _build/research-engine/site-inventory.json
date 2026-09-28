@@ -1,0 +1,3242 @@
+{
+  "scope": "Local working tree, including pre-existing uncommitted Bake-Off; raw HTML only, not proof of deployment/indexing",
+  "head": "7fe2bd235c4eaaa2300bc91a0e7d013cd5b913b0",
+  "pages": [
+    {
+      "path": "Poetry/poetry-accent.html",
+      "title": "The Accent of the Soul \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-accent.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "The Accent  of the Soul ",
+      "raw_word_count": 2605,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "The Accent of the Soul",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-26",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": [
+            "en",
+            "de"
+          ],
+          "url": "https://shanestrough.com/poetry-accent.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry.html",
+        "poetry-boys.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry-boys.html",
+      "title": "The World In Their Bodies \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-boys.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "The World  In Their Bodies ",
+      "raw_word_count": 4253,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "The World In Their Bodies",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-27",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "about": "A poetry collection for three sons \u2014 Merric, Tristan, and Layne \u2014 on formation, courage, and becoming.",
+          "url": "https://shanestrough.com/poetry-boys.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-accent.html",
+        "poetry.html",
+        "poetry-merric.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry-gina.html",
+      "title": "GINA \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-gina.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " GINA ",
+      "raw_word_count": 362,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "GINA",
+          "alternateName": "An Acrostic",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "An acrostic poem \u2014 Grounded, Independent, Navigating, Alive.",
+          "url": "https://shanestrough.com/poetry-gina.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-singular.html",
+        "poetry.html",
+        "poetry-shane.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry-layne.html",
+      "title": "LAYNE \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-layne.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " LAYNE ",
+      "raw_word_count": 828,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "LAYNE",
+          "alternateName": "An Acrostic \u00b7 For My Youngest Son",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "An acrostic poem \u2014 Limitless, Animated, Young-hearted, Neverending, Expressive.",
+          "url": "https://shanestrough.com/poetry-layne.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-tristan.html",
+        "poetry.html",
+        "poetry-nobody.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry-merric.html",
+      "title": "MERRIC \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-merric.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " MERRIC ",
+      "raw_word_count": 732,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "MERRIC",
+          "alternateName": "An Acrostic \u00b7 For My Eldest Son",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "An acrostic poem \u2014 Mighty, Enduring, Radiant, Remarkable, Intuitive, Courageous.",
+          "url": "https://shanestrough.com/poetry-merric.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-boys.html",
+        "poetry.html",
+        "poetry-tristan.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry-navigating.html",
+      "title": "NAVIGATING: A Triptych \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-navigating.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " NAVIGATING ",
+      "raw_word_count": 2221,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "NAVIGATING: A Triptych",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "A triptych poem in three parts \u2014 SHANE, GINA, and the shared center between them. Two whole souls. One shared center. Navigating.",
+          "url": "https://shanestrough.com/poetry-navigating.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-orchard.html",
+        "poetry.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry-nobody.html",
+      "title": "Nobody Leaves Hungry \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-nobody.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Nobody Leaves  Hungry ",
+      "raw_word_count": 758,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Nobody Leaves Hungry",
+          "alternateName": "El Gringo Clandestino",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Playa El Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "A poem on provision, patience, architecture, and the discipline of love.",
+          "url": "https://shanestrough.com/poetry-nobody.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-layne.html",
+        "poetry.html",
+        "poetry-singular.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry-orchard.html",
+      "title": "The Orchard \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-orchard.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "The  Orchard ",
+      "raw_word_count": 539,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "The Orchard",
+          "alternateName": "El Gringo Clandestino",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Playa El Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "A poem on devotion, endurance, and the discipline of watering what someone else grew.",
+          "url": "https://shanestrough.com/poetry-orchard.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-worth.html",
+        "poetry.html",
+        "poetry-navigating.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry-shane.html",
+      "title": "SHANE \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-shane.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " SHANE ",
+      "raw_word_count": 645,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "SHANE",
+          "alternateName": "An Acrostic",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "An acrostic poem \u2014 Sovereign, Honest, Aware, Navigating, Evolving.",
+          "url": "https://shanestrough.com/poetry-shane.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-gina.html",
+        "poetry.html",
+        "poetry-worth.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry-singular.html",
+      "title": "Singular \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-singular.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " Singular ",
+      "raw_word_count": 261,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Singular",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Playa El Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "A poem on authenticity, singularity, and refusing to perform a life instead of living it.",
+          "url": "https://shanestrough.com/poetry-singular.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-nobody.html",
+        "poetry.html",
+        "poetry-gina.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry-tristan.html",
+      "title": "TRISTAN \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-tristan.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " TRISTAN ",
+      "raw_word_count": 770,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "TRISTAN",
+          "alternateName": "An Acrostic \u00b7 For My Second Son",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "An acrostic poem \u2014 Tenacious, Resilient, Ironhearted, Selfless, Tender, Authentic, Never-yielding.",
+          "url": "https://shanestrough.com/poetry-tristan.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-merric.html",
+        "poetry.html",
+        "poetry-layne.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry-worth.html",
+      "title": "Worth Not Leaving \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-worth.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Worth Not  Leaving ",
+      "raw_word_count": 1624,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Worth Not Leaving",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "A poem on identity, devotion, the forge of time, and one soul worth not leaving.",
+          "url": "https://shanestrough.com/poetry-worth.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-shane.html",
+        "poetry.html",
+        "poetry-orchard.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/poetry.html",
+      "title": "Poetry \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "POETRY",
+      "raw_word_count": 450,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Poetry \u2014 Shane Thomas Strough",
+          "description": "The Palmarcito Papers and other works. Original poetry by Shane Thomas Strough.",
+          "url": "https://shanestrough.com/poetry.html",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "hasPart": [
+            {
+              "@type": "CreativeWork",
+              "name": "The Orchard",
+              "url": "https://shanestrough.com/poetry-orchard.html"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "NAVIGATING: A Triptych",
+              "url": "https://shanestrough.com/poetry-navigating.html"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Worth Not Leaving",
+              "url": "https://shanestrough.com/poetry-worth.html"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "SHANE",
+              "url": "https://shanestrough.com/poetry-shane.html"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "GINA",
+              "url": "https://shanestrough.com/poetry-gina.html"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Singular",
+              "url": "https://shanestrough.com/poetry-singular.html"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Nobody Leaves Hungry",
+              "url": "https://shanestrough.com/poetry-nobody.html"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "The World In Their Bodies",
+              "url": "https://shanestrough.com/poetry-boys.html"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "MERRIC",
+              "url": "https://shanestrough.com/poetry-merric.html"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "TRISTAN",
+              "url": "https://shanestrough.com/poetry-tristan.html"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "LAYNE",
+              "url": "https://shanestrough.com/poetry-layne.html"
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "The Accent of the Soul",
+              "url": "https://shanestrough.com/poetry-accent.html"
+            }
+          ]
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "poetry-orchard.html",
+        "poetry-navigating.html",
+        "poetry-worth.html",
+        "poetry-shane.html",
+        "poetry-gina.html",
+        "poetry-singular.html",
+        "poetry-nobody.html",
+        "poetry-boys.html",
+        "poetry-merric.html",
+        "poetry-tristan.html",
+        "poetry-layne.html",
+        "poetry-accent.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "Poetry/press.html",
+      "title": "Press & Media Kit \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/press.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Press &  Media Kit ",
+      "raw_word_count": 495,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Shane Thomas Strough",
+          "alternateName": "Shane Strough",
+          "url": "https://shanestrough.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/shane-thomas-strough/",
+            "https://medium.com/@shane-thomas-strough",
+            "https://github.com/shane-thomas-strough",
+            "https://shanestrough.substack.com",
+            "https://www.youtube.com/@ShaneThomasStrough",
+            "https://www.crunchbase.com/person/shane-strough"
+          ],
+          "jobTitle": "Founder & Principal Architect",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Elevare Edge LLC",
+            "url": "https://shanestrough.com"
+          },
+          "description": "Integration & Commissioning Leader with 15+ years executing zero-downtime cutovers across DoD, federal, aerospace, hyperscale data center, and industrial infrastructure. Founder of Elevare Edge LLC and Elevare Scribe.",
+          "image": [
+            "https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-professional-headshot-mc-dean-1.jpg"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "FL"
+          }
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "images/shane-thomas-strough-professional-headshot-blazer-1.jpg",
+        "images/shane-thomas-strough-professional-headshot-mc-dean-1.jpg",
+        "https://medium.com/@shane-thomas-strough/mitigating-logistical-risks-in-international-mission-critical-construction-214009336399",
+        "https://medium.com/@shane-thomas-strough/zero-downtime-cutovers-replacing-backbone-infrastructure-in-mission-critical-facilities-69fef425323f",
+        "field-notes-siemens-bas.html",
+        "podcast-stop-the-chaos.html",
+        "poetry-accent.html",
+        "poetry-boys.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough",
+        "https://shanestrough.substack.com",
+        "https://github.com/shane-thomas-strough",
+        "https://www.crunchbase.com/person/shane-strough",
+        "index.html#contact",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough",
+        "https://shanestrough.substack.com",
+        "https://github.com/shane-thomas-strough"
+      ]
+    },
+    {
+      "path": "about.html",
+      "title": "About Shane Thomas Strough \u2014 Integration & Commissioning Leader",
+      "canonical": "https://shanestrough.com/about.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Shane Thomas Strough ",
+      "raw_word_count": 878,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Shane Thomas Strough",
+          "alternateName": "Shane Strough",
+          "url": "https://shanestrough.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/shane-thomas-strough/",
+            "https://medium.com/@shane-thomas-strough",
+            "https://github.com/shane-thomas-strough",
+            "https://shanestrough.substack.com",
+            "https://www.youtube.com/@ShaneThomasStrough"
+          ],
+          "jobTitle": "Founder & Principal Architect",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Elevare Edge LLC",
+            "url": "https://shanestrough.com"
+          },
+          "description": "Florida-based Integration and Commissioning Leader with 15+ years executing complex programs across DoD/federal facilities, aerospace infrastructure, hyperscale data centers, and enterprise SaaS. Founder of Elevare Edge LLC and Elevare Scribe.",
+          "knowsAbout": [
+            "Electrical Commissioning",
+            "Data Center Infrastructure",
+            "SCADA Systems",
+            "OT/IT Integration",
+            "DoD Federal Construction",
+            "Air-Gapped AI Infrastructure",
+            "Zero-Downtime Cutovers",
+            "Enterprise Learning and Development",
+            "Algorithmic Trading Systems",
+            "Next.js",
+            "FastAPI",
+            "pgVector",
+            "Enterprise AI Security",
+            "Myelin Runtime Guardrails",
+            "MCP Guard",
+            "Full-Stack SaaS Architecture",
+            "Fractional CTO"
+          ],
+          "image": [
+            "https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-professional-headshot-mc-dean-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-florida.jpg.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-london-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-datahall-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-isle-of-skye-lighthouse-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-high-angle-rescue-certification-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-london-eye-boys-promise-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-wiesbaden-germany-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-k60-el-salvador-surf-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-farne-islands-england-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-advanced-dive-el-salvador-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-goliath-grouper-dive-el-salvador-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-hurricane-gustav-surfing-2008-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-surfing-port-aransas-texas-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-dungeness-crab-fishing-oregon-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-fishing-boat-sunset-el-salvador-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-cycling-germany-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-offshore-fishing-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-snorkeling-bahamas-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-family-tintagel-cornwall-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-surfboard-wax-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-son-layne-universal-studios-1.jpg"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "FL"
+          }
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "/",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "/",
+        "index.html#systems",
+        "index.html#systems",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough",
+        "https://shanestrough.substack.com",
+        "https://github.com/shane-thomas-strough",
+        "index.html#contact",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "cv.html",
+      "title": "CV / Resume \u2014 Shane Thomas Strough | General Superintendent",
+      "canonical": "https://shanestrough.com/cv.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Shane Thomas /  Strough ",
+      "raw_word_count": 907,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Shane Thomas Strough",
+          "alternateName": "Shane Strough",
+          "url": "https://shanestrough.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/shane-thomas-strough/",
+            "https://medium.com/@shane-thomas-strough",
+            "https://github.com/shane-thomas-strough",
+            "https://shanestrough.substack.com"
+          ],
+          "jobTitle": "General Superintendent - Integration & Technology",
+          "description": "General Superintendent with 15+ years orchestrating complex, multi-discipline infrastructure projects across DoD/federal, utilities, industrial, and data center adjacent programs.",
+          "knowsAbout": [
+            "Critical Infrastructure",
+            "Industrial Controls & Commissioning",
+            "Project Integration",
+            "Technology Systems",
+            "BAS/EPMS/SCADA Integration",
+            "Zero-Downtime Cutovers",
+            "DoD Federal Construction",
+            "OT/IT Integration"
+          ],
+          "image": "https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dallas",
+            "addressRegion": "TX",
+            "addressCountry": "US"
+          }
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "index.html#contact",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "field-notes-blue-origin.html",
+      "title": "What Building Blue Origin's Launch Infrastructure Taught Me \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/field-notes-blue-origin.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "What Building Blue Origin's  Launch Infrastructure Taught Me",
+      "raw_word_count": 3708,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": "What Building Blue Origin's Launch Infrastructure Taught Me About Mission-Critical Systems",
+          "alternativeHeadline": "Leadership, Systems, and Field Truth Under Constraint",
+          "description": "Leadership, systems integration, and field truth under constraint at Blue Origin's Cape Canaveral launch infrastructure. Two towers, peregrine falcons at 360 feet, tacos at 500 feet, and the conversations that only happen when the ground is that far below.",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com",
+            "jobTitle": "Founder & Principal Architect",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Elevare Edge LLC"
+            }
+          },
+          "url": "https://shanestrough.com/field-notes-blue-origin.html",
+          "image": [
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-lc36-portrait-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-tower-looking-down-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-raptor-family-nesting-tower-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-electrical-fault-burned-wiring-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-team-lc36-group-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-faa-obstruction-light-interior-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-spacex-launch-from-tower-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-looking-up-through-steel-1.jpg"
+          ],
+          "publisher": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough"
+          },
+          "datePublished": "2026-03-28",
+          "proficiencyLevel": "Expert",
+          "about": [
+            "Aerospace Infrastructure",
+            "Launch Complex Commissioning",
+            "FAA Compliance",
+            "Mission-Critical Leadership",
+            "Blue Origin"
+          ]
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "insights.html",
+        "index.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "insights.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "field-notes-siemens-bas.html",
+      "title": "Siemens BAS Data Center Commissioning Field Guide \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/field-notes-siemens-bas.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Siemens BAS /  Data Center Commissioning ",
+      "raw_word_count": 5473,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": "Siemens Building Automation Systems \u2014 Data Center Commissioning Field Guide",
+          "description": "Comprehensive technical field guide for Siemens Building Automation Systems in data center commissioning, covering Desigo CC, APOGEE, PXC controllers, BACnet, Modbus, Cerberus PRO fire alarm systems, and commissioning workflows.",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "url": "https://shanestrough.com/field-notes-siemens-bas.html",
+          "image": "https://shanestrough.com/images/shane-thomas-strough-datahall-1.jpg",
+          "publisher": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough"
+          },
+          "proficiencyLevel": "Expert",
+          "dependencies": "Siemens Desigo CC, APOGEE, PXC Controllers, BACnet, Modbus, Cerberus PRO"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "insights.html",
+        "#agenda",
+        "#ch1",
+        "#ch2",
+        "#ch2-features",
+        "#ch3",
+        "#ch3-workflow",
+        "#ch4",
+        "#ch4-bacnet",
+        "#ch4-legacy",
+        "#ch5",
+        "#ch5-tools",
+        "#ch6",
+        "#ch7",
+        "#ch8",
+        "#ch9",
+        "#ch10",
+        "#ch11",
+        "#ch12",
+        "insights.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "gallery.html",
+      "title": "Photo Gallery \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/gallery.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Execution in the Wild",
+      "raw_word_count": 163,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          "name": "Execution in the Wild \u2014 Shane Thomas Strough Photo Gallery",
+          "description": "Field photography from 15+ years of mission-critical infrastructure \u2014 launch pads, data centers, electrical commissioning, and team leadership.",
+          "url": "https://shanestrough.com/gallery.html",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "image": [
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-lc36-portrait-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-team-lc36-group-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-tower-looking-down-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-looking-up-through-steel-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-road-to-space-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-launch-pad-crew-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-building-sign-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-raptor-family-nesting-tower-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-raptor-nesting-tower-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-spacex-launch-from-tower-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-faa-obstruction-light-interior-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-tower-climb-crew-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-data-hall-white-space-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-switchgear-crah-data-center-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-bas-controller-panel-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-relay-contactor-panel-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-data-center-cable-tray-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-water-tower-climb-petzl-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-electrical-fault-burned-wiring-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-electrical-room-panel-lineup-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-fiber-optic-splice-tools-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-team-fishing-cape-canaveral-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-mc-dean-tech-expo-team-1.jpg"
+          ]
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "/",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "/",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "index.html",
+      "title": "Shane Thomas Strough \u2014 Integration & Commissioning Leader",
+      "canonical": "https://shanestrough.com",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Shane  Thomas Strough",
+      "raw_word_count": 1567,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Shane Thomas Strough",
+          "alternateName": "Shane Strough",
+          "url": "https://shanestrough.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/shane-thomas-strough/",
+            "https://medium.com/@shane-thomas-strough",
+            "https://github.com/shane-thomas-strough",
+            "https://shanestrough.substack.com",
+            "https://www.youtube.com/@ShaneThomasStrough"
+          ],
+          "jobTitle": "Founder & Principal Architect",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Elevare Edge LLC",
+            "url": "https://shanestrough.com"
+          },
+          "description": "Full-Stack Technical Executive and Fractional CTO with 15+ years executing complex programs across DoD/federal facilities, aerospace infrastructure, hyperscale data centers, and enterprise SaaS. Builds the physical data center, engineers the bare-metal AI hardware, and ships the secure SaaS applications running on top of it.",
+          "knowsAbout": [
+            "Electrical Commissioning",
+            "Data Center Infrastructure",
+            "SCADA Systems",
+            "OT/IT Integration",
+            "DoD Federal Construction",
+            "Air-Gapped AI Infrastructure",
+            "Zero-Downtime Cutovers",
+            "Enterprise Learning and Development",
+            "Algorithmic Trading Systems",
+            "Next.js",
+            "FastAPI",
+            "pgVector",
+            "Enterprise AI Security",
+            "Myelin Runtime Guardrails",
+            "MCP Guard",
+            "Full-Stack SaaS Architecture",
+            "Fractional CTO"
+          ],
+          "image": [
+            "https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-professional-headshot-mc-dean-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-florida.jpg.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-lc36-portrait-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-team-lc36-group-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-tower-looking-down-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-looking-up-through-steel-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-road-to-space-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-launch-pad-crew-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-blue-origin-building-sign-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-raptor-family-nesting-tower-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-raptor-nesting-tower-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-spacex-launch-from-tower-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-faa-obstruction-light-interior-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-tower-climb-crew-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-london-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-datahall-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-isle-of-skye-lighthouse-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-high-angle-rescue-certification-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-london-eye-boys-promise-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-wiesbaden-germany-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-k60-el-salvador-surf-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-farne-islands-england-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-advanced-dive-el-salvador-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-goliath-grouper-dive-el-salvador-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-hurricane-gustav-surfing-2008-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-surfing-port-aransas-texas-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-dungeness-crab-fishing-oregon-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-fishing-boat-sunset-el-salvador-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-cycling-germany-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-offshore-fishing-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-snorkeling-bahamas-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-family-tintagel-cornwall-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-surfboard-wax-1.jpg",
+            "https://shanestrough.com/images/shane-thomas-strough-son-layne-universal-studios-1.jpg"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "FL"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          "name": "Shane Thomas Strough \u2014 75th Anniversary Gala",
+          "description": "Shane Thomas Strough at the 75th anniversary corporate celebration. Director-level Integration and Commissioning Leader with 15+ years executing zero-downtime cutovers across DoD, federal, hyperscale data center, aerospace, and industrial infrastructure.",
+          "thumbnailUrl": "https://img.youtube.com/vi/F8d0t349LKg/maxresdefault.jpg",
+          "uploadDate": "2026-03-26",
+          "contentUrl": "https://www.youtube.com/watch?v=F8d0t349LKg",
+          "embedUrl": "https://www.youtube.com/embed/F8d0t349LKg",
+          "publisher": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "PodcastSeries",
+          "name": "Shane Thomas Strough \u2014 Field Notes",
+          "description": "Technical leadership, commissioning insights, and field-tested frameworks from Shane Thomas Strough \u2014 Integration & Commissioning Leader with 15+ years across DoD, aerospace, hyperscale data centers, and industrial infrastructure.",
+          "url": "https://www.youtube.com/@ShaneThomasStrough",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "webFeed": "https://www.youtube.com/feeds/videos.xml?channel_id=@ShaneThomasStrough",
+          "image": "https://shanestrough.com/images/shane-thomas-strough-field-notes-podcast.png"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "/",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "#contact",
+        "#services",
+        "#work",
+        "#contact",
+        "#services",
+        "the-comprehension-horizon.html",
+        "podcast-stop-the-chaos.html",
+        "field-notes-siemens-bas.html",
+        "poetry-navigating.html",
+        "poetry-worth.html",
+        "field-notes-blue-origin.html",
+        "https://medium.com/@shane-thomas-strough/zero-downtime-cutovers-replacing-backbone-infrastructure-in-mission-critical-facilities-69fef425323f",
+        "insights.html",
+        "gallery.html",
+        "#contact",
+        "#contact",
+        "#contact",
+        "private-family-estates.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://shanestrough.substack.com",
+        "https://www.youtube.com/@ShaneThomasStrough",
+        "cv.html",
+        "/cdn-cgi/l/email-protection#e7948f8689829493958892808fa7808a868e8bc984888a",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "insights.html",
+      "title": "Technical Library \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/insights.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Technical  Library ",
+      "raw_word_count": 1011,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Technical Library \u2014 Shane Thomas Strough",
+          "description": "Field notes and technical analysis by Shane Thomas Strough",
+          "url": "https://shanestrough.com/insights.html",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          }
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "https://medium.com/@shane-thomas-strough/mitigating-logistical-risks-in-international-mission-critical-construction-214009336399",
+        "https://medium.com/@shane-thomas-strough/zero-downtime-cutovers-replacing-backbone-infrastructure-in-mission-critical-facilities-69fef425323f",
+        "field-notes-siemens-bas.html",
+        "podcast-stop-the-chaos.html",
+        "the-bake-off.html",
+        "the-comprehension-horizon.html",
+        "stale-state.html",
+        "field-notes-blue-origin.html",
+        "https://medium.com/@shane-thomas-strough",
+        "https://shanestrough.substack.com",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "index.html",
+        "https://shanestrough.substack.com/subscribe",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "podcast-stop-the-chaos.html",
+      "title": "Stop the Chaos: Nuclear-Grade Communication for Data Centers \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/podcast-stop-the-chaos.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Stop the Chaos  Nuclear-Grade Communication ",
+      "raw_word_count": 916,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "PodcastEpisode",
+          "name": "Stop the Chaos: Why Nuclear-Grade Communication is the Ultimate Data Center Control",
+          "description": "A framework for shifting communication from a soft skill to a critical engineering control essential for the successful construction and operation of hyperscale data centers.",
+          "url": "https://shanestrough.com/podcast-stop-the-chaos.html",
+          "datePublished": "2026-03-27",
+          "duration": "PT14M49S",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "partOfSeries": {
+            "@type": "PodcastSeries",
+            "name": "Shane Thomas Strough \u2014 Field Notes"
+          },
+          "associatedMedia": {
+            "@type": "VideoObject",
+            "name": "Stop the Chaos: Why Nuclear-Grade Communication is the Ultimate Data Center Control",
+            "embedUrl": "https://www.youtube.com/embed/TP0U8ELIrxE",
+            "thumbnailUrl": "https://shanestrough.com/images/shane-thomas-strough-stop-the-chaos-podcast.png",
+            "uploadDate": "2026-03-27",
+            "duration": "PT14M49S",
+            "publisher": {
+              "@type": "Person",
+              "name": "Shane Thomas Strough"
+            }
+          }
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "insights.html",
+        "insights.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-accent.html",
+      "title": "The Accent of the Soul \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-accent.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "The Accent  of the Soul ",
+      "raw_word_count": 2605,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "The Accent of the Soul",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-26",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": [
+            "en",
+            "de"
+          ],
+          "url": "https://shanestrough.com/poetry-accent.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry.html",
+        "poetry-boys.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-boys.html",
+      "title": "The World In Their Bodies \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-boys.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "The World  In Their Bodies ",
+      "raw_word_count": 4253,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "The World In Their Bodies",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-27",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "about": "A poetry collection for three sons \u2014 Merric, Tristan, and Layne \u2014 on formation, courage, and becoming.",
+          "url": "https://shanestrough.com/poetry-boys.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-accent.html",
+        "poetry.html",
+        "poetry-merric.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-gina.html",
+      "title": "GINA \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-gina.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " GINA ",
+      "raw_word_count": 362,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "GINA",
+          "alternateName": "An Acrostic",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "An acrostic poem \u2014 Grounded, Independent, Navigating, Alive.",
+          "url": "https://shanestrough.com/poetry-gina.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-singular.html",
+        "poetry.html",
+        "poetry-shane.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-layne.html",
+      "title": "LAYNE \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-layne.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " LAYNE ",
+      "raw_word_count": 828,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "LAYNE",
+          "alternateName": "An Acrostic \u00b7 For My Youngest Son",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "An acrostic poem \u2014 Limitless, Animated, Young-hearted, Neverending, Expressive.",
+          "url": "https://shanestrough.com/poetry-layne.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-tristan.html",
+        "poetry.html",
+        "poetry-nobody.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-merric.html",
+      "title": "MERRIC \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-merric.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " MERRIC ",
+      "raw_word_count": 732,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "MERRIC",
+          "alternateName": "An Acrostic \u00b7 For My Eldest Son",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "An acrostic poem \u2014 Mighty, Enduring, Radiant, Remarkable, Intuitive, Courageous.",
+          "url": "https://shanestrough.com/poetry-merric.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-boys.html",
+        "poetry.html",
+        "poetry-tristan.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-navigating.html",
+      "title": "NAVIGATING: A Triptych \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-navigating.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " NAVIGATING ",
+      "raw_word_count": 2221,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "NAVIGATING: A Triptych",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "A triptych poem in three parts \u2014 SHANE, GINA, and the shared center between them. Two whole souls. One shared center. Navigating.",
+          "url": "https://shanestrough.com/poetry-navigating.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-orchard.html",
+        "poetry.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-nobody.html",
+      "title": "Nobody Leaves Hungry \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-nobody.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Nobody Leaves  Hungry ",
+      "raw_word_count": 758,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Nobody Leaves Hungry",
+          "alternateName": "El Gringo Clandestino",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Playa El Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "A poem on provision, patience, architecture, and the discipline of love.",
+          "url": "https://shanestrough.com/poetry-nobody.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-layne.html",
+        "poetry.html",
+        "poetry-singular.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-orchard.html",
+      "title": "The Orchard \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-orchard.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "The  Orchard ",
+      "raw_word_count": 539,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "The Orchard",
+          "alternateName": "El Gringo Clandestino",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Playa El Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "A poem on devotion, endurance, and the discipline of watering what someone else grew.",
+          "url": "https://shanestrough.com/poetry-orchard.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-worth.html",
+        "poetry.html",
+        "poetry-navigating.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-shane.html",
+      "title": "SHANE \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-shane.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " SHANE ",
+      "raw_word_count": 645,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "SHANE",
+          "alternateName": "An Acrostic",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "An acrostic poem \u2014 Sovereign, Honest, Aware, Navigating, Evolving.",
+          "url": "https://shanestrough.com/poetry-shane.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-gina.html",
+        "poetry.html",
+        "poetry-worth.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-singular.html",
+      "title": "Singular \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-singular.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " Singular ",
+      "raw_word_count": 261,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Singular",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Playa El Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "A poem on authenticity, singularity, and refusing to perform a life instead of living it.",
+          "url": "https://shanestrough.com/poetry-singular.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-nobody.html",
+        "poetry.html",
+        "poetry-gina.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-tristan.html",
+      "title": "TRISTAN \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-tristan.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": " TRISTAN ",
+      "raw_word_count": 770,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "TRISTAN",
+          "alternateName": "An Acrostic \u00b7 For My Second Son",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "An acrostic poem \u2014 Tenacious, Resilient, Ironhearted, Selfless, Tender, Authentic, Never-yielding.",
+          "url": "https://shanestrough.com/poetry-tristan.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-merric.html",
+        "poetry.html",
+        "poetry-layne.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "poetry-worth.html",
+      "title": "Worth Not Leaving \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/poetry-worth.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Worth Not  Leaving ",
+      "raw_word_count": 1624,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Worth Not Leaving",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com"
+          },
+          "dateCreated": "2026-03-28",
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Palmarcito, El Salvador"
+          },
+          "genre": "Poetry",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "CreativeWork",
+            "name": "The Palmarcito Papers"
+          },
+          "about": "A poem on identity, devotion, the forge of time, and one soul worth not leaving.",
+          "url": "https://shanestrough.com/poetry-worth.html"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "poetry.html",
+        "poetry-shane.html",
+        "poetry.html",
+        "poetry-orchard.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "private-family-estates.html",
+      "title": "Private Family Estates \u00b7 Sovereign AI & Digital Infrastructure \u00b7 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/private-family-estates.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Private  Family Estates ",
+      "raw_word_count": 1854,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Private Family Estates",
+          "serviceType": "Sovereign AI estate infrastructure for private families",
+          "description": "A private, self-hosted operating system for a family's records, treasury, credit, deadlines, voice assistants, and succession. Built on the family's own hardware and property, governed by the family, designed to survive its vendors, its models, and its builder. Delivered as a private engagement: consultation, build, and stewardship.",
+          "url": "https://shanestrough.com/private-family-estates.html",
+          "provider": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com",
+            "sameAs": [
+              "https://www.linkedin.com/in/shane-thomas-strough/",
+              "https://github.com/shane-thomas-strough",
+              "https://medium.com/@shane-thomas-strough"
+            ]
+          },
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Private families and family offices"
+          },
+          "areaServed": "United States"
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "the-comprehension-horizon.html",
+        "/cdn-cgi/l/email-protection#e7948f8689829493958892808fa7808a868e8bc984888a",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "stale-state.html",
+      "title": "Stale State \u2014 the measurement program behind The Comprehension Horizon",
+      "canonical": "https://shanestrough.com/stale-state.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "Stale State",
+      "raw_word_count": 3252,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": "Stale State: Measuring Institutional Clock-Speed Against Frontier AI Cadence",
+          "alternativeHeadline": "Two loops, three clocks, numbers you can rerun",
+          "description": "Two institutional loops, three frontier clocks, numbers you can rerun: generation exposure, temporal shear, and the state plane \u2014 a commissioning test report measuring whether institutions keep pace with AI's cadence.",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com",
+            "sameAs": [
+              "https://www.linkedin.com/in/shane-thomas-strough/",
+              "https://github.com/shane-thomas-strough",
+              "https://medium.com/@shane-thomas-strough"
+            ]
+          },
+          "url": "https://shanestrough.com/stale-state.html",
+          "datePublished": "2026-08-31",
+          "publisher": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough"
+          }
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "insights.html",
+        "the-comprehension-horizon.html",
+        "mailto:shanestrough@gmail.com?subject=Useful%3A%20Stale%20State",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "the-bake-off.html",
+      "title": "The Bake-Off \u00b7 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/the-bake-off.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "The Bake-Off",
+      "raw_word_count": 1884,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": "The Bake-Off",
+          "alternativeHeadline": "Why the session that knew everything checked least",
+          "description": "Two sessions of the same AI built the same page, firewalled from each other: one with two days of lived project context, one brand new. The veteran overclaimed; the stranger verified everything and won. A field experiment in familiarity outrunning ground truth.",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com",
+            "sameAs": [
+              "https://www.linkedin.com/in/shane-thomas-strough/",
+              "https://github.com/shane-thomas-strough",
+              "https://medium.com/@shane-thomas-strough"
+            ]
+          },
+          "url": "https://shanestrough.com/the-bake-off.html",
+          "image": [
+            "https://shanestrough.com/images/bake-off-first-capture.png"
+          ],
+          "datePublished": "2026-08-31",
+          "publisher": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough"
+          }
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "insights.html",
+        "the-comprehension-horizon.html",
+        "private-family-estates.html",
+        "the-comprehension-horizon.html",
+        "private-family-estates.html",
+        "insights.html",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    },
+    {
+      "path": "the-comprehension-horizon.html",
+      "title": "The Comprehension Horizon \u2014 Shane Thomas Strough",
+      "canonical": "https://shanestrough.com/the-comprehension-horizon.html",
+      "description": true,
+      "og_title": true,
+      "twitter_card": "summary_large_image",
+      "h1": "The Comprehension Horizon",
+      "raw_word_count": 2987,
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": "The Comprehension Horizon",
+          "alternativeHeadline": "An Engineering Theory of Technological Time-Compression",
+          "description": "The time between major technological shifts keeps halving \u2014 and the mechanisms society uses to understand technology can't keep pace. An engineering theory of time compression, from a sketch on a torn envelope to a measured claim.",
+          "author": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough",
+            "url": "https://shanestrough.com",
+            "sameAs": [
+              "https://www.linkedin.com/in/shane-thomas-strough/",
+              "https://github.com/shane-thomas-strough",
+              "https://medium.com/@shane-thomas-strough"
+            ]
+          },
+          "url": "https://shanestrough.com/the-comprehension-horizon.html",
+          "datePublished": "2026-08-31",
+          "publisher": {
+            "@type": "Person",
+            "name": "Shane Thomas Strough"
+          }
+        }
+      ],
+      "jsonld_errors": [],
+      "in_sitemap": true,
+      "robots": null,
+      "links": [
+        "index.html",
+        "about.html",
+        "insights.html",
+        "poetry.html",
+        "podcast-stop-the-chaos.html",
+        "index.html#contact",
+        "index.html",
+        "insights.html",
+        "stale-state.html",
+        "private-family-estates.html",
+        "stale-state.html",
+        "https://shanestrough.com",
+        "https://shanestrough.com",
+        "https://elevareedge.com",
+        "stale-state.html",
+        "mailto:shanestrough@gmail.com?subject=Useful%3A%20The%20Comprehension%20Horizon",
+        "insights.html",
+        "https://www.linkedin.com/in/shane-thomas-strough/",
+        "https://medium.com/@shane-thomas-strough",
+        "https://www.youtube.com/@ShaneThomasStrough"
+      ]
+    }
+  ],
+  "sitemap_urls": [
+    "https://shanestrough.com",
+    "https://shanestrough.com/index.html",
+    "https://shanestrough.com/insights.html",
+    "https://shanestrough.com/poetry.html",
+    "https://shanestrough.com/poetry-accent.html",
+    "https://shanestrough.com/poetry-boys.html",
+    "https://shanestrough.com/poetry-nobody.html",
+    "https://shanestrough.com/poetry-singular.html",
+    "https://shanestrough.com/field-notes-siemens-bas.html",
+    "https://shanestrough.com/field-notes-blue-origin.html",
+    "https://shanestrough.com/cv.html",
+    "https://shanestrough.com/podcast-stop-the-chaos.html",
+    "https://shanestrough.com/about.html",
+    "https://shanestrough.com/press.html",
+    "https://shanestrough.com/poetry-gina.html",
+    "https://shanestrough.com/poetry-shane.html",
+    "https://shanestrough.com/poetry-worth.html",
+    "https://shanestrough.com/poetry-navigating.html",
+    "https://shanestrough.com/poetry-orchard.html",
+    "https://shanestrough.com/poetry-merric.html",
+    "https://shanestrough.com/poetry-tristan.html",
+    "https://shanestrough.com/poetry-layne.html",
+    "https://shanestrough.com/gallery.html",
+    "https://shanestrough.com/the-comprehension-horizon.html",
+    "https://shanestrough.com/stale-state.html",
+    "https://shanestrough.com/private-family-estates.html",
+    "https://shanestrough.com/the-bake-off.html"
+  ],
+  "broken_local_references": [
+    {
+      "source": "Poetry/poetry-accent.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-accent.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-accent.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-accent.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-accent.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-accent.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-accent.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-boys.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-boys.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-boys.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-boys.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-boys.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-boys.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-boys.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-gina.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-gina.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-gina.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-gina.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-gina.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-gina.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-gina.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-layne.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-layne.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-layne.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-layne.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-layne.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-layne.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-layne.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-merric.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-merric.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-merric.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-merric.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-merric.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-merric.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-merric.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-navigating.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-navigating.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-navigating.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-navigating.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-navigating.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-navigating.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-navigating.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-nobody.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-nobody.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-nobody.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-nobody.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-nobody.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-nobody.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-nobody.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-orchard.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-orchard.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-orchard.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-orchard.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-orchard.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-orchard.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-orchard.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-shane.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-shane.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-shane.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-shane.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-shane.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-shane.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-shane.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-singular.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-singular.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-singular.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-singular.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-singular.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-singular.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-singular.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-tristan.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-tristan.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-tristan.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-tristan.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-tristan.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-tristan.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-tristan.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-worth.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-worth.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry-worth.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry-worth.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry-worth.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry-worth.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry-worth.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry.html",
+      "tag": "link",
+      "target": "https://shanestrough.com/poetry.html"
+    },
+    {
+      "source": "Poetry/poetry.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/poetry.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/poetry.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/poetry.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/poetry.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/poetry.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "link",
+      "target": "https://shanestrough.com/press.html"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "about.html"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "index.html"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "img",
+      "target": "images/shane-thomas-strough-professional-headshot-blazer-1.jpg"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "images/shane-thomas-strough-professional-headshot-blazer-1.jpg"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "img",
+      "target": "images/shane-thomas-strough-professional-headshot-mc-dean-1.jpg"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "images/shane-thomas-strough-professional-headshot-mc-dean-1.jpg"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "field-notes-siemens-bas.html"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "podcast-stop-the-chaos.html"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "index.html#contact"
+    },
+    {
+      "source": "Poetry/press.html",
+      "tag": "a",
+      "target": "insights.html"
+    },
+    {
+      "source": "about.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "cv.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "field-notes-blue-origin.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "field-notes-siemens-bas.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "gallery.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "gallery.html",
+      "tag": "img",
+      "target": "images/shane-thomas-strough-bas-controller-panel-1.jpg"
+    },
+    {
+      "source": "gallery.html",
+      "tag": "img",
+      "target": "images/shane-thomas-strough-relay-contactor-panel-1.jpg"
+    },
+    {
+      "source": "gallery.html",
+      "tag": "img",
+      "target": "images/shane-thomas-strough-data-center-cable-tray-1.jpg"
+    },
+    {
+      "source": "gallery.html",
+      "tag": "img",
+      "target": "images/shane-thomas-strough-electrical-room-panel-lineup-1.jpg"
+    },
+    {
+      "source": "gallery.html",
+      "tag": "img",
+      "target": "images/shane-thomas-strough-fiber-optic-splice-tools-1.jpg"
+    },
+    {
+      "source": "index.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "insights.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "podcast-stop-the-chaos.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-accent.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-accent.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-accent.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-boys.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-boys.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-boys.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-gina.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-gina.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-gina.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-layne.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-layne.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-layne.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-merric.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-merric.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-merric.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-navigating.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-navigating.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-navigating.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-nobody.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-nobody.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-nobody.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-orchard.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-orchard.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-orchard.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-shane.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-shane.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-shane.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-singular.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-singular.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-singular.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-tristan.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-tristan.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-tristan.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-worth.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-worth.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "poetry-worth.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "private-family-estates.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "stale-state.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "the-bake-off.html",
+      "tag": "a",
+      "target": "poetry.html"
+    },
+    {
+      "source": "the-comprehension-horizon.html",
+      "tag": "a",
+      "target": "poetry.html"
+    }
+  ],
+  "source_documents": [
+    "field-notes/AI_Security_Assurance.md",
+    "field-notes/Air_Gapped_AI.md",
+    "field-notes/FOUND_Methodology.md",
+    "field-notes/Full_Stack_AI_Ecosystem.md",
+    "field-notes/High_Angle_Aerospace.md",
+    "field-notes/Master_the_Flow.md",
+    "field-notes/OT_IT_Integration.md",
+    "field-notes/Offline_Documentation.md",
+    "field-notes/Siemens_Data_Center_Commissioning_Guide.md",
+    "field-notes/What-Building-Blue-Origin-Launch-Infrastructure-Taught-Me-Shane-Thomas-Strough.docx",
+    "Poetry/Boys/LAYNE_Poem.md",
+    "Poetry/Boys/MERRIC_Poem.md",
+    "Poetry/Boys/TRISTAN_Poem.md",
+    "Poetry/Boys/The_World_In_Their_Bodies.md",
+    "Poetry/Gina/GINA_Poem.md",
+    "Poetry/Gina/NAVIGATING_Triptych.md",
+    "Poetry/Gina/SHANE_Poem.md",
+    "Poetry/Gina/Worth_Not_Leaving.md",
+    "Poetry/One/The_Accent_of_the_Soul_Formatted.md",
+    "Poetry/One/The_Accent_of_the_Soul_Story.md",
+    "_build/bake-off-final.md",
+    "_build/horizon-final.md",
+    "_build/stale-state-final.md"
+  ]
+}

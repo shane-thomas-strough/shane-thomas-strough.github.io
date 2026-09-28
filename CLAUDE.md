@@ -76,17 +76,21 @@ All pages include JSON-LD schema markup:
 - `insights.html` — CollectionPage schema
 - `poetry.html` — CreativeWork schema
 
-### Automated Search Engine Indexing
+### Search discovery notifications
 
-A GitHub Actions workflow (`.github/workflows/index-search-engines.yml`) runs on every push to `main` that changes `.html` files:
+`.github/workflows/index-search-engines.yml` notifies IndexNow on HTML changes
+pushed to `main`. The committed key file verifies control of the host. Acceptance
+of a notification does not establish crawling, indexing, or ranking.
 
-1. **IndexNow** (Bing, Yandex, Seznam, Naver) — batch submission, no auth required. Key file: `5891ff7061e0f42802e84221382b9ca9.txt`
-2. **Google Indexing API** — OAuth2 via service account. Credentials stored as GitHub secret `GOOGLE_INDEXING_KEY`
+Ordinary articles are **not eligible for Google's Indexing API**. Google discovery
+uses crawlable internal links and `sitemap.xml` (declared in `robots.txt`). Manage
+sitemap submission and inspect indexing in Search Console. The Search Console
+Sitemaps API is a supported future automation seam; no analytics ingestion or
+Google submission runs in this workflow. `GOOGLE_INDEXING_KEY` is no longer used.
 
-**No manual indexing steps are needed.** Changed pages are automatically submitted to all search engines on deploy.
-
-Google Cloud project: `shanestrough-indexing`
-Service account: `indexing-bot@shanestrough-indexing.iam.gserviceaccount.com` (Owner in Search Console)
+Official restriction: https://developers.google.com/search/apis/indexing-api/v3/using-api
+Source audit, remaining workflow limits, and publication architecture:
+`_build/research-engine/RECON.md`.
 
 ### Image Handling
 

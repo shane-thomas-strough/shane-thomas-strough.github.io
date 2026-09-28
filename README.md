@@ -23,7 +23,7 @@ A hand-built, dependency-free static website: pure HTML, CSS, and vanilla JavaSc
 - **Scroll animations** — CSS keyframes (`fadeInUp`, `gridPulse`, `glowFloat`) fired by `IntersectionObserver`; poetry pages use a slower `reveal-slow` cadence.
 - **Responsive** — breakpoints at 900 / 768 / 600 / 480 px.
 - **SEO-first** — per-page JSON-LD (`Person`, `CollectionPage`, `CreativeWork`), Open Graph + Twitter cards, `sitemap.xml`, `robots.txt`, native lazy-loaded images, and Cloudflare-obfuscated contact emails.
-- **Automated search-engine indexing** — a GitHub Actions workflow pings IndexNow and the Google Indexing API on every push that touches an `.html` file (see below).
+- **Automated search-engine indexing** — a GitHub Actions workflow notifies IndexNow on pushes that touch HTML. Google uses sitemap/crawl discovery; notifications never guarantee indexing.
 
 ## How it deploys
 
@@ -36,15 +36,20 @@ flowchart LR
     Pages --> Live["shanestrough.com (custom domain via CNAME)"]
     Push --> GHA["GitHub Actions: diff changed .html"]
     GHA --> IndexNow["IndexNow (Bing, Yandex, Seznam, Naver)"]
-    GHA --> Google["Google Indexing API (if secret set)"]
+    Live --> Google["Google crawl discovery: links + sitemap / Search Console"]
 ```
 
 The indexing workflow (`.github/workflows/index-search-engines.yml`) diffs `HEAD` against its parent for changed `*.html`, then:
 
 1. Batch-submits the URLs to **IndexNow** — one POST fans out to Bing, Yandex, Seznam, Naver, etc. The verification key file `5891ff7061e0f42802e84221382b9ca9.txt` sits at the repo root.
-2. Submits each URL to the **Google Indexing API**, minting an OAuth2 token from a self-signed JWT using the `GOOGLE_INDEXING_KEY` service-account secret. This step skips gracefully when the secret isn't configured.
+Google's Indexing API is restricted to eligible job-posting and livestream pages,
+so this site does not submit ordinary articles to it. Maintain `sitemap.xml` and
+crawlable internal links; use Search Console for sitemap submission and inspection.
+The Search Console Sitemaps API is the supported future submission seam. The old
+`GOOGLE_INDEXING_KEY` secret is unused. No notification guarantees indexing.
 
-No manual indexing steps are needed.
+See [the source audit](_build/research-engine/RECON.md) for measured implementation
+state and remaining workflow limitations, including deployment ordering.
 
 ## Tech stack
 
@@ -52,7 +57,7 @@ No manual indexing steps are needed.
 - **Styling:** CSS3 with custom properties, inline per page; Google Fonts (Bebas Neue, Fraunces, DM Mono)
 - **Behavior:** vanilla JavaScript (no libraries)
 - **Hosting:** GitHub Pages + custom domain (`CNAME` → `shanestrough.com`)
-- **Automation:** GitHub Actions (IndexNow + Google Indexing API)
+- **Automation:** GitHub Actions (IndexNow notifications)
 
 ## Running it locally
 
