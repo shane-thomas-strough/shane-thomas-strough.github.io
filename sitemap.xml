@@ -141,4 +141,16 @@
   <url><loc>https://shanestrough.com/the-comprehension-horizon.html</loc><lastmod>2026-08-31</lastmod><priority>0.9</priority></url>
   <url><loc>https://shanestrough.com/stale-state.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://shanestrough.com/private-family-estates.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url>
+    <loc>https://shanestrough.com/building-the-factory/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shanestrough.com/building-the-factory/agent-worked-through-the-night/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
