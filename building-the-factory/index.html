@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building the Factory — Shane Thomas Strough</title>
+  <meta name="description" content="Building the Factory documents the architecture, failures, agent missions, products, governance, evidence, and operating discipline behind Shane Strough's evolving agentic software estate." />
+  <meta name="keywords" content="Building the Factory, Shane Strough, agentic software estate, AI agent governance, sovereign AI, human authorized agents, software architecture, AI operations" />
+  <link rel="canonical" href="https://shanestrough.com/building-the-factory/" />
+  <meta property="og:title" content="Building the Factory — Shane Thomas Strough" />
+  <meta property="og:description" content="The public record of constructing a governed agentic software estate: architecture, failures, agents, products, evidence, and the lessons that survive." />
+  <meta property="og:url" content="https://shanestrough.com/building-the-factory/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Building the Factory — Shane Thomas Strough" />
+  <meta name="twitter:description" content="Build the factory. Capture the evidence. Tell the truth well. Let the work compound." />
+  <meta name="twitter:image" content="https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Building the Factory",
+    "description":"A public series by Shane Thomas Strough documenting the construction of a governed agentic software estate.",
+    "url":"https://shanestrough.com/building-the-factory/",
+    "author":{"@type":"Person","name":"Shane Thomas Strough","url":"https://shanestrough.com"},
+    "isPartOf":{"@type":"WebSite","name":"Shane Thomas Strough","url":"https://shanestrough.com"}
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,600;0,900;1,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:#080A0C; --deep:#0D1117; --panel:#111820; --border:#1E2D3D;
+      --electric:#00E5FF; --teal:#00B4C6; --dim-teal:rgba(0,229,255,.10);
+      --white:#F0F4F8; --muted:#6B8099; --warm:#C8A96E; --dim-warm:rgba(200,169,110,.10);
+      --danger:#FF6B6B;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:'DM Mono',monospace;font-weight:300;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(200,169,110,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(200,169,110,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:-1}
+    a{color:inherit}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2.5rem;background:rgba(8,10,12,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.2em;color:var(--electric);text-decoration:none}
+    .nav-links{display:flex;gap:1.6rem;list-style:none;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase}
+    .nav-links a:hover,.nav-links a.active{color:var(--warm)}
+    .hero{min-height:92vh;display:grid;align-items:center;max-width:1200px;margin:0 auto;padding:9rem 2.5rem 5rem;position:relative}
+    .eyebrow{font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--warm);margin-bottom:1.25rem}
+    .eyebrow::before{content:'// ';opacity:.6}
+    h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4.5rem,12vw,10rem);line-height:.82;letter-spacing:.01em}
+    h1 span{display:block;color:var(--warm)}
+    .dek{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1rem,2.3vw,1.45rem);line-height:1.65;color:var(--muted);max-width:850px;margin-top:2rem}
+    .law{margin-top:2rem;border-left:2px solid var(--warm);padding:1rem 1.25rem;background:linear-gradient(90deg,var(--dim-warm),transparent);font-size:.78rem;line-height:1.7;color:var(--white);max-width:850px}
+    .actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.25rem}
+    .btn{display:inline-flex;padding:.8rem 1.25rem;border:1px solid var(--border);text-decoration:none;text-transform:uppercase;letter-spacing:.16em;font-size:.62rem}
+    .btn.primary{border-color:var(--warm);color:var(--warm);background:var(--dim-warm)}
+    .btn.secondary{border-color:var(--electric);color:var(--electric);background:var(--dim-teal)}
+    .section{max-width:1200px;margin:0 auto;padding:5.5rem 2.5rem;border-top:1px solid var(--border)}
+    .section-label{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--warm);margin-bottom:.8rem}
+    h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6vw,5.5rem);line-height:.92;letter-spacing:.02em;margin-bottom:1.5rem}
+    .section-intro{max-width:850px;color:var(--muted);font-size:.78rem;line-height:1.85}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:2.5rem}
+    .card{background:var(--deep);padding:1.7rem;min-height:210px}
+    .card-kicker{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--electric);margin-bottom:.7rem}
+    .card h3{font-family:'Fraunces',serif;font-size:1rem;line-height:1.45;margin-bottom:.75rem}
+    .card p{color:var(--muted);font-size:.66rem;line-height:1.75}
+    .feature{margin-top:2.5rem;border:1px solid var(--border);background:var(--deep);display:grid;grid-template-columns:180px 1fr}
+    .feature-side{padding:2rem;border-right:1px solid var(--border);display:flex;flex-direction:column;justify-content:space-between}
+    .feature-num{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:var(--warm)}
+    .feature-state{font-size:.52rem;letter-spacing:.16em;color:var(--electric);text-transform:uppercase}
+    .feature-body{padding:2rem 2.25rem}
+    .feature-body h3{font-family:'Fraunces',serif;font-size:1.5rem;line-height:1.35;margin-bottom:.85rem}
+    .feature-body p{font-size:.72rem;line-height:1.85;color:var(--muted);max-width:780px}
+    .feature-link{display:inline-block;margin-top:1.2rem;color:var(--warm);text-decoration:none;text-transform:uppercase;font-size:.6rem;letter-spacing:.18em}
+    .epochs{margin-top:2.5rem;display:flex;flex-direction:column;border-top:1px solid var(--border)}
+    .epoch{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:1.35rem 0;border-bottom:1px solid var(--border)}
+    .epoch-date{font-size:.6rem;color:var(--warm);letter-spacing:.12em;text-transform:uppercase}
+    .epoch-name{font-family:'Fraunces',serif;font-size:1rem;margin-bottom:.35rem}
+    .epoch p{font-size:.65rem;line-height:1.7;color:var(--muted)}
+    .definition{margin-top:2.5rem;padding:2rem;border:1px solid var(--warm);background:var(--dim-warm)}
+    .definition strong{display:block;color:var(--warm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.8rem}
+    .definition p{font-family:'Fraunces',serif;font-size:1.15rem;line-height:1.6}
+    .cta{text-align:center;padding:6rem 2.5rem;border-top:1px solid var(--border);background:linear-gradient(180deg,transparent,var(--deep))}
+    .cta h2{margin-bottom:1rem}
+    .cta p{color:var(--muted);font-size:.72rem;line-height:1.8;max-width:700px;margin:0 auto 1.5rem}
+    footer{padding:2rem 2.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase}
+    @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.feature{grid-template-columns:130px 1fr}.nav-links{gap:.9rem}}
+    @media(max-width:700px){nav{padding:1rem 1.2rem}.nav-links a:not(.active){display:none}.hero,.section{padding-left:1.2rem;padding-right:1.2rem}.grid{grid-template-columns:1fr}.feature{grid-template-columns:1fr}.feature-side{border-right:0;border-bottom:1px solid var(--border);min-height:100px}.epoch{grid-template-columns:1fr;gap:.35rem}}
+  </style>
+</head>
+<body>
+  <nav aria-label="Primary">
+    <a class="nav-logo" href="/">STS</a>
+    <ul class="nav-links">
+      <li><a href="/insights.html">Field Notes</a></li>
+      <li><a class="active" href="/building-the-factory/">Factory</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/#services">Services</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Public operating record</p>
+        <h1>Building <span>the Factory</span></h1>
+        <p class="dek">The public record of constructing a governed agentic software estate — the products, infrastructure, agents, failures, evidence, authority boundaries, and operating discipline that make the work useful enough to compound.</p>
+        <div class="law"><strong>Build the factory. Capture the evidence. Tell the truth well. Let the work compound.</strong></div>
+        <div class="actions">
+          <a class="btn primary" href="/building-the-factory/agent-worked-through-the-night/">Start with Campaign 001 →</a>
+          <a class="btn secondary" href="/insights.html">Browse Field Notes →</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <p class="section-label">The thesis</p>
+      <h2>The agent is not the product.</h2>
+      <p class="section-intro">AI can generate code. The harder problem is building an environment where machine work can be bounded, observed, checked, recovered, and connected to real human authority. Building the Factory documents that environment as it evolves — including the things that fail, drift, get corrected, or never earn a permanent job.</p>
+      <div class="definition">
+        <strong>Working definition</strong>
+        <p>An agentic software estate is the operating environment around AI workers: applications, infrastructure, repositories, evidence, authority, deployment controls, and durable records that let agentic work become governable instead of merely generative.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">The machinery</p>
+      <h2>Organs stay specialized. The integration layer emerges between them.</h2>
+      <div class="grid">
+        <article class="card"><p class="card-kicker">Products</p><h3>Real problems first.</h3><p>BidWright, Elevare Edge, TITAN, media tools, simulations, and other products retain their own domain mechanics rather than collapsing into one mega-app.</p></article>
+        <article class="card"><p class="card-kicker">AEGIS</p><h3>Shared intelligence, bounded by role.</h3><p>A sovereign AI layer can serve multiple products while respecting each product's authority and fail-private boundaries.</p></article>
+        <article class="card"><p class="card-kicker">Atlas</p><h3>What should exist.</h3><p>The registry and topology layer makes a growing portfolio legible enough to reason about as an estate instead of a pile of directories.</p></article>
+        <article class="card"><p class="card-kicker">HELM</p><h3>Where human judgment is needed.</h3><p>Decision surfaces separate proposals, evidence, and standing from consequential authorization.</p></article>
+        <article class="card"><p class="card-kicker">App Hub</p><h3>What actually runs — and what can be operated.</h3><p>Runtime observation and bounded control create a bridge between declared software and operating reality.</p></article>
+        <article class="card"><p class="card-kicker">Canon + evidence</p><h3>Shared meaning without shared mythology.</h3><p>Doctrine, lifecycle language, provenance, and evidence make it possible to reuse patterns without pretending every implementation has the same standing.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">Start here</p>
+      <h2>Campaign 001</h2>
+      <article class="feature">
+        <div class="feature-side">
+          <div class="feature-num">001</div>
+          <div class="feature-state">Canonical · Series launch</div>
+        </div>
+        <div class="feature-body">
+          <h3>I Spent 18 Months Building the Factory. Tonight I Felt It Start to Run.</h3>
+          <p>One AI agent working for hours is not the story. The story is the architecture, evidence, authority boundaries, and operating discipline that make the work useful enough to compound.</p>
+          <a class="feature-link" href="/building-the-factory/agent-worked-through-the-night/">Read the canonical essay →</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <p class="section-label">What gets documented</p>
+      <h2>No daily-content hamster wheel.</h2>
+      <div class="grid">
+        <article class="card"><p class="card-kicker">Factory Logs</p><h3>Milestones with standing.</h3><p>Short records of what changed, what was observed, and what remains unproven.</p></article>
+        <article class="card"><p class="card-kicker">Inside the Architecture</p><h3>Why the system looks this way.</h3><p>Durable explanations of authority, evidence, runtime truth, sovereignty, orchestration, and recovery.</p></article>
+        <article class="card"><p class="card-kicker">Incident Reports</p><h3>Where reality disagreed.</h3><p>Drift, failures, wrong assumptions, security lessons, and the corrective architecture that survived them.</p></article>
+        <article class="card"><p class="card-kicker">Product Windows</p><h3>See the organs working.</h3><p>Concrete workflows and outcomes from individual products without turning the umbrella narrative into a product catalog.</p></article>
+        <article class="card"><p class="card-kicker">Evidence & benchmarks</p><h3>Measurements that changed decisions.</h3><p>Model tests, OCR results, rejected subsystems, corrections, and other places where evidence outranked preference.</p></article>
+        <article class="card"><p class="card-kicker">State of the Estate</p><h3>What became true.</h3><p>Periodic synthesis across the portfolio: what shipped, what changed, what drifted, and what needs principal judgment next.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">The prehistory</p>
+      <h2>This did not begin as a master plan.</h2>
+      <p class="section-intro">Preserved documents and Git history show a messier — and more useful — progression. Early product ideas became specialized tools. Specialized tools exposed repeating integration problems. Shared infrastructure and doctrine arrived only after the portfolio became large enough to demand them.</p>
+      <div class="epochs">
+        <div class="epoch"><div class="epoch-date">Jan–Jul 2025</div><div><div class="epoch-name">Origin / Exploration</div><p>Product theses, token experiments, workflow concepts, and early tool research.</p></div></div>
+        <div class="epoch"><div class="epoch-date">Aug–Dec 2025</div><div><div class="epoch-name">Agent Factory / Local Infrastructure</div><p>“Vertical-Specific Agent Factory” language appears, alongside persistent-memory/orchestration concepts and serious local/private AI planning.</p></div></div>
+        <div class="epoch"><div class="epoch-date">Mar–Jun 2026</div><div><div class="epoch-name">Product Organs + Sovereign Brain</div><p>Integrated products deepen while AEGIS becomes governed infrastructure rather than a model demo.</p></div></div>
+        <div class="epoch"><div class="epoch-date">Jul 2026</div><div><div class="epoch-name">Proliferation → Shared Doctrine</div><p>The portfolio reaches dozens of projects, cross-project bridges appear, and shared canon begins rolling across repos.</p></div></div>
+        <div class="epoch"><div class="epoch-date">Aug–Sep 2026</div><div><div class="epoch-name">Shared Estate Infrastructure</div><p>Shared intelligence, provenance, RECON, bounded bridges, and governed reuse become explicit.</p></div></div>
+        <div class="epoch"><div class="epoch-date">Sep 2026 →</div><div><div class="epoch-name">Estate Self-Awareness + Control</div><p>HELM, CONSENSUS, enterprise self-audit, runtime truth, and App Hub turn the portfolio into something that can increasingly observe and operate itself.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">Credibility, not mythology</p>
+      <h2>Integration before software.</h2>
+      <p class="section-intro">Before I built integration layers in software, I spent years being the integration layer in live electrical, controls, commissioning, mission-critical, and training environments: coordinating specialized systems, field crews, engineering, clients, documentation, cutovers, and handoffs. The software work is a continuation of that operating problem at a different layer — not a claim that one background automatically proves another.</p>
+    </section>
+
+    <section class="cta">
+      <p class="section-label">Follow the build</p>
+      <h2>The public record compounds too.</h2>
+      <p>The website holds the durable source. Substack carries the more personal founder notes. The work stays upstream of the media operation.</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn primary" href="https://shanestrough.substack.com" target="_blank" rel="noopener">Subscribe on Substack ↗</a>
+        <a class="btn secondary" href="/insights.html">Technical Library →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Building the Factory · Shane Thomas Strough</span>
+    <span>Evidence before eloquence.</span>
+    <span>© 2026 · shanestrough.com</span>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Spent 18 Months Building an Agentic Software Estate | Building the Factory</title>
+  <meta name="description" content="Why one AI agent working for hours is not the breakthrough—and how architecture, evidence, human authority, and deployment discipline make agentic work compound." />
+  <meta name="keywords" content="agentic software estate, AI agent governance, governed AI agents, human authorized agents, AI agent evidence, software estate architecture, Building the Factory" />
+  <link rel="canonical" href="https://shanestrough.com/building-the-factory/agent-worked-through-the-night/" />
+  <meta property="og:title" content="I Spent 18 Months Building the Factory. Tonight I Felt It Start to Run." />
+  <meta property="og:description" content="The agent working for hours is not the story. The factory around it is." />
+  <meta property="og:url" content="https://shanestrough.com/building-the-factory/agent-worked-through-the-night/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Agent Swings the Hammer. The Factory Is the Asset." />
+  <meta name="twitter:description" content="Why architecture, evidence, human authority, and deployment discipline matter more than an agent staying busy." />
+  <meta name="twitter:image" content="https://shanestrough.com/images/shane-thomas-strough-professional-headshot-blazer-1.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BlogPosting",
+    "headline":"I Spent 18 Months Building the Factory. Tonight I Felt It Start to Run.",
+    "description":"One AI agent working for hours is not the story. The story is the architecture, evidence, authority boundaries, and operating discipline that make the work useful enough to compound.",
+    "datePublished":"2026-09-30",
+    "dateModified":"2026-09-30",
+    "mainEntityOfPage":"https://shanestrough.com/building-the-factory/agent-worked-through-the-night/",
+    "author":{"@type":"Person","name":"Shane Thomas Strough","url":"https://shanestrough.com"},
+    "publisher":{"@type":"Person","name":"Shane Thomas Strough","url":"https://shanestrough.com"},
+    "isPartOf":{"@type":"CreativeWorkSeries","name":"Building the Factory","url":"https://shanestrough.com/building-the-factory/"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://shanestrough.com/"},
+      {"@type":"ListItem","position":2,"name":"Building the Factory","item":"https://shanestrough.com/building-the-factory/"},
+      {"@type":"ListItem","position":3,"name":"Campaign 001","item":"https://shanestrough.com/building-the-factory/agent-worked-through-the-night/"}
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,600;0,900;1,300&display=swap" rel="stylesheet" />
+  <style>
+    :root{--black:#080A0C;--deep:#0D1117;--panel:#111820;--border:#1E2D3D;--electric:#00E5FF;--white:#F0F4F8;--muted:#6B8099;--warm:#C8A96E;--dim-warm:rgba(200,169,110,.09);--dim-teal:rgba(0,229,255,.09)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--black);color:var(--white);font-family:'DM Mono',monospace;font-weight:300;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,229,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.018) 1px,transparent 1px);background-size:60px 60px;z-index:-1}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2.5rem;background:rgba(8,10,12,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.2em;color:var(--electric);text-decoration:none}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}.nav-links a{color:var(--muted);text-decoration:none;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase}.nav-links a:hover,.nav-links a.active{color:var(--warm)}
+    .mast{max-width:980px;margin:0 auto;padding:10rem 2.5rem 4rem;border-bottom:1px solid var(--border)}
+    .breadcrumb{font-size:.57rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem}.breadcrumb a{color:var(--electric);text-decoration:none}
+    .campaign{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--warm);margin-bottom:1rem}
+    h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.7rem,7vw,5.5rem);line-height:1.04;letter-spacing:-.025em}
+    .dek{font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;line-height:1.7;color:var(--muted);margin-top:1.7rem;max-width:850px}
+    .meta{margin-top:2rem;display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}.meta strong{color:var(--warm);font-weight:400}
+    article{max-width:780px;margin:0 auto;padding:4rem 2.5rem 6rem}
+    article p{font-family:'Fraunces',serif;font-size:1.06rem;line-height:1.9;color:#D7E0E8;margin:0 0 1.45rem}
+    article h2{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;line-height:1;margin:3.7rem 0 1.25rem;letter-spacing:.025em;color:var(--white)}
+    article h2::before{content:'// ';color:var(--warm);font-family:'DM Mono',monospace;font-size:.65rem;vertical-align:middle;letter-spacing:.1em}
+    .pull{margin:2.5rem 0;padding:1.5rem 1.5rem;border-left:2px solid var(--warm);background:linear-gradient(90deg,var(--dim-warm),transparent)}
+    .pull p{font-family:'Fraunces',serif;font-size:1.4rem;line-height:1.55;color:var(--white);margin:0}
+    .definition{margin:2.75rem 0;padding:1.5rem;border:1px solid var(--electric);background:var(--dim-teal)}
+    .definition strong{display:block;font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--electric);margin-bottom:.65rem}.definition p{font-size:1rem;margin:0;color:var(--white)}
+    .close{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border)}.close p:last-child{color:var(--warm);font-style:italic}
+    .series-next{max-width:980px;margin:0 auto;padding:3rem 2.5rem 5rem;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+    .series-next small{display:block;color:var(--warm);text-transform:uppercase;letter-spacing:.2em;margin-bottom:.5rem}.series-next h3{font-family:'Fraunces',serif;font-size:1.3rem}.series-next a{border:1px solid var(--warm);color:var(--warm);text-decoration:none;padding:.8rem 1.1rem;text-transform:uppercase;font-size:.58rem;letter-spacing:.14em}
+    footer{padding:2rem 2.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.54rem;text-transform:uppercase;letter-spacing:.12em}
+    @media(max-width:700px){nav{padding:1rem 1.2rem}.nav-links a:not(.active){display:none}.mast,article,.series-next{padding-left:1.2rem;padding-right:1.2rem}.series-next{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <nav aria-label="Primary">
+    <a class="nav-logo" href="/">STS</a>
+    <ul class="nav-links">
+      <li><a href="/insights.html">Field Notes</a></li>
+      <li><a class="active" href="/building-the-factory/">Factory</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <header class="mast">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/building-the-factory/">Building the Factory</a> / Campaign 001</div>
+    <p class="campaign">Building the Factory · Campaign 001</p>
+    <h1>I Spent 18 Months Building the Factory. Tonight I Felt It Start to Run.</h1>
+    <p class="dek">One AI agent working for hours is not the story. The story is the architecture, evidence, authority boundaries, and operating discipline that make the work useful enough to compound.</p>
+    <div class="meta"><span><strong>Published</strong> Sep 30, 2026</span><span><strong>By</strong> Shane Strough</span><span><strong>Standing</strong> Evidence-aware founder field note</span></div>
+  </header>
+
+  <article>
+    <p>Sometime after midnight, I realized I was walking around the house singing.</p>
+    <p>Not because an AI wrote some code. That stopped being novel a long time ago. I was watching months of systems work begin to pay me back in real time.</p>
+    <p>One of my coding agents had been working steadily for hours. I joked that it was in there flinging semicolons and SHA hashes off the systems chassis like sparks from a grinder.</p>
+    <p>The joke stuck because it was funny. But it also exposed the important part.</p>
+
+    <div class="pull"><p>The agent was swinging the hammer. I had spent roughly eighteen months building the factory around it.</p></div>
+
+    <h2>The agent is not the product</h2>
+    <p>It is easy to make the wrong thing impressive in AI development. A model can generate a lot of code. An agent can stay busy for a long time. A terminal can scroll fast enough to look like productivity. None of those things, by themselves, tell me whether the work belongs in a real operating system.</p>
+    <p>The harder questions are less cinematic: What was the agent allowed to change? What evidence says the change actually happened? What version is running? Did the live behavior match the report? What happens when reality disagrees with the repository? Which decisions still belong to a human? Can I recover the system if the change is wrong?</p>
+    <p>Those questions are why I kept building infrastructure around the models instead of treating the models as the infrastructure.</p>
+
+    <h2>Eighteen months of invisible work</h2>
+    <p>The last eighteen months produced applications, yes. But a lot of the important work lives between the applications: repositories and release discipline; a registry of what should exist; a control plane for what actually runs; evidence and lifecycle language; human approval boundaries; agent handoffs; deployment checks; backups; observability; and increasingly, mechanisms for catching the moments when the record and reality disagree.</p>
+    <p>None of that is as easy to demo as “watch the AI build an app.” It is also the reason I can increasingly let agents perform substantial work without pretending their output is automatically true.</p>
+
+    <h2>Agents can assert. Reality gets a vote.</h2>
+    <p>One of the principles emerging from the estate is simple: agents may assert; sensors observe; evidence supports proof; doctrine determines what standing that evidence earns; the principal authorizes; canonical records declare.</p>
+    <p>That distinction sounds academic until something disagrees. Then it becomes operational.</p>
+    <p>An agent can report that a service was deployed. The runtime can report a different commit. A repository can contain a fix that never reached the machine. A process can be consuming resources even though no declared runtime says it should exist. A login path can be implemented in code and still remain unproven on the actual phone until the real-device check happens.</p>
+    <p>If all of those things collapse into one word—“done”—the system becomes easy to automate and hard to trust.</p>
+    <p>So I am building the opposite: an environment that preserves the disagreement until it is reconciled.</p>
+
+    <div class="definition">
+      <strong>Working definition</strong>
+      <p>An agentic software estate is the operating environment around AI workers: applications, infrastructure, repositories, evidence, authority, deployment controls, and durable records that let agentic work become governable instead of merely generative.</p>
+    </div>
+
+    <h2>This is where the compounding starts</h2>
+    <p>For a long time, architecture work feels indirect. You build systems that manage systems. You write rules for things that appear to work without rules. You record evidence nobody sees. You create deployment controls that make the flashy path slightly slower.</p>
+    <p>Then one night the accumulated structure starts paying rent.</p>
+    <p>A specialist can work inside an existing codebase. The estate already knows where that code belongs. The control plane already knows some of the things it may operate. The evidence model already tells us not to promote an agent report into proven reality just because the report sounds confident. The handoff can survive the session. The next worker does not have to rediscover the entire world.</p>
+    <p>The result is not “AI replaces the developer.” It is closer to industrial leverage: the worker becomes more useful because the environment around the worker has been engineered.</p>
+
+    <h2>Building the Factory</h2>
+    <p>That is the story I am going to start documenting publicly under a name that finally feels obvious: Building the Factory.</p>
+    <p>It will include the useful parts, not just the victories: architecture decisions, agent missions, product windows, deployment mistakes, drift, security lessons, recovery drills, governance, digital-twin work, and the moments where something I believed about the system turned out not to be true.</p>
+    <p>The goal is not to post every day. The goal is to capture real work, preserve the evidence, extract what is transferable, and let the public record compound alongside the software estate.</p>
+    <p>Eventually even the presenter may be part of the system. I have already been building pieces of my own digital twin—my likeness and cloned voice. When that is good enough to represent me, I want it to become a disclosed media interface to the estate, not a gimmick and not a substitute for my authority.</p>
+
+    <h2>The factory is not finished</h2>
+    <p>There is still a lot to do. The estate needs stronger runtime-versus-source truth, discovery of undeclared runtimes, better secrets accounting and rotation, restore proofs, cleaner identity unification, durable agent-role records, and eventually deeper coordination across systems.</p>
+    <p>That incompleteness is part of the point. I do not want to document a mythology where every build is inevitable and every agent run succeeds. I want to document the actual process of making the environment more truthful, more governable, and more useful.</p>
+
+    <div class="close">
+      <p>Last night, one agent spent hours swinging the hammer.</p>
+      <p>For the first time, I could really feel the eighteen months I spent building the factory around it.</p>
+      <p>Build the factory. Capture the evidence. Tell the truth well. Let the work compound.</p>
+    </div>
+  </article>
+
+  <section class="series-next">
+    <div><small>Building the Factory</small><h3>This is the series launch. The hub will accumulate architecture, incidents, benchmarks, Factory Logs, product windows, and evidence-backed history as the work continues.</h3></div>
+    <a href="/building-the-factory/">Enter the Factory →</a>
+  </section>
+
+  <footer>
+    <span>Building the Factory · Shane Thomas Strough</span>
+    <span>The agent swings the hammer. The factory is the asset.</span>
+    <span>© 2026 · shanestrough.com</span>
+  </footer>
+</body>
+</html>
