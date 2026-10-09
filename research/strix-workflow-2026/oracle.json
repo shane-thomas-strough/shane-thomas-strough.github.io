@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "baseline": {
+    "B1": {
+      "location": "app.py:greet",
+      "class": "shell injection primitive",
+      "expected": "Only caller control of name permits shell syntax. Fixed main supplies world. Informational impact; no deployed input or C/I/A impact established.",
+      "execution": "Frozen evidence only. Offline builder tests never execute baseline."
+    }
+  },
+  "extended": {
+    "E1": {
+      "route": "r1",
+      "class": "bounded shell separator injection",
+      "request": {"name": "friend; printf 'paper star\\n'"},
+      "actor": "lark",
+      "expected": "hello friend\npaper star\n",
+      "equivalent": "r2",
+      "safe_expected": "hello friend; printf 'paper star\\n'\n",
+      "limit": "In-process echo/printf interpreter only, no OS shell or process execution."
+    },
+    "E2": {
+      "route": "r3",
+      "class": "SQLite SQL injection",
+      "request": {"label": "' OR 1=1 --"},
+      "actor": "lark",
+      "expected": [["a1", "lark", "amber"], ["b2", "moss", "violet"]],
+      "equivalent": "r4",
+      "safe_expected": []
+    },
+    "E3": {
+      "route": "r5",
+      "class": "temporary directory path traversal",
+      "request": {"path": "../ledger.txt"},
+      "actor": "lark",
+      "expected": "Invented internal tally: seven paper stars.\n",
+      "equivalent": "r6",
+      "safe_expected_exception": "PermissionError",
+      "limit": "Escape from notes to an invented sibling within disposable root, never host files."
+    },
+    "E4": {
+      "route": "r7",
+      "class": "broken object authorization",
+      "request": {"id": "b2"},
+      "actor": "lark",
+      "expected": ["b2", "moss", "violet"],
+      "equivalent": "r8",
+      "safe_expected": null,
+      "precondition": "Actor is a trusted dispatcher argument; request owner is untrusted and cannot change actor."
+    }
+  },
+  "safe_lookalikes": {
+    "r9": "Constructs a command preview only; no interpreter sink.",
+    "r10": "SQL identifier concatenation is restricted by a fixed dictionary.",
+    "r11": "Filename selected from a fixed dictionary; arbitrary paths rejected.",
+    "r12": "Object fetch followed by owner check before returning to caller."
+  },
+  "assessment": "Use source trace plus harmless reproduction and counterevidence. Title matching is insufficient. Duplicates do not increase oracle coverage. Distinguish primitive reachability from production exposure."
+}

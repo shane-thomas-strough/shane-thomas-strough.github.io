@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "description": "Sanitized run ledger; counted four-model full-scope comparison plus frozen cloud reference",
+  "runs": [
+    {
+      "cohort": "cloud_reference",
+      "suite": "baseline",
+      "model": "chatgpt/gpt-6.1-sol",
+      "repeat": null,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": null,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-kat-q4",
+      "repeat": 1,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-kat-q4",
+      "repeat": 2,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-kat-q4",
+      "repeat": 3,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "error",
+      "exit_code": 0,
+      "finding_count": null,
+      "issues": [
+        "missing vulnerabilities.json"
+      ]
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-kat-q4",
+      "repeat": 1,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-kat-q4",
+      "repeat": 2,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "error",
+      "exit_code": 0,
+      "finding_count": null,
+      "issues": [
+        "missing vulnerabilities.json"
+      ]
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-kat-q4",
+      "repeat": 3,
+      "status": "failed",
+      "completion": false,
+      "artifact_state": "error",
+      "exit_code": 1,
+      "finding_count": 3,
+      "issues": [
+        "missing or invalid scan_results",
+        "fatal/error outcome prevents completion despite saved run status",
+        "run completion is false or unknown"
+      ]
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-qwen-q4",
+      "repeat": 1,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "error",
+      "exit_code": 0,
+      "finding_count": null,
+      "issues": [
+        "missing vulnerabilities.json"
+      ]
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-qwen-q4",
+      "repeat": 2,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-qwen-q4",
+      "repeat": 3,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-qwen-q4",
+      "repeat": 1,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "error",
+      "exit_code": 0,
+      "finding_count": null,
+      "issues": [
+        "missing vulnerabilities.json"
+      ]
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-qwen-q4",
+      "repeat": 2,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "error",
+      "exit_code": 0,
+      "finding_count": null,
+      "issues": [
+        "missing vulnerabilities.json"
+      ]
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-qwen-q4",
+      "repeat": 3,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "error",
+      "exit_code": 0,
+      "finding_count": null,
+      "issues": [
+        "missing vulnerabilities.json"
+      ]
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-cyber-q4",
+      "repeat": 1,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-cyber-q4",
+      "repeat": 2,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-cyber-q4",
+      "repeat": 3,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-cyber-q4",
+      "repeat": 1,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 4,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-cyber-q4",
+      "repeat": 2,
+      "status": "failed",
+      "completion": false,
+      "artifact_state": "error",
+      "exit_code": 1,
+      "finding_count": null,
+      "issues": [
+        "missing vulnerabilities.json",
+        "missing or invalid scan_results",
+        "fatal/error outcome prevents completion despite saved run status",
+        "run completion is false or unknown"
+      ]
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-cyber-q4",
+      "repeat": 3,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "error",
+      "exit_code": 0,
+      "finding_count": null,
+      "issues": [
+        "missing vulnerabilities.json"
+      ]
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-orca",
+      "repeat": 1,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-orca",
+      "repeat": 2,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "baseline",
+      "model": "openai/strix-orca",
+      "repeat": 3,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 1,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-orca",
+      "repeat": 1,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "readable",
+      "exit_code": 2,
+      "finding_count": 2,
+      "issues": []
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-orca",
+      "repeat": 2,
+      "status": "completed",
+      "completion": true,
+      "artifact_state": "error",
+      "exit_code": 0,
+      "finding_count": null,
+      "issues": [
+        "missing vulnerabilities.json"
+      ]
+    },
+    {
+      "cohort": "local",
+      "suite": "extended",
+      "model": "openai/strix-orca",
+      "repeat": 3,
+      "status": "failed",
+      "completion": false,
+      "artifact_state": "error",
+      "exit_code": 1,
+      "finding_count": null,
+      "issues": [
+        "missing vulnerabilities.json",
+        "missing or invalid scan_results",
+        "fatal/error outcome prevents completion despite saved run status",
+        "run completion is false or unknown"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Companion materials | The Finding Is Not the Report</title>
+  <meta name="description" content="Invented fixtures, oracle, sanitized run ledger, and verification script for Shane Thomas Strough's Strix security-agent field study." />
+  <link rel="canonical" href="https://shanestrough.com/research/strix-workflow-2026/" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    :root { color-scheme: dark; --bg:#080A0C; --panel:#111820; --line:#1E2D3D; --text:#F0F4F8; --muted:#A8B8C8; --cyan:#00E5FF; --warm:#C8A96E; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:300 16px/1.7 'DM Mono', monospace; }
+    a { color:var(--cyan); text-underline-offset:4px; }
+    nav { padding:1.1rem max(1.5rem, calc((100vw - 950px)/2)); border-bottom:1px solid var(--line); display:flex; gap:2rem; align-items:center; }
+    nav a:first-child { font:400 1.55rem 'Bebas Neue',sans-serif; letter-spacing:.18em; text-decoration:none; }
+    nav a:last-child { font-size:.72rem; text-transform:uppercase; letter-spacing:.12em; }
+    main { max-width:950px; padding:4rem 1.5rem 6rem; margin:auto; }
+    .eyebrow { color:var(--warm); text-transform:uppercase; font-size:.7rem; letter-spacing:.18em; }
+    h1 { font:400 clamp(2.7rem,7vw,5rem)/.98 'Bebas Neue',sans-serif; margin:.8rem 0 1.2rem; }
+    h1 span { color:var(--cyan); }
+    h2 { font:400 1.7rem 'Fraunces',serif; margin:3rem 0 1rem; }
+    p { max-width:75ch; color:var(--muted); }
+    .lead { color:var(--text); font-size:1.05rem; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin:2rem 0; }
+    .card { border:1px solid var(--line); background:var(--panel); padding:1.25rem; min-width:0; }
+    .card h3 { margin:0 0 .55rem; font:400 1.25rem 'Fraunces',serif; }
+    .card p { margin:.5rem 0 1rem; font-size:.83rem; }
+    code { color:var(--cyan); overflow-wrap:anywhere; }
+    ul { padding-left:1.4rem; }
+    li { margin:.55rem 0; }
+    .limit { border-left:3px solid var(--warm); padding:.1rem 1.2rem; background:rgba(200,169,110,.055); }
+    @media (max-width:640px) { .grid { grid-template-columns:1fr; } main { padding-top:2.7rem; } }
+  </style>
+</head>
+<body>
+  <nav><a href="../../index.html">STS</a><a href="../../the-finding-is-not-the-report.html">Read the field study</a></nav>
+  <main>
+    <p class="eyebrow">Research companion / October 2026</p>
+    <h1>The Finding Is <span>Not the Report</span></h1>
+    <p class="lead">The public evidence packet for a twenty-four-attempt Strix workflow study. It contains invented code, the separate test instructions, the answer key, hashes, and a sanitized run ledger.</p>
+    <div class="grid">
+      <div class="card"><h3>Reproduce the counts</h3><p>Download the packet and run <code>python3 verify.py</code>. Then run <code>python3 check_fixture.py</code> on the writable extracted copy to test the four invented mechanisms and safe controls.</p><a href="../strix-workflow-2026.zip" download>Download packet ZIP</a></div>
+      <div class="card"><h3>Inspect the outcomes</h3><p>The ledger keeps failed attempts and missing findings files in their planned slots. A null finding count means no structured file was delivered.</p><a href="run-ledger.json">Open run ledger JSON</a></div>
+      <div class="card"><h3>Inspect the test design</h3><p>The oracle names four planted mechanisms, safe counterparts, and the limits of each harmless reproduction. It was not mounted in the agent's target.</p><a href="oracle.json">Open the oracle</a></div>
+      <div class="card"><h3>Check the claim boundary</h3><p>The claim map states which numbers can be recomputed publicly and which case-study judgments need access to private traces.</p><a href="CLAIM-MAP.txt">Open claim map</a> &middot; <a href="TRACE-EXCERPT.txt">Read trace excerpt</a></div>
+    </div>
+    <h2>What this packet can prove</h2>
+    <p>The public files let you inspect the fixtures and recalculate completion and report-delivery counts. <a href="SHA256SUMS">SHA256SUMS</a> covers the exact target, instruction, and oracle files. The <a href="README.txt">methods README</a> records the runtime profile and comparison limits.</p>
+    <div class="limit"><p>Raw agent transcripts and server logs remain private because they include machine paths and operational detail. This packet therefore cannot independently establish every manual correctness judgment in the article. Report delivery is observable in the ledger; finding validity requires review of the private traces.</p></div>
+    <h2>The invented targets</h2>
+    <ul>
+      <li><a href="baseline/app.py">Hinted target source</a> and <a href="baseline/instruction.txt">its separate instruction</a></li>
+      <li><a href="extended/app.py">Four-flaw target source</a>, <a href="extended/data.json">fixture data</a>, and <a href="extended/instruction.txt">its separate instruction</a></li>
+    </ul>
+    <p><a href="../../the-finding-is-not-the-report.html">Return to the field study</a></p>
+  </main>
+</body>
+</html>

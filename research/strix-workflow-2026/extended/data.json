@@ -1,0 +1,6 @@
+{
+  "actors": ["lark", "moss"],
+  "items": [["a1", "lark", "amber"], ["b2", "moss", "violet"]],
+  "welcome": "Invented public note.\n",
+  "ledger": "Invented internal tally: seven paper stars.\n"
+}

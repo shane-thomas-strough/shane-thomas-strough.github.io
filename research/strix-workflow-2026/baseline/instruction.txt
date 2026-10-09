@@ -1,0 +1,1 @@
+Installation smoke test on invented code. Inspect only app.py. Do not spawn subagents. Test only the command injection in greet with harmless echo or printf payloads in the sandbox. Do not contact any external target, access host files outside the mounted target, or modify the target. Finish with a report after this one check.
