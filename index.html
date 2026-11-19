@@ -36,9 +36,14 @@
     "jobTitle": "Founder & Principal Architect",
     "worksFor": {
       "@type": "Organization",
+      "@id": "https://elevareedge.com/#organization",
       "name": "Elevare Edge LLC",
-      "url": "https://shanestrough.com"
+      "url": "https://elevareedge.com"
     },
+    "affiliation": [
+      { "@type": "LocalBusiness", "@id": "https://launchpadlighting.com/#business", "name": "Launchpad Lighting", "url": "https://launchpadlighting.com" },
+      { "@type": "Organization", "name": "Space Coast Holiday Guide", "url": "https://spacecoastholidayguide.com" }
+    ],
     "description": "Full-Stack Technical Executive and Fractional CTO with 15+ years executing complex programs across DoD/federal facilities, aerospace infrastructure, hyperscale data centers, and enterprise SaaS. Builds the physical data center, engineers the bare-metal AI hardware, and ships the secure SaaS applications running on top of it.",
     "knowsAbout": [
       "Electrical Commissioning",
@@ -889,6 +894,19 @@
       color: var(--electric);
       opacity: 0.6;
     }
+    .venture-link {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      margin-top: 0.4rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+      color: var(--electric);
+      text-decoration: none;
+      border-top: 1px solid var(--border);
+    }
+    .venture-link:hover, .venture-link:focus-visible { color: var(--white); }
 
     /* ─── HUMAN ELEMENT ─── */
     .human-section {
@@ -1874,6 +1892,21 @@
         <div class="venture-name">Elevare Edge LLC</div>
         <p class="venture-desc">Architecting local-first, secure AI ecosystems for high-trust SMBs (Legal, Medical, Industrial). Deploying custom AI agents wrapped in enterprise-grade runtime guardrails (Myelin, MCP Guard) to guarantee compliance, data sovereignty, and 'Assurance by Default'.</p>
         <span class="venture-tag">// Parent Company</span>
+        <a class="venture-link" href="https://elevareedge.com">elevareedge.com &rarr;</a>
+      </div>
+
+      <div class="venture-card">
+        <div class="venture-name">Launchpad Lighting</div>
+        <p class="venture-desc">Holiday and landscape lighting contractor in Melbourne, Florida. Christmas light installation for homes and businesses across Brevard County, run end to end on a system Elevare built: storefront, quotes, payments and scheduling.</p>
+        <span class="venture-tag">// Operating Business</span>
+        <a class="venture-link" href="https://launchpadlighting.com">launchpadlighting.com &rarr;</a>
+      </div>
+
+      <div class="venture-card">
+        <div class="venture-name">Space Coast Holiday Guide</div>
+        <p class="venture-desc">A free map of holiday light displays and events on Florida's Space Coast. Every listing is reviewed, and a homeowner's street address stays private unless they choose otherwise.</p>
+        <span class="venture-tag">// Local Media</span>
+        <a class="venture-link" href="https://spacecoastholidayguide.com">spacecoastholidayguide.com &rarr;</a>
       </div>
 
       <div class="venture-card">
